@@ -8,9 +8,7 @@ export default function Intro() {
 		"I'm a full stack web developer ",
 	];
 
-	const handleClick = () => {
-		console.log("CLICK");
-	};
+
 
 	return (
 		<div className="h-screen bg-colorThree mt-8">
@@ -34,18 +32,18 @@ export default function Intro() {
 					<div className="my-6 flex flex-row">
 					<div className="mx-1">
 						<Button
-							text="Message Me"
-							className={'px-4 py-2 text-colorFive border-2 border-colorFive rounded-3xl'}
+							text="Portfolio"
+							className={'px-4 py-2 text-colorFive border-2 border-colorFive rounded-xl'}
 							active={true}
-							action={handleClick}
+							action={'portfolio'}
 						/>
 						</div>
 						<div className="mx-4">
 						<Button
-						text="Portfolio"
-						className={'px-4 py-2 bg-colorFour text-colorFive border-2 border-colorFive rounded-3xl'}
+						text="Contact"
+						className={'px-4 py-2 bg-colorFour text-colorFive border-2 border-colorFive rounded-xl'}
 						active={true}
-						action={handleClick}
+						action={'contact'}
 					/>
 					</div>
 					</div>

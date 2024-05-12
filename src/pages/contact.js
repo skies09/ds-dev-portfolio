@@ -29,7 +29,7 @@ export default function Contact() {
       }, [isInView])
     
 	return (
-		<div className=" h-screen bg-colorFour" ref={containerRef}>
+		<div className=" h-screen bg-colorFour" ref={containerRef} id='contact'>
 			<h1 className="text-3xl font-bold underline flex justify-center text-center">
 				CONTACT
 			</h1>

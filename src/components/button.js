@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
 export default function Button({ text, className, active = true, action }) {
+	const handleClick = (page) => {
+		window.location.href = "#" + page;
+	};
+
 	return (
 		<>
 			{active && (
@@ -14,7 +18,7 @@ export default function Button({ text, className, active = true, action }) {
 					}}
 					transition={{ bounceDamping: 10, bounceStiffness: 600 }}
 					className={className}
-					onClick={action}
+					onClick={() => handleClick(action)}
 				>
 					{text}
 				</motion.button>

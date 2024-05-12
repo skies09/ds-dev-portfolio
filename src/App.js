@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 
 import Intro from "./pages/intro";
 import About from "./pages/about";
+import Portfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 			<div className="relative w-full h-screen snap-mandatory snap-y -mt-8">
 				<Intro />
 				<About />
+				<Portfolio />
 				<Contact />
 			</div>
 		</>

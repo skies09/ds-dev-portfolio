@@ -35,18 +35,18 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 			transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
 			className="w-1/3 md:w-1/5 h-screen bg-colorTwo fixed top-0 -right-4 z-20 flex flex-col items-center justify-center"
 		>
-			<ul>
-				<li onClick={() => setMenuOpen(false)}>
+			<ul className="flex items-start justify-center flex-col">
+				<li className='mt-2' onClick={() => setMenuOpen(false)}>
 					<a href="#intro">
-						<FontAwesomeIcon icon={faHouse} size="xs" />
-						<span>Home</span>
+						<FontAwesomeIcon icon={faHouse} size="sm" className="text-colorFive" />
+						<span className="ml-2 text-colorFive">Home</span>
 					</a>
 				</li>
 
-				<li onClick={() => setMenuOpen(false)}>
+				<li className='mt-2' onClick={() => setMenuOpen(false)}>
 					<a href="#contact">
-						<FontAwesomeIcon icon={faEnvelope} size="xs" />
-						<span>Contact</span>
+						<FontAwesomeIcon icon={faEnvelope} size="sm" className="text-colorFive"/>
+						<span className="ml-2 text-colorFive">Contact</span>
 					</a>
 				</li>
 			</ul>
