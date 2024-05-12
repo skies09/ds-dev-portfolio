@@ -13,7 +13,11 @@ module.exports = {
       colorFive: '#F9F9F9',
     },
 
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      }
+    },
   },
   plugins: [],
 }

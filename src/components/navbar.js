@@ -24,18 +24,22 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 ${
-								menuOpen ? "rotate-45 relative top-4" : ""
+							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition  ${
+								menuOpen
+									? "-rotate-45 relative top-4 ease-out duration-2000"
+									: "ease-linear duration-500"
 							}`}
 						></span>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 ${
+							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition duration-100 ${
 								menuOpen ? "opacity-0" : "opacity-100"
 							}`}
 						></span>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 ${
-								menuOpen ? "-rotate-45 relative -top-2" : ""
+							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition  ${
+								menuOpen
+									? "rotate-45 relative -top-2 ease-out duration-2000"
+									: "ease-linear duration-500"
 							}`}
 						></span>
 					</div>
