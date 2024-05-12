@@ -33,18 +33,18 @@ export default function About() {
 			<h1 className="text-3xl font-bold underline flex justify-center text-center">
 				About
 			</h1>
-			<div className="flex flex-row justify-center items-center">
+			<div className="mt-20 flex flex-row justify-center items-center w-4/5 mx-auto">
 				<motion.div
-					className="bg-colorFour w-1/2 flex justify-center items-center"
+					className="bg-colorFour w-1/2 flex justify-center items-center h-96"
 					style={{ translateX: leftValue }}
 				>
-					left section
+					About Text section
 				</motion.div>
 				<motion.div
-					className="bg-colorFour w-1/2 flex justify-center items-center"
+					className="bg-colorFour w-1/2 flex justify-center items-center h-96"
 					style={{ translateX: rightValue }}
 				>
-					right section
+					About Image section
 				</motion.div>
 			</div>
 		</div>
