@@ -108,15 +108,10 @@ export default function Contact() {
 				className="pt-20 text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
 			>
 				Got a cool project idea?
-			</motion.div>
-			<motion.div
-				initial={{ opacity: 0, y: -100 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 2, ease: "easeOut" }}
-				className="text-2xl font-bold text-colorFive flex justify-center text-center font-monoTwo"
-			>
+				<br/>
 				Get in touch!
 			</motion.div>
+		
 			<div className="pt-8 flex flex-row justify-center items-center w-4/5 mx-auto">
 				<motion.div
 					className="w-1/2 flex justify-center items-start bg-colorThree h-96"
