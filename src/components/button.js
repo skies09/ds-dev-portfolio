@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Button({ text, active = true, action }) {
+export default function Button({ text, className, active = true, action }) {
 	return (
 		<>
 			{active && (
@@ -13,7 +13,7 @@ export default function Button({ text, active = true, action }) {
 						border: "solid #007EA7 2px",
 					}}
 					transition={{ bounceDamping: 10, bounceStiffness: 600 }}
-					className='w-1/2 bg-[#FFFFFF]'
+					className={className}
 					onClick={action}
 				>
 					{text}

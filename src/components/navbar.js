@@ -1,6 +1,6 @@
 export default function Navbar({ menuOpen, setMenuOpen }) {
 	return (
-		<div className="w-full h-12 bg-colorFive text-colorOne fixed top-0 z-30">
+		<div className="w-full h-12 bg-colorThree fixed top-0 z-30">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center justify-center">
 					<a

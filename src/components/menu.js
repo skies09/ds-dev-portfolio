@@ -33,7 +33,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 			variants={variants}
 			initial="closed"
 			transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-			className="w-1/3 md:w-1/5 h-screen bg-colorOne fixed top-0 -right-4 z-20 flex flex-col items-center justify-center"
+			className="w-1/3 md:w-1/5 h-screen bg-colorTwo fixed top-0 -right-4 z-20 flex flex-col items-center justify-center"
 		>
 			<ul>
 				<li onClick={() => setMenuOpen(false)}>

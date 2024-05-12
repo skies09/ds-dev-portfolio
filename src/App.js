@@ -13,7 +13,7 @@ export default function App() {
 		<>
 			<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			<Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-			<div className="relative w-full h-screen snap-mandatory snap-y mt-12">
+			<div className="relative w-full h-screen snap-mandatory snap-y -mt-8">
 				<Intro />
 				<About />
 				<Contact />
