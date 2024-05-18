@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import * as Yup from "yup";
+import SocialLinks from "../components/socialLinks";
 // import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -91,7 +92,7 @@ export default function Contact() {
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-4 py-2 bg-colorFour text-colorFive border-2 border-colorFive rounded-xl"
+						className="flex justify-center items-center mx-auto px-4 py-2 bg-colorFour text-colorFive border border-colorFive rounded-xl"
 						type="submit"
 					>
 						Send
@@ -111,7 +112,7 @@ export default function Contact() {
 				initial={{ opacity: 0, y: -100 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
-				className="pt-8 lg:pt-20 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
+				className="pt-20 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
 			>
 				Got a cool project idea?
 				<br />
@@ -131,7 +132,7 @@ export default function Contact() {
 					)}
 				</motion.div>
 				<motion.div
-					className="w-1/2 flex flex-col justify-center items-center h-52 lg:h-96"
+					className="w-1/2 flex flex-col justify-center items-center h-44 lg:h-96 pt-12 lg:pt-0"
 					initial={{ opacity: 0, x: 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
@@ -158,7 +159,7 @@ export default function Contact() {
 							</span>
 						</div>
 					</div>
-
+					<SocialLinks/>
 				</motion.div>
 			</div>
 		</div>

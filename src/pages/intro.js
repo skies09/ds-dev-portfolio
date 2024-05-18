@@ -31,7 +31,7 @@ export default function Intro() {
 					<div className="mx-1">
 						<Button
 							text="Portfolio"
-							className={'px-4 py-2 text-colorFive border-2 border-colorFive rounded-xl'}
+							className={'px-4 py-2 text-colorFive border border-colorFive rounded-xl tracking-wider'}
 							active={true}
 							action={'portfolio'}
 						/>
@@ -39,7 +39,7 @@ export default function Intro() {
 						<div className="mx-4">
 						<Button
 						text="Contact"
-						className={'px-4 py-2 bg-colorFour text-colorFive border-2 border-colorFive rounded-xl'}
+						className={'px-4 py-2 bg-colorFour text-colorFive border border-colorFour rounded-xl tracking-wider'}
 						active={true}
 						action={'contact'}
 					/>
