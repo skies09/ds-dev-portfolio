@@ -29,7 +29,7 @@ export default function About() {
       }, [isInView])
     
 	return (
-		<div className=" h-screen bg-colorTwo" ref={containerRef} id='about'>
+		<div className="w-screen overflow-hidden h-screen bg-colorTwo" ref={containerRef} id='about'>
 			<h1 className="text-3xl font-bold underline flex justify-center text-center">
 				About
 			</h1>

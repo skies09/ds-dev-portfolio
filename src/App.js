@@ -11,7 +11,7 @@ export default function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<>
+		<div>
 			<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			<Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			<div className="relative w-full h-screen snap-mandatory snap-y -mt-8">
@@ -20,6 +20,6 @@ export default function App() {
 				<Portfolio />
 				<Contact />
 			</div>
-		</>
+		</div>
 	);
 }

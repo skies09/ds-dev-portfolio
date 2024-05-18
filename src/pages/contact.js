@@ -104,7 +104,7 @@ export default function Contact() {
 
 	return (
 		<div
-			className=" h-screen bg-colorThree"
+			className="w-screen overflow-hidden h-screen bg-colorThree"
 			ref={containerRef}
 			id="contact"
 		>

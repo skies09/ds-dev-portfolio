@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import {
-	delay,
 	motion,
 	useAnimation,
 	useInView,
-	useScroll,
-	useTransform,
 } from "framer-motion";
+import PortfolioCard from "../components/portfolioCard";
+import { portfolioData } from "../portfolioData";
 
 export default function Portfolio() {
 	const containerRef = useRef(null);
@@ -36,11 +35,9 @@ export default function Portfolio() {
 		show: { opacity: 1 },
 	};
 
-	// map the divs
-
 	return (
 		<div
-			className="flex flex-col gap-10 overflow-x-hidden h-screen"
+			className="w-screen overflow-hidden flex flex-col gap-10 overflow-x-hidden lg:h-auto py-16 bg-colorThree"
 			ref={containerRef}
 			id="portfolio"
 		>
@@ -48,28 +45,16 @@ export default function Portfolio() {
 				variants={gridContainerVariants}
 				initial="hidden"
 				whileInView="show"
-				className="grid grid-cols-3 p-10 gap-10 bg-colorFive h-screen"
-			>
-				<motion.div
-					variants={gridSquareVariants}
-					className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
-				>
-					K9 Collection
-				</motion.div>
-
-				<motion.div
-					variants={gridSquareVariants}
-					className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
-				>
-					Neo Project
-				</motion.div>
-
-				<motion.div
-					variants={gridSquareVariants}
-					className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
-				>
-					Diary App
-				</motion.div>
+			    className="flex flex-wrap justify-evenly p-4 h-full overflow-hidden"
+   >
+				{portfolioData.map((project) => (
+					<motion.div
+						variants={gridSquareVariants}
+						className="justify-center flex items-center p-4 max-h-full max-w-full"
+					>
+						<PortfolioCard project={project} />
+					</motion.div>
+				))}
 			</motion.section>
 		</div>
 	);

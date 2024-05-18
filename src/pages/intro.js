@@ -9,7 +9,7 @@ export default function Intro() {
 	];
 
 	return (
-		<div className="h-screen bg-colorThree mt-8" id='intro'>
+		<div className="w-screen overflow-hidden h-screen bg-colorThree mt-8" id='intro'>
 			<div className="relative flex flex-col justify-center items-start ml-4 pt-56 w-full ">
 				<p className="text-colorFive text-2xl md:text-5xl font-mono">
 					Hey, I'm{" "}
