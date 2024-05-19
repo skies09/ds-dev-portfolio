@@ -1,3 +1,30 @@
+export const skillsData = [
+	{
+		section:'Languages',
+		skills: 'Javascript, Python'
+	},
+	{
+		section:'Stack',
+		skills: 'React, Redux, Django, Django REST, Tailwind'
+	},
+	{
+		section:'Databases',
+		skills: 'MySQL, MongoDB, PostgreSQL'
+	},
+	{
+		section:'Deployment',
+		skills: 'AWS, Azure, Git'
+	},
+	{
+		section:'Design',
+		skills: 'Figma, Adobe Photoshop'
+	},
+	{
+		section:'Likes',
+		skills: 'Dogs, Photography, Hiking, Pancakes'
+	},
+]
+
 export const portfolioData = [
 	{
 		id: 1,
