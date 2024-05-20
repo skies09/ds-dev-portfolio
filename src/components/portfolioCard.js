@@ -8,9 +8,9 @@ export default function PortfolioCard({ project }) {
 		<AnimatePresence>
 			{viewProject ? (
 				<motion.div
-					initial={{ opacity: 0, scale: 0.5 }}
+					initial={{ opacity: 0, scale: 1 }}
 					animate={{ opacity: 1, scale: 1 }}
-					exit={{ opacity: 0, scale: 0.5 }}
+					exit={{ opacity: 0, scale: 1 }}
 					transition={{ duration: 1, ease: "easeInOut" }}
 					className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
 					onClick={() => setViewProject(false)}
@@ -93,9 +93,9 @@ export default function PortfolioCard({ project }) {
 				</motion.div>
 			) : (
 				<motion.div
-					initial={{ opacity: 0, scale: 0.8 }}
+					initial={{ opacity: 0, scale: 1 }}
 					animate={{ opacity: 1, scale: 1 }}
-					exit={{ opacity: 0, scale: 0.8 }}
+					exit={{ opacity: 0, scale: 1 }}
 					transition={{ duration: 1, ease: "easeInOut" }}
 					className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72"
 				>
