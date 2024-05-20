@@ -53,7 +53,7 @@ export const portfolioData = [
 		shortDescription: "Bullet Journal",
 		longDescription: "Diary, bullet journal and mind mapping",
 		languages: ["Django", "React"],
-		keyFeatures: [""],
+		keyFeatures: [],
 		link: "www.zenithquest.co.uk",
 	},
 	
