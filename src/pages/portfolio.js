@@ -45,7 +45,7 @@ export default function Portfolio() {
 				variants={gridContainerVariants}
 				initial="hidden"
 				whileInView="show"
-			    className="flex flex-wrap justify-evenly p-4 h-full overflow-hidden"
+			    className="flex flex-wrap justify-evenly p-4 py-12 h-full overflow-hidden"
    >
 				{portfolioData.map((project) => (
 					<motion.div
