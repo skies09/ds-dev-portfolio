@@ -5,13 +5,13 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 				<div className="flex items-center justify-center">
 					<a
 						href="#intro"
-						className="hidden md:flex font-sans text-lg font-semibold text-colorOne ml-2 tracking-tight hover:text-colorFour"
+						className="hidden md:flex font-sans text-lg font-semibold text-colorOne ml-6 tracking-tight hover:text-colorFour"
 					>
 						Donna Smith
 					</a>
 					<a
 						href="#intro"
-						className="block md:hidden font-sans text-lg font-semibold text-colorOne ml-2 items-center justify-center hover:text-colorFour"
+						className="block md:hidden font-sans text-lg font-semibold text-colorOne ml-6 items-center justify-center hover:text-colorFour"
 					>
 						{"</DS>"}
 					</a>
