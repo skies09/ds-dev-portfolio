@@ -11,11 +11,11 @@ export default function Intro() {
 
 	return (
 		<div
-			className="w-screen overflow-hidden h-[95vh] md:h-screen bg-colorThree mt-8"
+			className="w-screen overflow-hidden h-[90vh] md:h-screen bg-colorThree mt-8"
 			id="intro"
 		>
 			<motion.div
-				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 w-full"
+				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 w-full z-50"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6 }}
