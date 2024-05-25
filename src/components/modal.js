@@ -30,7 +30,7 @@ export default function PortfolioModal({ project, onClose }) {
 				<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo py-2">
 					{project.link}
 				</p>
-				<p className="ml-3 text-lg md:text-sm text-colorFive font-bold flex justify-start text-start font-serif tracking-wide py-2">
+				<p className="ml-3 text-sm md:text-sm text-colorFive font-bold flex justify-start text-start font-serif tracking-wide py-2">
 					{project.longDescription}
 				</p>
 
