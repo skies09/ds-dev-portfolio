@@ -39,26 +39,26 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 			<ul className="flex items-start justify-center flex-col">
 				<li className='mt-3' onClick={() => setMenuOpen(false)}>
 					<a href="#intro">
-						<FontAwesomeIcon icon={faHouse} size="xl" className="text-colorFive" />
+						<FontAwesomeIcon icon={faHouse} size="xl" className="text-colorFive hover:text-colorOne" />
 						<span className="ml-3 text-colorFive text-lg hover:text-colorOne">Home</span>
 					</a>
 				</li>
 				<li className='mt-3' onClick={() => setMenuOpen(false)}>
 				<a href="#about">
-					<FontAwesomeIcon icon={faUser} size="xl" className="text-colorFive" />
+					<FontAwesomeIcon icon={faUser} size="xl" className="text-colorFive hover:text-colorOne" />
 					<span className="ml-4 text-colorFive text-lg hover:text-colorOne">About</span>
 				</a>
 			</li>
 			<li className='mt-3' onClick={() => setMenuOpen(false)}>
 			<a href="#portfolio">
-				<FontAwesomeIcon icon={faBriefcase} size="xl" className="text-colorFive" />
+				<FontAwesomeIcon icon={faBriefcase} size="xl" className="text-colorFive hover:text-colorOne" />
 				<span className="ml-3 text-colorFive text-lg hover:text-colorOne">Portfolio</span>
 			</a>
 		</li>
 
 				<li className='mt-3' onClick={() => setMenuOpen(false)}>
 					<a href="#contact">
-						<FontAwesomeIcon icon={faEnvelope} size="xl" className="text-colorFive"/>
+						<FontAwesomeIcon icon={faEnvelope} size="xl" className="text-colorFive hover:text-colorOne"/>
 						<span className="ml-3 text-colorFive text-lg hover:text-colorOne">Contact</span>
 					</a>
 				</li>

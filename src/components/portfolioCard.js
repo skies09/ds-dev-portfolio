@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faClose
+} from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PortfolioCard({ project }) {
@@ -16,7 +20,7 @@ export default function PortfolioCard({ project }) {
 					onClick={() => setViewProject(false)}
 				>
 					<motion.div
-						className="flex flex-col justify-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-1/2"
+						className="flex flex-col justify-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-1/2 relative"
 						onClick={(e) => e.stopPropagation()}
 					>
 						<p className="text-2xl text-colorFive font-bold flex justify-center text-center font-sans py-2 tracking-widest">
@@ -70,29 +74,21 @@ export default function PortfolioCard({ project }) {
 							</div>
 						)}
 
-						<motion.button
-							whileTap={{ scale: 0.9 }}
-							whileHover={{
-								scale: 1.1,
-								backgroundColor: "#003459",
-								color: "#F9F9F9",
-								border: "solid #007EA7 2px",
-							}}
-							transition={{
-								bounceDamping: 10,
-								bounceStiffness: 600,
-							}}
-							className={
-								"w-1/3 mx-auto flex justify-center items-center mb-2 px-4 py-2 bg-colorTwo text-colorOne border border-colorFive rounded-xl tracking-wider font-mono"
-							}
+						<div
+							className="absolute top-0 right-0 cursor-pointer"
 							onClick={() => setViewProject(false)}
 						>
-							Close
-						</motion.button>
+						<FontAwesomeIcon icon={faClose} size="xl" className="text-colorFive hover:text-colorOne m-4" />
+						</div>
 					</motion.div>
 				</motion.div>
 			) : (
-				<motion.div className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo">
+				<motion.div
+					className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo"
+					initial={{ opacity: 1, scale: 1}}
+					animate={{ rotateX: 0 }}
+					onClick={() => setViewProject(true)}
+				>
 					<p className="text-2xl text-colorFive font-bold flex justify-center text-center font-sans py-2 tracking-widest">
 						{project.title}
 					</p>
@@ -109,23 +105,6 @@ export default function PortfolioCard({ project }) {
 					<p className="text-sm md:text-sm text-colorFive font-bold flex justify-center text-center font-display tracking-wide py-4">
 						{project.shortDescription}
 					</p>
-
-					<motion.button
-						whileTap={{ scale: 0.9 }}
-						whileHover={{
-							scale: 1.1,
-							backgroundColor: "#003459",
-							color: "#F9F9F9",
-							border: "solid #007EA7 2px",
-						}}
-						transition={{ bounceDamping: 10, bounceStiffness: 600 }}
-						className={
-							"mb-2 px-4 py-2 bg-colorTwo text-colorOne border border-colorFive rounded-xl tracking-wider font-monoTwo"
-						}
-						onClick={() => setViewProject(true)}
-					>
-						View
-					</motion.button>
 				</motion.div>
 			)}
 		</AnimatePresence>

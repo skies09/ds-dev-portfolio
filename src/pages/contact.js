@@ -77,7 +77,7 @@ export default function Contact() {
 						name="user_email"
 					/>
 					<ErrorMessage
-						className="error"
+						className="text-sm text-colorFour font-bold flex justify-center text-center font-monoTwo"
 						name="user_email"
 						component="div"
 					/>
@@ -112,7 +112,7 @@ export default function Contact() {
 				initial={{ opacity: 0, y: -100 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
-				className="pt-20 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
+				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
 			>
 				Got a cool project idea?
 				<br />
@@ -132,7 +132,7 @@ export default function Contact() {
 					)}
 				</motion.div>
 				<motion.div
-					className="w-1/2 flex flex-col justify-center items-center h-44 lg:h-96 pt-12 lg:pt-0"
+					className="w-1/2 flex flex-col justify-center items-center h-44 lg:h-96 pt-16 lg:pt-0"
 					initial={{ opacity: 0, x: 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}

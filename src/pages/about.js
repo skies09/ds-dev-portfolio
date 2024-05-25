@@ -38,7 +38,6 @@ export default function About() {
 			ref={containerRef}
 			id="about"
 		>
-			{/* TODO: add copy here */}
 			<div className="lg:my-40 flex flex-col-reverse lg:flex-row justify-center items-center w-11/12 mx-auto">
 				<motion.div
 					className="w-11/12 lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center h-auto"
