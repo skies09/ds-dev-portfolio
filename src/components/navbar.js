@@ -11,7 +11,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 					</a>
 					<a
 						href="#intro"
-						className="block md:hidden font-sans text-lg font-semibold text-colorOne ml-6 items-center justify-center hover:text-colorFour"
+						className="block md:hidden font-sans text-lg font-semibold text-colorOne ml-3 items-center justify-center hover:text-colorFour"
 					>
 						{"</DS>"}
 					</a>

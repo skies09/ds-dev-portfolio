@@ -14,10 +14,10 @@ export default function PortfolioModal({ project, onClose }) {
 			onClick={onClose}
 		>
 			<motion.div
-				className="flex flex-col justify-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 xl:w-1/3 relative shadow-shadow-colorTwo"
+				className="flex flex-col justify-center bg-colorTwo p-3 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 xl:w-1/3 relative shadow-shadow-colorTwo"
 				onClick={(e) => e.stopPropagation()}
 			>
-				<p className="text-2xl text-colorFive font-bold flex justify-center text-center font-sans py-3 tracking-widest">
+				<p className="text-2xl text-colorFive font-bold flex justify-center text-center font-sans py-4 tracking-widest">
 					{project.title}
 				</p>
 				<div className="flex justify-center items-center">
