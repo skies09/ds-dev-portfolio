@@ -92,7 +92,7 @@ export default function Contact() {
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-4 py-2 bg-colorFour text-colorFive border border-colorFive rounded-xl"
+						className="flex justify-center items-center mx-auto px-4 py-2 bg-colorFour text-colorFive border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
 						Send
@@ -159,7 +159,7 @@ export default function Contact() {
 							</span>
 						</div>
 					</div>
-					<SocialLinks/>
+					<SocialLinks />
 				</motion.div>
 			</div>
 		</div>

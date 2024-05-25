@@ -1,9 +1,5 @@
 import { useEffect, useRef } from "react";
-import {
-	motion,
-	useAnimation,
-	useInView,
-} from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { skillsData } from "../portfolioData";
 
 export default function About() {
@@ -23,7 +19,7 @@ export default function About() {
 			opacity: 1,
 			transition: {
 				delayChildren: 0.5,
-				staggerChildren: 0.2, 
+				staggerChildren: 0.2,
 			},
 		},
 	};
@@ -42,6 +38,7 @@ export default function About() {
 			ref={containerRef}
 			id="about"
 		>
+			{/* TODO: add copy here */}
 			<div className="lg:my-40 flex flex-col-reverse lg:flex-row justify-center items-center w-11/12 mx-auto">
 				<motion.div
 					className="w-11/12 lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center h-auto"
@@ -73,10 +70,10 @@ export default function About() {
 						hidden: { opacity: 0 },
 						show: { opacity: 1 },
 					}}
-					transition={{ duration: 5, delay:0.5}}
+					transition={{ duration: 5, delay: 0.5 }}
 				>
 					<img
-						className="w-4/6 mt-12 lg:mt-0 h-auto border border-colorFive rounded-full"
+						className="shadow-shadow-colorOne w-4/6 mt-8 lg:mt-0 h-auto border-colorOne rounded-full"
 						src={`../../assets/Images/profilePic.jpeg`}
 						alt="Project"
 					/>
