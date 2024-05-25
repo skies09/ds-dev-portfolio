@@ -73,6 +73,13 @@ export default function Intro() {
 					</motion.div>
 				</div>
 			</motion.div>
+			<div className="items-end justify-end w-full h-auto hidden md:flex ">
+				<img
+					className="w-3/4 h-auto -skew-y-6 opacity-25"
+					src="../../assets/Images/codeImage.png"
+					alt="Project"
+				/>
+			</div>
 		</div>
 	);
 }
