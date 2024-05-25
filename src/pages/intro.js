@@ -11,7 +11,7 @@ export default function Intro() {
 
 	return (
 		<div
-			className="w-screen overflow-hidden h-screen bg-colorThree mt-8"
+			className="w-screen overflow-hidden h-[95vh] md:h-screen bg-colorThree mt-8"
 			id="intro"
 		>
 			<motion.div
@@ -40,7 +40,7 @@ export default function Intro() {
 						eraseDelay={1500}
 					/>
 				</div>
-				<div className="w-4/5 md:w-3/5 lg:w-1/2">
+				<div className="w-4/5 md:w-3/5 lg:w-1/3">
 					<motion.div
 						className="mb-6 border-t border-dotted border-colorFive"
 						initial={{ width: 0 }}

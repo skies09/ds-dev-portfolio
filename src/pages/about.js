@@ -72,7 +72,7 @@ export default function About() {
 					transition={{ duration: 5, delay: 0.5 }}
 				>
 					<img
-						className="shadow-shadow-colorOne w-4/6 mt-8 lg:mt-0 h-auto border-colorOne rounded-full"
+						className="shadow-shadow-colorOne w-4/6 mt-16 lg:mt-0 h-auto border-colorOne rounded-full"
 						src={`../../assets/Images/profilePic.jpeg`}
 						alt="Project"
 					/>
