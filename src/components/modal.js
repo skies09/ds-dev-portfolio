@@ -22,7 +22,7 @@ export default function PortfolioModal({ project, onClose }) {
 				</p>
 				<div className="flex justify-center items-center">
 					<img
-						className="w-4/6 h-auto border border-colorFive rounded-xl"
+						className="w-11/12 md:w-4/6 h-auto border border-colorFive rounded-xl"
 						src={`../../assets/Images/${project.img}`}
 						alt="Project"
 					/>
