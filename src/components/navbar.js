@@ -16,30 +16,28 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 						{"</DS>"}
 					</a>
 				</div>
-				<div className="mr-3 w-8 h-12 flex items-center">
+				<div className="mr-2 w-8 h-12 flex items-center">
 					<div
-						className={`w-full flex flex-col items-center justify-between ${
-							menuOpen ? "relative -top-1" : ""
-						} `}
+						className="w-8 h-6 flex flex-col justify-between cursor-pointer"
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition  ${
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
 								menuOpen
-									? "rotate-45 relative top-4 ease-out duration-500"
-									: "ease-out duration-200"
+									? "transform rotate-45 translate-y-2.5"
+									: ""
 							}`}
 						></span>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition duration-100 ${
-								menuOpen ? "opacity-0" : "opacity-100 delay-50"
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out ${
+								menuOpen ? "opacity-0" : ""
 							}`}
 						></span>
 						<span
-							className={`w-3/4 h-1 bg-colorOne rounded-3xl my-1 transition  ${
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
 								menuOpen
-									? "-rotate-45 relative -top-2 ease-out duration-500"
-									: "ease-out duration-200"
+									? "transform -rotate-45 -translate-y-2.5"
+									: ""
 							}`}
 						></span>
 					</div>
