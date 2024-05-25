@@ -5,7 +5,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import * as Yup from "yup";
 import SocialLinks from "../components/socialLinks";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
 	const containerRef = useRef(null);
@@ -13,22 +13,22 @@ export default function Contact() {
 
 	function sendEmail(values) {
 		console.log(values, "values");
-		// emailjs
-		// 	.send(
-		// 		process.env.REACT_APP_EMAIL_SERVICE_KEY,
-		// 		process.env.REACT_APP_EMAIL_TEMPLATE_KEY,
-		// 		values,
-		// 		process.env.REACT_APP_EMAIL_KEY
-		// 	)
-		// 	.then(
-		// 		(result) => {
-		// 			console.log(result.text);
-		// 			setFormSubmitted(true);
-		// 		},
-		// 		(error) => {
-		// 			console.log(error.text);
-		// 		}
-		// 	);
+		emailjs
+			.send(
+				process.env.REACT_APP_EMAIL_SERVICE_KEY,
+				process.env.REACT_APP_EMAIL_TEMPLATE_KEY,
+				values,
+				process.env.REACT_APP_EMAIL_KEY
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					setFormSubmitted(true);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 	}
 
 	const validationSchema = Yup.object({
@@ -85,8 +85,8 @@ export default function Contact() {
 						Message
 					</p>
 					<Field
-						className="w-full h-6 lg:h-36 z-10 rounded-xl my-2 lg:my-4 pl-2 pb-24"
-						type="textarea"
+						as="textarea"
+						className="w-full lg:h-36 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2"
 						id="message"
 						name="message"
 						rows="3"
@@ -128,7 +128,9 @@ export default function Contact() {
 				>
 					{!formSubmitted && <ContactForm />}
 					{formSubmitted && (
-						<h2>Thanks, I'll get back to you shortly!</h2>
+						<p className="pt-16 lg:pt-28 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+							Thanks, I'll get back to you shortly!
+						</p>
 					)}
 				</motion.div>
 				<motion.div
