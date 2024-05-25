@@ -15,7 +15,7 @@ export default function Intro() {
 			id="intro"
 		>
 			<motion.div
-				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 w-full z-50"
+				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 w-full z-40"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6 }}
