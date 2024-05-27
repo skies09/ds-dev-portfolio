@@ -28,6 +28,16 @@ export const skillsData = [
 export const portfolioData = [
 	{
 		id: 1,
+		title: "Donna's Dog Photography",
+		img: "donnaDogPhotography.png",
+		shortDescription: "Dog Photography Website",
+		longDescription: "Website for dog photography business",
+		languages: ["React", "Tailwind"],
+		keyFeatures: [],
+		link: "https://donna-dog-photography.web.app",
+	},
+	{
+		id: 2,
 		title: "Woof Wiki",
 		img: "woofwiki.png",
 		shortDescription: "Dog Breed Database",
@@ -35,16 +45,6 @@ export const portfolioData = [
 		languages: ["Django", "React"],
 		keyFeatures: ["Binary search algorithm"],
 		link: "www.woofwiki.co.uk",
-	},
-	{
-		id: 2,
-		title: "The Neo Project",
-		img: "neoProjectPlaceholder.png",
-		shortDescription: "Re-homing Dog Search",
-		longDescription: "Search engine for rescue dogs",
-		languages: ["Django", "React"],
-		keyFeatures: ["Binary search algorithm"],
-		link: "www.the-neo-project.co.uk",
 	},
 	{
 		id: 3,
@@ -56,5 +56,14 @@ export const portfolioData = [
 		keyFeatures: [],
 		link: "www.zenithquest.co.uk",
 	},
-	
+	{
+		id: 4,
+		title: "The Neo Project",
+		img: "neoProject.png",
+		shortDescription: "Re-homing Dog Search",
+		longDescription: "Search engine for rescue dogs",
+		languages: ["Django", "React"],
+		keyFeatures: ["Binary search algorithm"],
+		link: "www.the-neo-project.co.uk",
+	},
 ];

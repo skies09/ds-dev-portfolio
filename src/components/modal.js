@@ -27,9 +27,15 @@ export default function PortfolioModal({ project, onClose }) {
 						alt="Project"
 					/>
 				</div>
-				<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo py-2">
-					{project.link}
-				</p>
+				<a
+					href={project.link}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo py-2">
+						{project.link}
+					</p>
+				</a>
 				<p className="ml-3 text-sm md:text-sm text-colorFive font-bold flex justify-start text-start font-serif tracking-wide py-2">
 					{project.longDescription}
 				</p>
