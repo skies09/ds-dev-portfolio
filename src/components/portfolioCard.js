@@ -20,11 +20,22 @@ export default function PortfolioCard({ project }) {
 					src={`../../assets/Images/${project.img}`}
 					alt="Project"
 				/>
-				<a href={project.link} target="_blank" rel="noopener noreferrer">
+				{!project.link.includes("Coming Soon") && (
+					<a
+						href={project.link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
+							{project.link}
+						</p>
+					</a>
+				)}
+				{project.link.includes("Coming Soon") && (
 					<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
 						{project.link}
 					</p>
-				</a>
+				)}
 				<p className="text-sm md:text-sm text-colorFive font-bold flex justify-center text-center font-display tracking-wide py-4">
 					{project.shortDescription}
 				</p>

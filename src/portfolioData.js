@@ -44,7 +44,8 @@ export const portfolioData = [
 		longDescription: "Dog breed database and dog breed calculator",
 		languages: ["Django", "React"],
 		keyFeatures: ["Binary search algorithm"],
-		link: "www.woofwiki.co.uk",
+		// link: "www.woofwiki.co.uk",
+		link:'Coming Soon'
 	},
 	{
 		id: 3,
@@ -54,7 +55,8 @@ export const portfolioData = [
 		longDescription: "Diary, bullet journal and mind mapping",
 		languages: ["Django", "React"],
 		keyFeatures: [],
-		link: "www.zenithquest.co.uk",
+		// link: "www.zenithquest.co.uk",
+		link:'Coming Soon'
 	},
 	{
 		id: 4,
@@ -64,6 +66,7 @@ export const portfolioData = [
 		longDescription: "Search engine for rescue dogs",
 		languages: ["Django", "React"],
 		keyFeatures: ["Binary search algorithm"],
-		link: "www.the-neo-project.co.uk",
+		// link: "www.the-neo-project.co.uk",
+		link:'Coming Soon'
 	},
 ];
