@@ -12,7 +12,6 @@ export default function Contact() {
 	const [formSubmitted, setFormSubmitted] = useState(false);
 
 	function sendEmail(values) {
-		console.log(values, "values");
 		emailjs
 			.send(
 				process.env.REACT_APP_EMAIL_SERVICE_KEY,
@@ -47,6 +46,10 @@ export default function Contact() {
 		};
 
 		const handleSubmit = (values, { setSubmitting }) => {
+			console.log(
+				values.message,
+				"append ds dev portfolio onto the message"
+			);
 			sendEmail(values);
 			setSubmitting(false);
 		};
@@ -143,7 +146,7 @@ export default function Contact() {
 						<div className="flex flex-row items-center mb-4">
 							<FontAwesomeIcon
 								icon={faPhone}
-								size="md"
+								size="lg"
 								className="text-colorFive"
 							/>
 							<span className="ml-4 text-lg lg:text-2xl text-colorFive tracking-wider">
@@ -153,7 +156,7 @@ export default function Contact() {
 						<div className="flex flex-row items-center mb-6">
 							<FontAwesomeIcon
 								icon={faEnvelope}
-								size="md"
+								size="lg"
 								className="text-colorFive"
 							/>
 							<span className="ml-4 text-lg lg:text-2xl text-colorFive tracking-wider">
