@@ -1,9 +1,5 @@
 import { useEffect, useRef } from "react";
-import {
-	motion,
-	useAnimation,
-	useInView,
-} from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import PortfolioCard from "../components/portfolioCard";
 import { portfolioData } from "../portfolioData";
 
@@ -45,8 +41,8 @@ export default function Portfolio() {
 				variants={gridContainerVariants}
 				initial="hidden"
 				whileInView="show"
-			    className="flex flex-wrap justify-evenly p-4 py-12 h-full overflow-hidden"
-   >
+				className="flex flex-wrap justify-evenly p-4 py-12 h-full overflow-hidden"
+			>
 				{portfolioData.map((project) => (
 					<motion.div
 						variants={gridSquareVariants}

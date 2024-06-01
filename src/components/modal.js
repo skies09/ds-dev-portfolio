@@ -4,6 +4,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export default function PortfolioModal({ project, onClose }) {
+	const url = project.link.replace(/^https?:\/\//, "www.");
 	return (
 		<motion.div
 			initial={{ opacity: 0, scale: 1 }}
@@ -34,7 +35,7 @@ export default function PortfolioModal({ project, onClose }) {
 						rel="noopener noreferrer"
 					>
 						<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
-							{project.link}
+							{url}
 						</p>
 					</a>
 				)}

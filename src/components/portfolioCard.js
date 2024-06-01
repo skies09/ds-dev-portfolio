@@ -4,11 +4,12 @@ import PortfolioModal from "./modal";
 
 export default function PortfolioCard({ project }) {
 	const [viewProject, setViewProject] = useState(false);
+	const url = project.link.replace(/^https?:\/\//, "www.");
 
 	return (
 		<>
 			<motion.div
-				className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo"
+				className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo h-full"
 				whileHover={{ scale: 1.1 }}
 				onClick={() => setViewProject(true)}
 			>
@@ -27,7 +28,7 @@ export default function PortfolioCard({ project }) {
 						rel="noopener noreferrer"
 					>
 						<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
-							{project.link}
+							{url}
 						</p>
 					</a>
 				)}

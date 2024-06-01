@@ -4,7 +4,7 @@ export const skillsData = [
 		skills: 'Javascript, Python'
 	},
 	{
-		section:'Stack',
+		section:'Specialties',
 		skills: 'React, Redux, Django, Django REST, Tailwind'
 	},
 	{
@@ -20,8 +20,8 @@ export const skillsData = [
 		skills: 'Figma, Adobe Photoshop'
 	},
 	{
-		section:'Likes',
-		skills: 'Dogs, Photography, Hiking, Pancakes'
+		section:'Interests',
+		skills: 'Dogs, Photography, Hiking'
 	},
 ]
 

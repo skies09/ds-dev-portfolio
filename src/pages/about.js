@@ -38,29 +38,7 @@ export default function About() {
 			ref={containerRef}
 			id="about"
 		>
-			<div className="lg:my-40 flex flex-col-reverse lg:flex-row justify-center items-center w-11/12 mx-auto">
-				<motion.div
-					className="w-11/12 lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center h-auto"
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="show"
-				>
-					<div className="flex flex-col">
-						{skillsData.map((s) => (
-							<div className="flex flex-col justify-center items-start pb-6">
-								<p className="text-lg text-colorFour font-bold flex justify-center font-sans">
-									{s.section}
-								</p>
-								<motion.p
-									variants={aboutTextVariants}
-									className="pl-8 pt-2 text-sm lg:text-xl text-colorOne font-bold flex justify-center font-monoTwo"
-								>
-									{s.skills}
-								</motion.p>
-							</div>
-						))}
-					</div>
-				</motion.div>
+			<div className="lg:my-20 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
 				<motion.div
 					className="w-3/4 lg:w-1/2 flex justify-center items-center h-auto"
 					initial={{ opacity: 0 }}
@@ -76,6 +54,32 @@ export default function About() {
 						src={`../../assets/Images/profilePic.jpeg`}
 						alt="Project"
 					/>
+				</motion.div>
+
+				<motion.div
+					className="w-11/12 lg:w-1/2 mt-8 lg:mt-0 flex justify-center items-center h-auto"
+					variants={containerVariants}
+					initial="hidden"
+					whileInView="show"
+				>
+					<div className="flex flex-col">
+						<div className="text-3xl text-colorOne font-bold flex justify-start font-display pt-8 lg:pt-0 pb-4 underline">
+							About:
+						</div>
+						{skillsData.map((s) => (
+							<div className="flex flex-col justify-center items-start pb-6">
+								<p className="text-lg text-colorFour font-bold flex justify-center font-sans">
+									{s.section}
+								</p>
+								<motion.p
+									variants={aboutTextVariants}
+									className="pl-8 pt-2 text-sm lg:text-xl text-colorOne font-bold flex justify-center font-monoTwo"
+								>
+									{s.skills}
+								</motion.p>
+							</div>
+						))}
+					</div>
 				</motion.div>
 			</div>
 		</div>
