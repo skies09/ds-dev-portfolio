@@ -49,29 +49,28 @@ export default function Intro() {
 						transition={{ duration: 2 }}
 						style={{ height: "1px" }}
 					></motion.div>
-				</div>
-			
 
-				<div className="my-6 flex flex-row">
-					<div className="mx-1">
-						<Button
-							text="Portfolio"
-							className={
-								"px-4 py-2 text-colorOne border border-colorOne rounded-xl tracking-wider font-semibold"
-							}
-							active={true}
-							action={"portfolio"}
-						/>
-					</div>
-					<div className="mx-4">
-						<Button
-							text="Contact"
-							className={
-								"px-4 py-2 bg-colorFour text-colorThree border border-colorFour rounded-xl tracking-wider font-semibold"
-							}
-							active={true}
-							action={"contact"}
-						/>
+					<div className="my-6 flex flex-row">
+						<div className="mx-1">
+							<Button
+								text="Portfolio"
+								className={
+									"px-4 py-2 text-colorOne border border-colorOne rounded-xl tracking-wider font-semibold"
+								}
+								active={true}
+								action={"portfolio"}
+							/>
+						</div>
+						<div className="mx-4">
+							<Button
+								text="Contact"
+								className={
+									"px-4 py-2 bg-colorFour text-colorThree border border-colorFour rounded-xl tracking-wider font-semibold"
+								}
+								active={true}
+								action={"contact"}
+							/>
+						</div>
 					</div>
 				</div>
 			</motion.div>
