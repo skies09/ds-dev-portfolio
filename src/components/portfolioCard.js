@@ -9,15 +9,15 @@ export default function PortfolioCard({ project }) {
 	return (
 		<>
 			<motion.div
-				className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 text-colorFive border border-colorFive rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo h-full"
+				className="flex flex-col justify-center items-center bg-colorTwo px-4 py-2 border border-[#75dbff] rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo h-full"
 				whileHover={{ scale: 1.1 }}
 				onClick={() => setViewProject(true)}
 			>
-				<p className="text-2xl text-colorFive font-bold flex justify-center text-center font-sans py-2 tracking-widest">
+				<p className="text-2xl text-[#0cdcff] font-bold flex justify-center text-center font-sans py-2 tracking-widest">
 					{project.title}
 				</p>
 				<img
-					className="w-5/6 lg:w-3/4 h-auto border border-colorFive rounded-xl"
+					className="w-5/6 lg:w-3/4 h-auto border border-[#75dbff] rounded-xl"
 					src={`../../assets/Images/${project.img}`}
 					alt="Project"
 				/>
@@ -27,13 +27,13 @@ export default function PortfolioCard({ project }) {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
+						<p className="text-sm md:text-md text-[#75dbff] font-bold flex justify-center text-center font-monoTwo pt-4">
 							{url}
 						</p>
 					</a>
 				)}
 				{project.link.includes("Coming Soon") && (
-					<p className="text-sm md:text-md text-colorFive font-bold flex justify-center text-center font-monoTwo pt-4">
+					<p className="text-sm md:text-md text-[#75dbff] font-bold flex justify-center text-center font-monoTwo pt-4">
 						{project.link}
 					</p>
 				)}

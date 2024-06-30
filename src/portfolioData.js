@@ -1,29 +1,29 @@
 export const skillsData = [
 	{
-		section:'Languages',
-		skills: 'Javascript, Python'
+		section: "Languages",
+		skills: "Javascript, Python",
 	},
 	{
-		section:'Specialties',
-		skills: 'React, Redux, Django, Django REST, Tailwind'
+		section: "Specialties",
+		skills: "React, Redux, Django, Django REST, Tailwind",
 	},
 	{
-		section:'Databases',
-		skills: 'MySQL, MongoDB, PostgreSQL'
+		section: "Databases",
+		skills: "MySQL, PostgreSQL, MongoDB",
 	},
 	{
-		section:'Deployment',
-		skills: 'AWS, Azure, Git'
+		section: "Deployment",
+		skills: "AWS, Azure, Git",
 	},
 	{
-		section:'Design',
-		skills: 'Figma, Adobe Photoshop'
+		section: "Design",
+		skills: "Figma, Adobe Photoshop",
 	},
 	{
-		section:'Interests',
-		skills: 'Dogs, Photography, Hiking'
+		section: "Interests",
+		skills: "Dogs, Photography, Hiking",
 	},
-]
+];
 
 export const portfolioData = [
 	{
@@ -45,7 +45,7 @@ export const portfolioData = [
 		languages: ["Django", "React"],
 		keyFeatures: ["Binary search algorithm"],
 		// link: "www.woofwiki.co.uk",
-		link:'Coming Soon'
+		link: "Coming Soon",
 	},
 	{
 		id: 3,
@@ -56,7 +56,7 @@ export const portfolioData = [
 		languages: ["Django", "React"],
 		keyFeatures: [],
 		// link: "www.zenithquest.co.uk",
-		link:'Coming Soon'
+		link: "Coming Soon",
 	},
 	{
 		id: 4,
@@ -67,6 +67,6 @@ export const portfolioData = [
 		languages: ["Django", "React"],
 		keyFeatures: ["Binary search algorithm"],
 		// link: "www.the-neo-project.co.uk",
-		link:'Coming Soon'
+		link: "Coming Soon",
 	},
 ];

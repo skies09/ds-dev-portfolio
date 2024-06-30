@@ -63,17 +63,17 @@ export default function About() {
 					whileInView="show"
 				>
 					<div className="flex flex-col">
-						<div className="text-3xl text-colorOne font-bold flex justify-start font-display pt-8 lg:pt-0 pb-4 underline">
+						<div className="text-3xl text-[#2cc9ff] font-bold flex justify-start font-display pt-8 lg:pt-0 pb-4 underline">
 							About:
 						</div>
 						{skillsData.map((s) => (
 							<div className="flex flex-col justify-center items-start pb-6">
-								<p className="text-lg text-colorFour font-bold flex justify-center font-sans">
+								<p className="text-lg text-[#0096c4] font-bold flex justify-center font-sans">
 									{s.section}
 								</p>
 								<motion.p
 									variants={aboutTextVariants}
-									className="pl-8 pt-2 text-sm lg:text-xl text-colorOne font-bold flex justify-center font-monoTwo"
+									className="pl-8 pt-2 text-sm lg:text-xl text-[#2cc9ff] font-bold flex justify-center font-monoTwo"
 								>
 									{s.skills}
 								</motion.p>

@@ -27,7 +27,7 @@ export default function Intro() {
 					transition={{ duration: 1 }}
 				>
 					Hey, I'm{" "}
-					<span className="font-mono text-3xl md:text-6xl m-1 text-colorOne">
+					<span className="font-mono text-3xl md:text-6xl m-1 text-[#2cc9ff]">
 						Donna Smith
 					</span>
 				</motion.p>
@@ -55,7 +55,7 @@ export default function Intro() {
 							<Button
 								text="Portfolio"
 								className={
-									"px-4 py-2 text-colorOne border border-colorOne rounded-xl tracking-wider font-semibold"
+									"px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold"
 								}
 								active={true}
 								action={"portfolio"}
@@ -65,7 +65,7 @@ export default function Intro() {
 							<Button
 								text="Contact"
 								className={
-									"px-4 py-2 bg-colorFour text-colorThree border border-colorFour rounded-xl tracking-wider font-semibold"
+									"px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold"
 								}
 								active={true}
 								action={"contact"}
