@@ -55,7 +55,7 @@ export default function Intro() {
 							<Button
 								text="Portfolio"
 								className={
-									"px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold"
+									"px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute"
 								}
 								active={true}
 								action={"portfolio"}
@@ -65,7 +65,7 @@ export default function Intro() {
 							<Button
 								text="Contact"
 								className={
-									"px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold"
+									"px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute lg:left-36"
 								}
 								active={true}
 								action={"contact"}
