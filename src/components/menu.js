@@ -32,50 +32,62 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 		>
 			<ul className="flex items-start justify-center flex-col">
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
-					<a href="#intro">
+					<a
+						href="#intro"
+						className="flex justify-center items-center"
+					>
 						<FontAwesomeIcon
 							icon={faHouse}
-							size="xl"
+							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-lg hover:text-colorOne">
+						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
 							Home
 						</span>
 					</a>
 				</li>
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
-					<a href="#about">
+					<a
+						href="#about"
+						className="flex justify-center items-center"
+					>
 						<FontAwesomeIcon
 							icon={faUser}
-							size="xl"
+							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-4 text-colorFive text-lg hover:text-colorOne">
+						<span className="ml-4 text-colorFive text-xl hover:text-colorOne">
 							About
 						</span>
 					</a>
 				</li>
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
-					<a href="#portfolio">
+					<a
+						href="#portfolio"
+						className="flex justify-center items-center"
+					>
 						<FontAwesomeIcon
 							icon={faBriefcase}
-							size="xl"
+							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-lg hover:text-colorOne">
+						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
 							Portfolio
 						</span>
 					</a>
 				</li>
 
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
-					<a href="#contact">
+					<a
+						href="#contact"
+						className="flex justify-center items-center"
+					>
 						<FontAwesomeIcon
 							icon={faEnvelope}
-							size="xl"
+							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-lg hover:text-colorOne">
+						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
 							Contact
 						</span>
 					</a>
