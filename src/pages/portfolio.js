@@ -33,7 +33,7 @@ export default function Portfolio() {
 
 	return (
 		<div
-			className="w-screen overflow-hidden flex flex-col gap-10 overflow-x-hidden lg:h-auto py-16 bg-colorThree"
+			className="w-screen overflow-hidden flex flex-col gap-10 overflow-x-hidden lg:h-auto py-12 bg-colorThree"
 			ref={containerRef}
 			id="portfolio"
 		>

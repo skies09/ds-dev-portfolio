@@ -61,7 +61,7 @@ export default function Contact() {
 				onSubmit={handleSubmit}
 			>
 				<Form className="flex flex-col justify-start items-start w-full lg:w-10/12">
-					<p className="text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
 						Name
 					</p>
 					<Field
@@ -70,7 +70,7 @@ export default function Contact() {
 						id="user_name"
 						name="user_name"
 					/>
-					<p className="text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
 						Email
 					</p>
 					<Field
@@ -84,12 +84,12 @@ export default function Contact() {
 						name="user_email"
 						component="div"
 					/>
-					<p className="text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
 						Message
 					</p>
 					<Field
 						as="textarea"
-						className="w-full lg:h-36 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2"
+						className="w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2"
 						id="message"
 						name="message"
 						rows="3"
@@ -107,7 +107,7 @@ export default function Contact() {
 
 	return (
 		<div
-			className="w-screen overflow-hidden h-screen bg-colorThree"
+			className="w-screen overflow-hidden bg-colorThree"
 			ref={containerRef}
 			id="contact"
 		>
@@ -122,7 +122,7 @@ export default function Contact() {
 				Get in touch!
 			</motion.div>
 
-			<div className="pt-2 lg:pt-8 flex flex-col lg:flex-row justify-center items-center w-full lg:w-4/5 mx-auto">
+			<div className="pt-2 lg:pt-0 flex flex-col lg:flex-row justify-center items-center w-full lg:w-4/5 mx-auto">
 				<motion.div
 					className="w-10/12 lg:w-1/2 flex justify-center items-start bg-colorThree h-80 lg:h-96"
 					initial={{ opacity: 0, x: -100 }}
@@ -131,13 +131,13 @@ export default function Contact() {
 				>
 					{!formSubmitted && <ContactForm />}
 					{formSubmitted && (
-						<p className="pt-16 lg:pt-28 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
 							Thanks, I'll get back to you shortly!
 						</p>
 					)}
 				</motion.div>
 				<motion.div
-					className="w-1/2 flex flex-col justify-center items-center h-44 lg:h-96 pt-16 lg:pt-0"
+					className="w-1/2 flex flex-col justify-center items-center h-60 lg:h-[30rem] pt-16 lg:pt-0"
 					initial={{ opacity: 0, x: 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
@@ -149,7 +149,7 @@ export default function Contact() {
 								size="lg"
 								className="text-colorFive"
 							/>
-							<span className="ml-4 text-lg lg:text-2xl text-colorFive tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
 								07950981097
 							</span>
 						</div>
@@ -159,7 +159,7 @@ export default function Contact() {
 								size="lg"
 								className="text-colorFive"
 							/>
-							<span className="ml-4 text-lg lg:text-2xl text-colorFive tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
 								donna.smith09@hotmail.com
 							</span>
 						</div>

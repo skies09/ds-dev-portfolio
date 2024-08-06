@@ -38,7 +38,7 @@ export default function About() {
 			ref={containerRef}
 			id="about"
 		>
-			<div className="lg:my-20 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
+			<div className="lg:my-12 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
 				<motion.div
 					className="w-3/4 lg:w-1/2 flex justify-center items-center h-auto"
 					initial={{ opacity: 0 }}
@@ -68,12 +68,12 @@ export default function About() {
 						</div>
 						{skillsData.map((s) => (
 							<div className="flex flex-col justify-center items-start pb-6">
-								<p className="text-lg text-[#0096c4] font-bold flex justify-center font-sans">
+								<p className="text-md text-[#0096c4] font-bold flex justify-center font-sans">
 									{s.section}
 								</p>
 								<motion.p
 									variants={aboutTextVariants}
-									className="pl-8 pt-2 text-sm lg:text-xl text-[#2cc9ff] font-bold flex justify-center font-monoTwo"
+									className="pl-8 pt-2 text-sm lg:text-lg text-[#2cc9ff] font-bold flex justify-center font-monoTwo"
 								>
 									{s.skills}
 								</motion.p>

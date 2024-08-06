@@ -15,7 +15,7 @@ export default function Intro() {
 			id="intro"
 		>
 			<motion.div
-				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 w-full z-30"
+				className="relative flex flex-col justify-center items-start ml-4 lg:ml-12  pt-56 lg:pt-24 w-full z-30"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.6 }}
@@ -74,7 +74,7 @@ export default function Intro() {
 					</div>
 				</div>
 			</motion.div>
-			<div className="items-end justify-end w-full h-auto hidden lg:flex lg:mt-0 xl:-mt-24 2xl:-mt-56">
+			<div className="items-end justify-end w-full h-auto hidden lg:flex mt-0 lg:-mt-32 2xl:-mt-56">
 				<img
 					className="w-3/4 h-auto -skew-y-6 opacity-25"
 					src="../../assets/Images/codeImage.png"

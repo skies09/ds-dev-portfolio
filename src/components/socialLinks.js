@@ -10,7 +10,7 @@ import {
 
 export default function SocialLinks() {
 	return (
-		<div className="flex flex-row justify-center items-center pt-6">
+		<div className="flex flex-row justify-center items-center pt-6 mb-8">
 			<a
 				id="facebook"
 				href="https://www.facebook.com/profile.php?id=100002920786337"
