@@ -9,38 +9,52 @@ export default function PortfolioCard({ project }) {
 	return (
 		<>
 			<motion.div
-				className="flex flex-col justify-center items-center bg-colorThree px-4 py-2 border border-[#75dbff] rounded-xl w-5/6 md:w-1/2 lg:w-72 shadow-shadow-colorTwo h-full"
+				className="flex flex-col justify-between items-center bg-colorThree px-4 py-3 border border-[#75dbff] rounded-xl w-72 h-96 shadow-shadow-colorTwo"
 				whileHover={{ scale: 1.1 }}
 				onClick={() => setViewProject(true)}
 			>
-				<p className="text-2xl text-[#0cdcff] font-bold flex justify-center text-center font-sans py-2 tracking-widest">
-					{project.title}
-				</p>
-				<img
-					className="w-5/6 lg:w-3/4 h-auto border border-[#75dbff] rounded-xl"
-					src={`../../assets/Images/${project.img}`}
-					alt="Project"
-				/>
-				{!project.link.includes("Coming Soon") && (
-					<a
-						href={project.link}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<p className="text-sm md:text-md text-[#75dbff] font-bold flex justify-center text-center font-monoTwo pt-4">
-							{url}
-						</p>
-					</a>
-				)}
-				{project.link.includes("Coming Soon") && (
-					<p className="text-sm md:text-md text-[#75dbff] font-bold flex justify-center text-center font-monoTwo pt-4">
-						{project.link}
+				{/* Title Section */}
+				<div className="h-12 flex items-center justify-center my-2">
+					<p className="text-2xl text-[#0cdcff] font-bold text-center font-sans tracking-widest overflow-hidden">
+						{project.title}
 					</p>
-				)}
-				<p className="text-sm md:text-sm text-colorFive font-bold flex justify-center text-center font-display tracking-wide py-4">
-					{project.shortDescription}
-				</p>
+				</div>
+
+				{/* Image Section */}
+				<div className="w-full h-1/2 flex items-center justify-center overflow-hidden py-1">
+					<img
+						className="w-full h-full object-cover border border-[#75dbff] rounded-xl"
+						src={`../../assets/Images/${project.img}`}
+						alt="Project"
+					/>
+				</div>
+
+				{/* Link Section */}
+				<div className="h-12 flex items-center justify-center">
+					{!project.link.includes("Coming Soon") ? (
+						<a
+							href={project.link}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-sm md:text-md text-[#75dbff] font-bold text-center font-monoTwo overflow-hidden"
+						>
+							{url}
+						</a>
+					) : (
+						<p className="text-sm md:text-md text-[#75dbff] font-bold text-center font-monoTwo overflow-hidden">
+							{project.link}
+						</p>
+					)}
+				</div>
+
+				{/* Description Section */}
+				<div className="h-12 flex items-center justify-center">
+					<p className="text-sm md:text-sm text-colorFive font-bold text-center font-display tracking-wide overflow-hidden">
+						{project.shortDescription}
+					</p>
+				</div>
 			</motion.div>
+
 			{viewProject && (
 				<PortfolioModal
 					project={project}

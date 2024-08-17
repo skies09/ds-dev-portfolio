@@ -160,7 +160,7 @@ export default function Contact() {
 								className="text-colorFive"
 							/>
 							<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
-								donna.smith09@hotmail.com
+								donna.smith08@icloud.com
 							</span>
 						</div>
 					</div>
