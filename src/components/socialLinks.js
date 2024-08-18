@@ -32,6 +32,13 @@ export default function SocialLinks() {
 			>
 				<FontAwesomeIcon icon={faGithub} size="2x" />
 			</a>
+			<a
+				id="linkedIn"
+				href="https://www.linkedin.com/in/donna-smith-b72339305/"
+				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+			>
+				<FontAwesomeIcon icon={faLinkedin} size="2x" />
+			</a>
 		</div>
 	);
 }
