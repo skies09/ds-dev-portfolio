@@ -1,22 +1,22 @@
 export default function Navbar({ menuOpen, setMenuOpen }) {
 	return (
-		<div className="w-full h-12 bg-colorThree fixed top-0 z-50">
+		<div className="w-full h-16 bg-colorThree fixed top-0 z-50">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center justify-center">
 					<a
 						href="#intro"
-						className="hidden md:flex font-sans text-lg font-semibold text-[#2cc9ff] ml-6 tracking-tight hover:text-colorFour"
+						className="hidden md:flex font-sans text-lg font-semibold text-[#2cc9ff] ml-6 tracking-tight hover:text-colorFour mt-2"
 					>
 						Donna Smith
 					</a>
 					<a
 						href="#intro"
-						className="block md:hidden font-sans text-lg font-semibold text-[#2cc9ff] ml-3 items-center justify-center hover:text-colorFour"
+						className="block md:hidden font-sans text-lg font-semibold text-[#2cc9ff] ml-3 items-center justify-center hover:text-colorFour mt-2"
 					>
 						{"</DS>"}
 					</a>
 				</div>
-				<div className="mr-2 w-8 h-12 flex items-center">
+				<div className="mr-4 mt-2 w-8 h-12 flex items-center">
 					<div
 						className="w-8 h-6 flex flex-col justify-between cursor-pointer"
 						onClick={() => setMenuOpen(!menuOpen)}

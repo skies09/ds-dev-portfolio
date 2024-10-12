@@ -61,7 +61,7 @@ export default function Contact() {
 				onSubmit={handleSubmit}
 			>
 				<Form className="flex flex-col justify-start items-start w-full lg:w-10/12">
-					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo opacity-90">
 						Name
 					</p>
 					<Field
@@ -70,7 +70,7 @@ export default function Contact() {
 						id="user_name"
 						name="user_name"
 					/>
-					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo opacity-90">
 						Email
 					</p>
 					<Field
@@ -80,7 +80,7 @@ export default function Contact() {
 						name="user_email"
 					/>
 					<ErrorMessage
-						className="text-sm text-colorFour font-bold flex justify-center text-center font-monoTwo"
+						className="text-sm text-colorFour font-bold flex justify-center text-center font-monoTwo opacity-90"
 						name="user_email"
 						component="div"
 					/>
