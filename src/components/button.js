@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Button({ text, className, active = true, action }) {
+const Button = ({ text, className, active = true, action })  =>{
 	const handleClick = (page) => {
 		window.location.href = "#" + page;
 	};
@@ -26,3 +26,6 @@ export default function Button({ text, className, active = true, action }) {
 		</>
 	);
 }
+
+
+export default Button;

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faFacebook,
@@ -8,7 +7,7 @@ import {
 	faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function SocialLinks() {
+const SocialLinks = () => {
 	return (
 		<div className="flex flex-row justify-center items-center pt-6 mb-8">
 			<a
@@ -42,3 +41,4 @@ export default function SocialLinks() {
 		</div>
 	);
 }
+export default SocialLinks;

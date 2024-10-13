@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { skillsData } from "../portfolioData";
 
-export default function About() {
+const About = () => {
 	const containerRef = useRef(null);
 	const mainControls = useAnimation();
 
@@ -85,3 +85,5 @@ export default function About() {
 		</div>
 	);
 }
+
+export default About;

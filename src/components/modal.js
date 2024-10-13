@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-export default function PortfolioModal({ project, onClose }) {
+const PortfolioModal = ({ project, onClose })=> {
 	const url = project.link.replace(/^https?:\/\//, "www.");
 	return (
 		<motion.div
@@ -95,3 +95,5 @@ export default function PortfolioModal({ project, onClose }) {
 		</motion.div>
 	);
 }
+
+export default PortfolioModal;

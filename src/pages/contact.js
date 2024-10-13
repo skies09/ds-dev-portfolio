@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import SocialLinks from "../components/socialLinks";
 import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+const Contact = () =>{
 	const containerRef = useRef(null);
 	const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -170,3 +170,5 @@ export default function Contact() {
 		</div>
 	);
 }
+
+export default Contact;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PortfolioModal from "./modal";
 
-export default function PortfolioCard({ project }) {
+const PortfolioCard = ({ project }) => {
 	const [viewProject, setViewProject] = useState(false);
 	const url = project.link.replace(/^https?:\/\//, "www.");
 
@@ -64,3 +64,5 @@ export default function PortfolioCard({ project }) {
 		</>
 	);
 }
+
+export default PortfolioCard;

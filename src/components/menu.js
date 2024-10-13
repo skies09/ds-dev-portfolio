@@ -9,7 +9,7 @@ import {
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Menu({ menuOpen, setMenuOpen }) {
+const Menu=({ menuOpen, setMenuOpen }) =>{
 	const mainControls = useAnimation();
 	useEffect(() => {
 		if (menuOpen) {
@@ -96,3 +96,5 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 		</motion.div>
 	);
 }
+
+export default Menu;

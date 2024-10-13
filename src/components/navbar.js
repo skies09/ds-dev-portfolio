@@ -1,4 +1,4 @@
-export default function Navbar({ menuOpen, setMenuOpen }) {
+const Navbar =({ menuOpen, setMenuOpen }) => {
 	return (
 		<div className="w-full h-16 bg-colorThree fixed top-0 z-50">
 			<div className="flex justify-between items-center">
@@ -46,3 +46,5 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 		</div>
 	);
 }
+
+export default Navbar;

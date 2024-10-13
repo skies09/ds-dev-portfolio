@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
 import Button from "../components/button";
 
-export default function Intro() {
+const Intro = ()=> {
 	const typingString = [
 		"I'm a Javascript developer ",
 		"I'm a Python developer ",
@@ -84,3 +84,4 @@ export default function Intro() {
 		</div>
 	);
 }
+export default Intro;
