@@ -41,14 +41,14 @@ const  Portfolio =() => {
 				variants={gridContainerVariants}
 				initial="hidden"
 				whileInView="show"
-				className="flex flex-wrap justify-evenly p-4 py-12 h-full overflow-hidden"
+				className="flex flex-wrap justify-evenly p-4 py-6 h-full overflow-hidden"
 			>
-				{portfolioData.map((project) => (
+				{portfolioData.map((project, index) => (
 					<motion.div
 						variants={gridSquareVariants}
-						className="justify-center flex items-center p-4 max-h-full max-w-full"
+						className="justify-center flex items-center p-4 w-full h-full"
 					>
-						<PortfolioCard project={project} />
+						<PortfolioCard project={project} index={index} />
 					</motion.div>
 				))}
 			</motion.section>
