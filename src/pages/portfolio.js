@@ -46,7 +46,7 @@ const  Portfolio =() => {
 				{portfolioData.map((project, index) => (
 					<motion.div
 						variants={gridSquareVariants}
-						className="justify-center flex items-center p-4 w-full h-full"
+						className="justify-center flex items-center p-4 w-full lg:w-5/6 h-full"
 					>
 						<PortfolioCard project={project} index={index} />
 					</motion.div>
