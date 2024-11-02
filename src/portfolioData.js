@@ -49,7 +49,7 @@ export const portfolioData = [
 	{
 		id: 3,
 		title: "Zenith Quest",
-		img: "zenithquest.png",
+		img: "zenithQuest.png",
 		shortDescription: "Bullet Journal",
 		longDescription: "Diary, bullet journal and mind mapping",
 		languages: ["Django", "React"],
