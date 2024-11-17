@@ -7,11 +7,12 @@ import * as Yup from "yup";
 import SocialLinks from "../components/socialLinks";
 import emailjs from "@emailjs/browser";
 
-const Contact = () =>{
+const Contact = () => {
 	const containerRef = useRef(null);
 	const [formSubmitted, setFormSubmitted] = useState(false);
 
 	function sendEmail(values) {
+		values.from = "Dev portfolio";
 		emailjs
 			.send(
 				process.env.REACT_APP_EMAIL_SERVICE_KEY,
@@ -169,6 +170,6 @@ const Contact = () =>{
 			</div>
 		</div>
 	);
-}
+};
 
 export default Contact;
