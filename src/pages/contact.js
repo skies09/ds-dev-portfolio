@@ -10,6 +10,7 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
 	const containerRef = useRef(null);
 	const [formSubmitted, setFormSubmitted] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	function sendEmail(values) {
 		values.from = "Dev portfolio";
@@ -24,10 +25,13 @@ const Contact = () => {
 				(result) => {
 					console.log(result.text);
 					setFormSubmitted(true);
+					setLoading(false);
 				},
 				(error) => {
 					console.log(error.text);
+					setLoading(false);
 				}
+				// setLoading(false);
 			);
 	}
 
@@ -47,6 +51,7 @@ const Contact = () => {
 		};
 
 		const handleSubmit = (values, { setSubmitting }) => {
+			setLoading(true);
 			console.log(
 				values.message,
 				"append ds dev portfolio onto the message"
@@ -99,7 +104,7 @@ const Contact = () => {
 						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-[#0b607f] text-colorFive font-semibold border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
-						Send
+						{loading ? "Sending..." : "Send"}
 					</button>
 				</Form>
 			</Formik>
