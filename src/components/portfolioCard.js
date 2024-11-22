@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const PortfolioCard = ({ project, index }) => {
 	const [viewProject, setViewProject] = useState(false);
-	const url = project.link.replace(/^https?:\/\//, "www.");
+	const url = project.linkText.replace(/^https?:\/\//, "www.");
 
 	// Determine the image position based on index (even: left, odd: right)
 	const isOdd = index % 2 !== 0;
@@ -160,7 +160,7 @@ const PortfolioCard = ({ project, index }) => {
 								</a>
 							) : (
 								<p className="text-sm md:text-md text-[#75dbff] font-bold text-center font-monoTwo overflow-hidden">
-									{project.link}
+									{project.linkText}
 								</p>
 							)}
 						</div>
