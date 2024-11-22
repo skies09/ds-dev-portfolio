@@ -31,7 +31,6 @@ const Contact = () => {
 					console.log(error.text);
 					setLoading(false);
 				}
-				// setLoading(false);
 			);
 	}
 
@@ -71,7 +70,7 @@ const Contact = () => {
 						Name
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2"
+						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
 						type="text"
 						id="user_name"
 						name="user_name"
@@ -80,13 +79,13 @@ const Contact = () => {
 						Email
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2"
+						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
 						type="email"
 						id="user_email"
 						name="user_email"
 					/>
 					<ErrorMessage
-						className="text-sm text-colorFour font-bold flex justify-center text-center font-monoTwo opacity-90"
+						className="text-sm text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90 -mt-2"
 						name="user_email"
 						component="div"
 					/>
@@ -95,13 +94,13 @@ const Contact = () => {
 					</p>
 					<Field
 						as="textarea"
-						className="w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2"
+						className="w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2 font-monoTwo"
 						id="message"
 						name="message"
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-[#0b607f] text-colorFive font-semibold border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
+						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-racing text-colorFive font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
 						{loading ? "Sending..." : "Send"}

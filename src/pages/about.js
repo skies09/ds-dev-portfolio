@@ -30,7 +30,7 @@ const About = () => {
 		} else {
 			mainControls.start("hidden");
 		}
-	}, [isInView]);
+	}, [isInView, mainControls]);
 
 	return (
 		<div
@@ -63,12 +63,12 @@ const About = () => {
 					whileInView="show"
 				>
 					<div className="flex flex-col">
-						<div className="text-3xl text-[#2cc9ff] font-bold flex justify-start font-display pt-8 lg:pt-0 pb-4 underline">
+						<div className="text-3xl text-[#2cc9ff] font-bold flex justify-start font-fugaz pt-8 lg:pt-0 pb-4 underline">
 							About:
 						</div>
 						{skillsData.map((s) => (
 							<div className="flex flex-col justify-center items-start pb-6">
-								<p className="text-md text-[#0096c4] font-bold flex justify-center font-sans">
+								<p className="text-md text-[#0096c4] font-bold flex justify-center font-mono">
 									{s.section}
 								</p>
 								<motion.p
@@ -84,6 +84,6 @@ const About = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default About;

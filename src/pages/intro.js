@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
 import Button from "../components/button";
 
-const Intro = ()=> {
+const Intro = () => {
 	const typingString = [
 		"I'm a Javascript developer ",
 		"I'm a Python developer ",
@@ -27,7 +27,7 @@ const Intro = ()=> {
 					transition={{ duration: 1 }}
 				>
 					Hey, I'm{" "}
-					<span className="font-mono text-3xl md:text-6xl m-1 text-[#2cc9ff]">
+					<span className="font-fugaz text-3xl md:text-6xl m-1 text-[#2cc9ff]">
 						Donna Smith
 					</span>
 				</motion.p>
@@ -55,7 +55,7 @@ const Intro = ()=> {
 							<Button
 								text="Portfolio"
 								className={
-									"px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute"
+									"font-racing px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute"
 								}
 								active={true}
 								action={"portfolio"}
@@ -65,7 +65,7 @@ const Intro = ()=> {
 							<Button
 								text="Contact"
 								className={
-									"px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute lg:left-36"
+									"font-racing px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute lg:left-36"
 								}
 								active={true}
 								action={"contact"}
@@ -83,5 +83,5 @@ const Intro = ()=> {
 			</div>
 		</div>
 	);
-}
+};
 export default Intro;

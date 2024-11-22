@@ -104,41 +104,42 @@ const PortfolioCard = ({ project, index }) => {
 						{/* Title Section */}
 						<div className="ml-0 md:ml-3 h-12 flex items-center justify-center md:justify-start my-2">
 							<p className="text-2xl text-[#0cdcff] font-bold text-center font-sans tracking-widest overflow-hidden">
-							{project.title}
+								{project.title}
 							</p>
 						</div>
 
 						{/* Description Section */}
 						<div className="h-12 flex items-center justify-center md:justify-start">
-						<p className="ml-0 md:ml-3 text-sm md:text-sm text-colorFive font-bold flex justify-start text-start font-serif tracking-wide py-2">
-						{project.longDescription}
-					</p>
+							<p className="ml-0 md:ml-3 text-sm md:text-sm text-colorFive font-bold flex justify-start text-start font-display tracking-wide py-2">
+								{project.longDescription}
+							</p>
 						</div>
-						{project.keyFeatures && project.keyFeatures.length > 0 && (
-							<div className="ml-0 md:ml-3 py-2">
-								<p className="text-sm text-[#0cdcff] font-bold flex justify-start font-sans">
-									Key features:
-								</p>
-								{project.keyFeatures.map((k, index) => (
-									<div
-										key={index}
-										className="flex flex-col justify-center items-start pb-2"
-									>
-										<p className="text-sm text-colorFive font-bold flex justify-center font-sans">
-											{k}
-										</p>
-									</div>
-								))}
-							</div>
-						)}
+						{project.keyFeatures &&
+							project.keyFeatures.length > 0 && (
+								<div className="ml-0 md:ml-3 py-2">
+									<p className="text-sm text-colorOne font-bold flex justify-start font-racing">
+										Key features:
+									</p>
+									{project.keyFeatures.map((k, index) => (
+										<div
+											key={index}
+											className="flex flex-col justify-center items-start pb-2"
+										>
+											<p className="text-sm text-colorFive font-bold flex justify-center font-sans">
+												{k}
+											</p>
+										</div>
+									))}
+								</div>
+							)}
 						{project.languages && project.languages.length > 0 && (
 							<div className="ml-0 md:ml-3 py-2 flex flex-row justify-center md:justify-start items-start">
 								{project.languages.map((l, index) => (
 									<div
 										key={index}
-										className="mb-2 px-2 py-1 bg-[#dcdcdc] border-1 border-colorThree rounded-xl tracking-wider font-monoTwo mr-3 drop-shadow-xl"
+										className="mb-2 px-3 py-1  border-2 border-colorOne rounded-xl tracking-wider font-monoTwo mr-3 drop-shadow-xl"
 									>
-										<p className="text-xs text-colorThree font-bold flex justify-center font-sans">
+										<p className="text-xs text-colorOne font-medium flex justify-center font-racing">
 											{l}
 										</p>
 									</div>

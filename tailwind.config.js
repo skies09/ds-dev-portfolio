@@ -16,6 +16,9 @@ module.exports = {
 			mono: ["Roboto", "sans-serif"],
 			display: ["Montserrat", "sans-serif"],
 			monoTwo: ["Roboto Mono", "monospace"],
+			fugaz: ["Fugaz One", "sans-serif"],
+			farsan: ["Farsan", "cursive"],
+			racing: ["Racing Sans One", "sans-serif"],
 		},
 		extend: {
 			transitionDuration: {
@@ -24,10 +27,9 @@ module.exports = {
 			boxShadow: {
 				"shadow-colorOne":
 					"0 0 5px #00A8E8, 0 0 10px #00A8E8, 0 0 20px #00A8E8, 0 0 40px #00A8E8",
-					"shadow-colorTwo":
+				"shadow-colorTwo":
 					"0 0 5px #003459, 0 0 10px #003459, 0 0 20px #003459, 0 0 40px #003459",
 			},
-		
 		},
 	},
 	plugins: [],

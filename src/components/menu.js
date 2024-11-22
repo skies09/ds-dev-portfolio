@@ -9,7 +9,7 @@ import {
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Menu=({ menuOpen, setMenuOpen }) =>{
+const Menu = ({ menuOpen, setMenuOpen }) => {
 	const mainControls = useAnimation();
 	useEffect(() => {
 		if (menuOpen) {
@@ -41,7 +41,7 @@ const Menu=({ menuOpen, setMenuOpen }) =>{
 							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
+						<span className="font-display font-medium ml-3 text-colorFive text-xl hover:text-colorOne">
 							Home
 						</span>
 					</a>
@@ -56,7 +56,7 @@ const Menu=({ menuOpen, setMenuOpen }) =>{
 							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-4 text-colorFive text-xl hover:text-colorOne">
+						<span className="font-display font-medium ml-4 text-colorFive text-xl hover:text-colorOne">
 							About
 						</span>
 					</a>
@@ -71,7 +71,7 @@ const Menu=({ menuOpen, setMenuOpen }) =>{
 							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
+						<span className="font-display font-medium ml-3 text-colorFive text-xl hover:text-colorOne">
 							Portfolio
 						</span>
 					</a>
@@ -87,7 +87,7 @@ const Menu=({ menuOpen, setMenuOpen }) =>{
 							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="ml-3 text-colorFive text-xl hover:text-colorOne">
+						<span className="font-display font-medium ml-3 text-colorFive text-xl hover:text-colorOne">
 							Contact
 						</span>
 					</a>
@@ -95,6 +95,6 @@ const Menu=({ menuOpen, setMenuOpen }) =>{
 			</ul>
 		</motion.div>
 	);
-}
+};
 
 export default Menu;
