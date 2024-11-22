@@ -5,7 +5,7 @@ export const skillsData = [
 	},
 	{
 		section: "Specialities",
-		skills: "React, Redux, Django, Django REST, Tailwind",
+		skills: "React, Redux, Tailwind, Django, Django REST",
 	},
 	{
 		section: "Databases",

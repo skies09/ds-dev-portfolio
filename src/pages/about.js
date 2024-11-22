@@ -62,7 +62,7 @@ const About = () => {
 					initial="hidden"
 					whileInView="show"
 				>
-					<div className="flex flex-col">
+					<div className="flex flex-col mr-6 lg:mr-0">
 						<div className="text-3xl text-[#2cc9ff] font-bold flex justify-start font-fugaz pt-8 lg:pt-0 pb-4 underline">
 							About:
 						</div>
