@@ -51,10 +51,6 @@ const Contact = () => {
 
 		const handleSubmit = (values, { setSubmitting }) => {
 			setLoading(true);
-			console.log(
-				values.message,
-				"append ds dev portfolio onto the message"
-			);
 			sendEmail(values);
 			setSubmitting(false);
 		};

@@ -8,7 +8,7 @@ module.exports = {
 			colorTwo: "#003459",
 			colorThree: "#00171F",
 			colorFour: "#007EA7",
-			colorFive: "#F9F9F9",
+			colorFive: "#F0F8Ff",
 		},
 		fontFamily: {
 			sans: ["Open Sans", "sans-serif"],
