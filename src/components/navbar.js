@@ -8,21 +8,21 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 				<div className="flex items-center justify-center">
 					<a
 						href="#intro"
-						className="hidden md:flex font-fugaz text-lg font-semibold text-[#2cc9ff] ml-6 tracking-tight hover:text-colorFour mt-2"
+						className="hidden md:flex font-fugaz text-lg font-semibold text-colorOne ml-6 tracking-tight hover:text-colorFour mt-2"
 					>
 						Donna Smith
 					</a>
 
 					<a
 						href="#intro"
-						className="block md:hidden font-racing text-lg font-semibold text-[#2cc9ff] ml-3 items-center justify-center hover:text-colorFour mt-2"
+						className="block md:hidden font-racing text-lg font-semibold text-colorOne ml-3 items-center justify-center hover:text-colorFour mt-2"
 					>
 						{"</DS>"}
 					</a>
 					<FontAwesomeIcon
 						icon={faCodeBranch}
 						size="sm"
-						className="flex justify-center items-center ml-2 mt-2 text-colorOne hover:text-colorFive"
+						className="flex justify-center items-center ml-2 mt-2 text-colorOne hover:text-colorFour"
 					/>
 				</div>
 				<div className="mr-4 mt-2 w-8 h-12 flex items-center">
