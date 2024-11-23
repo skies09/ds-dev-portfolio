@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import PortfolioCard from "../components/portfolioCard";
 import { portfolioData } from "../portfolioData";
 
-const  Portfolio =() => {
+const Portfolio = () => {
 	const containerRef = useRef(null);
 
 	const isInView = useInView(containerRef, { once: true });
@@ -54,6 +54,6 @@ const  Portfolio =() => {
 			</motion.section>
 		</div>
 	);
-}
+};
 
 export default Portfolio;
