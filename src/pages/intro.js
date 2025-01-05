@@ -55,7 +55,7 @@ const Intro = () => {
 							<Button
 								text="Portfolio"
 								className={
-									"font-racing px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute"
+									"font-racing px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute"
 								}
 								active={true}
 								action={"portfolio"}
@@ -65,7 +65,7 @@ const Intro = () => {
 							<Button
 								text="Contact"
 								className={
-									"font-racing px-6 py-2 bg-colorOne text-colorThree border border-colorOne rounded-xl tracking-wider font-semibold lg:overflow-hidden lg:absolute lg:left-36"
+									"font-racing px-6 py-2 bg-colorOne text-colorThree border border-colorFour rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-36"
 								}
 								active={true}
 								action={"contact"}
