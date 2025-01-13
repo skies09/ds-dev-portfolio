@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBriefcase,
 	faEnvelope,
+	faGears,
 	faHouse,
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -76,7 +77,21 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-
+				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+					<a
+						href="#skills"
+						className="flex justify-center items-center"
+					>
+						<FontAwesomeIcon
+							icon={faGears}
+							size="lg"
+							className="text-colorFive hover:text-colorOne"
+						/>
+						<span className="font-display font-medium ml-4 text-colorFive text-xl hover:text-colorOne">
+							Skills
+						</span>
+					</a>
+				</li>
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#contact"

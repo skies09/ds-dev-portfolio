@@ -57,6 +57,8 @@ export const portfolioData = [
 		keyFeatures: ["Binary search algorithm"],
 		link: "https://the-neo-project.web.app",
 		linkText: "https://the-neo-project.web.app",
+		github: "https://github.com/skies09/the-neo-project",
+		additionalGithub: "https://github.com/skies09/neoProject",
 	},
 	{
 		id: 2,
@@ -68,6 +70,7 @@ export const portfolioData = [
 		keyFeatures: [],
 		link: "https://donna-dog-photography.web.app",
 		linkText: "https://donna-dog-photography.web.app",
+		github: "https://github.com/skies09/donna-dog-photography",
 	},
 
 	{
@@ -80,6 +83,7 @@ export const portfolioData = [
 		keyFeatures: [],
 		link: "https://happy-trails-457e2.web.app",
 		linkText: "https://happy-trails.web.app",
+		github: "https://github.com/skies09/happy-trails",
 	},
 	{
 		id: 4,
@@ -91,6 +95,7 @@ export const portfolioData = [
 		keyFeatures: [],
 		link: "https://all-roads-transport.web.app",
 		linkText: "https://all-roads-transport.web.app",
+		github: "https://github.com/skies09/all-roads-transport",
 	},
 	{
 		id: 5,
@@ -103,6 +108,7 @@ export const portfolioData = [
 		// link: "www.zenithquest.co.uk",
 		link: "Coming Soon",
 		linkText: "Coming Soon",
+		github: "",
 	},
 	// {
 	// 	id: 6,

@@ -5,9 +5,7 @@ import { portfolioData } from "../portfolioData";
 
 const Portfolio = () => {
 	const containerRef = useRef(null);
-
 	const isInView = useInView(containerRef, { once: true });
-
 	const mainControls = useAnimation();
 
 	useEffect(() => {
@@ -41,12 +39,13 @@ const Portfolio = () => {
 				variants={gridContainerVariants}
 				initial="hidden"
 				whileInView="show"
-				className="flex flex-wrap justify-evenly p-4 py-6 h-full overflow-hidden"
+				className="flex flex-wrap justify-center gap-6 p-4 py-6 w-11/12 mx-auto"
 			>
 				{portfolioData.map((project, index) => (
 					<motion.div
+						key={index}
 						variants={gridSquareVariants}
-						className="justify-center flex items-center p-4 w-full lg:w-5/6 h-full"
+						className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex justify-center items-center"
 					>
 						<PortfolioCard project={project} index={index} />
 					</motion.div>

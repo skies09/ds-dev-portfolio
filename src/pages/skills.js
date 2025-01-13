@@ -37,7 +37,7 @@ const Skills = () => {
 		<div
 			className="w-screen overflow-hidden h-auto bg-colorThree"
 			ref={containerRef}
-			id="Skills"
+			id="skills"
 		>
 			<div className="lg:my-12 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
 				<motion.div
