@@ -1,3 +1,24 @@
+export const skills = [
+	"HTML5",
+	"CSS3",
+	"JavaScript",
+	"React",
+	"Redux",
+	"Tailwind CSS",
+	"TypeScript",
+	"Python",
+	"Django",
+	"Flask",
+	"Node.js",
+	"REST APIs",
+	"SQL",
+	"MongoDB",
+	"PostgreSql",
+	"Git",
+	"Docker",
+	"AWS",
+];
+
 export const skillsData = [
 	{
 		section: "Languages",

@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import Intro from "./pages/intro";
 import About from "./pages/about";
 import Portfolio from "./pages/portfolio";
+import Skills from "./pages/skills";
 import Contact from "./pages/contact";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
 				<Intro />
 				<About />
 				<Portfolio />
+				<Skills />
 				<Contact />
 			</div>
 		</div>
