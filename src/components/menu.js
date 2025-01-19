@@ -95,7 +95,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 				</li>
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
 					<a
-						href="#skills"
+						href="#testimonials"
 						className="flex justify-center items-center"
 					>
 						<FontAwesomeIcon
