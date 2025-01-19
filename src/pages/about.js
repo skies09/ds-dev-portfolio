@@ -63,9 +63,9 @@ const About = () => {
 					whileInView="show"
 				>
 					<div className="flex flex-col mr-6 lg:mr-0">
-						<div className="text-3xl text-[#2cc9ff] font-bold flex justify-start font-fugaz pt-8 lg:pt-0 pb-4 underline">
-							About:
-						</div>
+						<h2 className="text-3xl font-bold text-center mb-6 text-colorFive">
+							About
+						</h2>
 						{skillsData.map((s) => (
 							<div className="flex flex-col justify-center items-start pb-6">
 								<p className="text-md text-[#0096c4] font-bold flex justify-center font-mono">
