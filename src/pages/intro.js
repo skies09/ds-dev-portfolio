@@ -61,11 +61,11 @@ const Intro = () => {
 								action={"portfolio"}
 							/>
 						</div>
-						<div className="mx-4">
+						<div className="">
 							<Button
 								text="Contact"
 								className={
-									"font-racing px-6 py-2 bg-colorOne text-colorThree border border-colorFour rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-36"
+									"mx-4 font-racing px-6 py-2 bg-colorOne text-colorThree border border-colorFour rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-36"
 								}
 								active={true}
 								action={"contact"}

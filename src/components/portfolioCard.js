@@ -42,7 +42,7 @@ const PortfolioCard = ({ project, index }) => {
 					<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-100" />
 					<div className="absolute inset-0 flex mt-2 items-start justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
 						<div className="bg-colorFive backdrop-blur-sm border border-colorThree px-4 py-2 rounded-md m-4 sm:m-0">
-							<h3 className="text-2xl text-colorThree font-bold tracking-widest shadow-lg font-roboto">
+							<h3 className="text-md lg:text-2xl text-colorThree font-bold tracking-widest shadow-lg font-roboto">
 								{project.title}
 							</h3>
 						</div>
