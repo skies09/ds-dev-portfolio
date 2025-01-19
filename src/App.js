@@ -7,6 +7,7 @@ import About from "./pages/about";
 import Portfolio from "./pages/portfolio";
 import Skills from "./pages/skills";
 import Contact from "./pages/contact";
+import Testimonials from "./pages/testimonials";
 
 export default function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -18,8 +19,9 @@ export default function App() {
 			<div className="relative w-full h-screen snap-mandatory snap-y -mt-8">
 				<Intro />
 				<About />
-				<Portfolio />
 				<Skills />
+				<Portfolio />
+				<Testimonials />
 				<Contact />
 			</div>
 		</div>

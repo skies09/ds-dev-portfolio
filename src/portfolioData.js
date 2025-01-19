@@ -121,3 +121,24 @@ export const portfolioData = [
 	// 	link: "Coming Soon",
 	// },
 ];
+
+export const testimonials = [
+	{
+		name: "Michael",
+		role: "Head of business development",
+		quote: "I'm really blown away by what she was able to develop in such a short period of time!",
+		rating: 5,
+	},
+	{
+		name: "Katie",
+		role: "Project manager",
+		quote: "Was able to put her own unique flair into components developed.",
+		rating: 5,
+	},
+	// {
+	// 	name: "Gareth",
+	// 	role: "CEO",
+	// 	quote: "Went above and beyond what I was expecting. Such a pleasure to work with",
+	// 	rating: 5,
+	// },
+];

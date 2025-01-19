@@ -48,7 +48,7 @@ const Skills = () => {
 				>
 					<section id="skills" className="bg-white py-8">
 						<div className="max-w-6xl mx-auto px-4">
-							<h2 className="text-3xl font-bold text-center text-colorFive mb-12">
+							<h2 className="text-3xl font-bold text-center text-colorFive mb-8">
 								Skills & Technologies
 							</h2>
 							<div className="flex flex-wrap justify-center gap-4">

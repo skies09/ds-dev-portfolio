@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faBriefcase,
+	faComments,
 	faEnvelope,
 	faGears,
 	faHouse,
@@ -64,6 +65,21 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 				</li>
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>
 					<a
+						href="#skills"
+						className="flex justify-center items-center"
+					>
+						<FontAwesomeIcon
+							icon={faGears}
+							size="lg"
+							className="text-colorFive hover:text-colorOne"
+						/>
+						<span className="font-display font-medium ml-2 text-colorFive text-xl hover:text-colorOne">
+							Skills
+						</span>
+					</a>
+				</li>
+				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+					<a
 						href="#portfolio"
 						className="flex justify-center items-center"
 					>
@@ -83,12 +99,12 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						className="flex justify-center items-center"
 					>
 						<FontAwesomeIcon
-							icon={faGears}
+							icon={faComments}
 							size="lg"
 							className="text-colorFive hover:text-colorOne"
 						/>
-						<span className="font-display font-medium ml-4 text-colorFive text-xl hover:text-colorOne">
-							Skills
+						<span className="font-display font-medium ml-2 text-colorFive text-xl hover:text-colorOne">
+							Testimonials
 						</span>
 					</a>
 				</li>
