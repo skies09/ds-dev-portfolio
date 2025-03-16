@@ -97,7 +97,7 @@ const Contact = () => {
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-racing text-colorFive font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
+						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-mono text-sm lg:text-lg text-colorFive font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
 						{loading ? "Sending..." : "Send"}

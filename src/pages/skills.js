@@ -48,14 +48,14 @@ const Skills = () => {
 				>
 					<section id="skills" className="bg-white py-8">
 						<div className="max-w-6xl mx-auto px-4">
-							<h2 className="text-3xl font-bold text-center text-colorFive mb-8">
+							<h2 className="text-3xl font-bold text-center text-colorFive mb-8 font-mono">
 								Skills & Technologies
 							</h2>
 							<div className="flex flex-wrap justify-center gap-4">
 								{skills.map((skill, index) => (
 									<motion.span
 										key={index}
-										className="px-4 py-2 bg-colorFive rounded-lg text-gray-700 hover:bg-gray-200 transition duration-200"
+										className="px-4 py-2 bg-colorOne font-serif text-sm lg:text-lg font-semibold rounded-lg text-colorThree hover:bg-colorTwo hover:text-colorFive transition duration-200"
 										variants={skillVariants}
 									>
 										{skill}

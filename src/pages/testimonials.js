@@ -28,7 +28,7 @@ const Testimonials = () => {
 								icon={faQuoteLeft}
 								className="text-colorTwo mb-2 text-2xl"
 							/>
-							<p className="text-colorThree font-sans italic">
+							<p className="text-colorThree font-serif text-lg italic">
 								"{testimonial.quote}"
 							</p>
 							<FontAwesomeIcon
@@ -47,10 +47,10 @@ const Testimonials = () => {
 									)}
 								</div>
 								<div>
-									<h3 className="font-semibold text-colorThree">
+									<h3 className="font-semibold text-colorThree font-display">
 										{testimonial.name}
 									</h3>
-									<p className="text-sm text-colorFour">
+									<p className="text-sm text-colorFour font-serif">
 										{testimonial.role}
 									</p>
 								</div>

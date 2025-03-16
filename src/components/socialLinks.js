@@ -13,32 +13,32 @@ const SocialLinks = () => {
 			<a
 				id="facebook"
 				href="https://www.facebook.com/profile.php?id=100002920786337"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorOne hover:text-colorFive"
 			>
 				<FontAwesomeIcon icon={faFacebook} size="2x" />
 			</a>
 			<a
 				id="instagram"
 				href="https://www.instagram.com/skies009/"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorOne hover:text-colorFive"
 			>
 				<FontAwesomeIcon icon={faInstagram} size="2x" />
 			</a>
 			<a
 				id="github"
 				href="https://github.com/skies09"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorOne hover:text-colorFive"
 			>
 				<FontAwesomeIcon icon={faGithub} size="2x" />
 			</a>
 			<a
 				id="linkedIn"
 				href="https://www.linkedin.com/in/donna-smith-b72339305/"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorOne hover:text-colorFive"
 			>
 				<FontAwesomeIcon icon={faLinkedin} size="2x" />
 			</a>
 		</div>
 	);
-}
+};
 export default SocialLinks;
