@@ -21,19 +21,19 @@ const Intro = () => {
 				transition={{ duration: 0.6 }}
 			>
 				<motion.p
-					className="text-colorFive text-2xl md:text-5xl font-mono"
+					className="text-colorFive text-2xl md:text-4xl font-mono"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1 }}
 				>
 					Hey, I'm{" "}
-					<span className="font-fugaz text-3xl md:text-6xl m-1 text-[#2cc9ff]">
+					<span className="font-display font-bold text-3xl md:text-5xl m-1 text-[#2cc9ff]">
 						Donna Smith
 					</span>
 				</motion.p>
 				<div className="my-4">
 					<ReactTypingEffect
-						className="text-lg md:text-3xl font-monoTwo text-colorFive"
+						className="text-lg md:text-2xl font-monoTwo text-colorFive"
 						text={typingString}
 						speed={60}
 						eraseSpeed={50}

@@ -107,7 +107,7 @@ const PortfolioCard = ({ project, index }) => {
 						{project.keyFeatures &&
 							project.keyFeatures.length > 0 && (
 								<div className="ml-0 md:ml-3 py-2 h-full">
-									<p className="text-sm text-colorOne font-bold flex justify-start font-racing">
+									<p className="text-sm text-colorOne font-bold flex justify-start font-serif">
 										Key features:
 									</p>
 									{project.keyFeatures.map((k, index) => (
@@ -131,7 +131,7 @@ const PortfolioCard = ({ project, index }) => {
 										key={index}
 										className="mb-2 px-3 py-1 border-2 border-colorOne rounded-xl tracking-wider font-monoTwo mr-3 drop-shadow-xl"
 									>
-										<p className="text-xs text-colorOne font-medium flex justify-center font-racing">
+										<p className="text-xs text-colorOne flex justify-center font-serif font-semibold">
 											{l}
 										</p>
 									</div>

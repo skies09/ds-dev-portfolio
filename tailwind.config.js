@@ -16,9 +16,6 @@ module.exports = {
 			mono: ["Roboto", "sans-serif"],
 			display: ["Montserrat", "sans-serif"],
 			monoTwo: ["Roboto Mono", "monospace"],
-			fugaz: ["Fugaz One", "sans-serif"],
-			farsan: ["Farsan", "cursive"],
-			racing: ["Racing Sans One", "sans-serif"],
 		},
 		extend: {
 			transitionDuration: {
