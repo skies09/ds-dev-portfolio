@@ -29,60 +29,57 @@ const PortfolioCard = ({ project, index }) => {
 			>
 				{/* Front of card */}
 				<div
-					className={`relative w-full rounded-xl max-h-[11rem] overflow-hidden group ${
+					className={`relative w-full rounded-xl overflow-hidden group ${
 						viewProject ? "rotate-y-180 hidden" : ""
 					}`}
 					style={{ backfaceVisibility: "hidden" }}
 				>
 					<img
-						className="w-full h-auto object-contain"
+						className="w-full h-56 object-cover"
 						src={`../../assets/Images/${project.img}`}
 						alt={project.title}
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-100" />
-					<div className="absolute inset-0 flex mt-2 items-start justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
-						<div className="bg-colorFive backdrop-blur-sm border border-colorThree px-4 py-2 rounded-md m-4 sm:m-0">
-							<h3 className="text-md lg:text-2xl text-colorThree font-bold tracking-widest shadow-lg font-roboto">
+					<div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
+						<div className="bg-colorFive backdrop-blur-sm border border-t-colorThree w-full py-2 flex items-center px-4">
+							<h3 className="text-md lg:text-xl text-colorThree font-bold tracking-wide font-roboto flex-2">
 								{project.title}
 							</h3>
-						</div>
-					</div>
 
-					{/* Links Section */}
-					<div className="absolute bottom-4 right-4 flex gap-4">
-						{project.github && (
-							<a
-								id="github"
-								href={project.github}
-								className="bg-colorThree hover:bg-gray-700 text-white py-1 px-2 lg:px-4 lg:py-2 rounded-lg transition-colors flex items-center gap-2"
-							>
-								<FontAwesomeIcon
-									className="text-colorOne text-lg"
-									icon={faGithub}
-								/>
-							</a>
-						)}
-						{!project.link.includes("Coming Soon") && (
-							<a
-								href={project.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="bg-colorThree hover:bg-blue-500 text-white py-1 px-2 lg:px-4 lg:py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"
-							>
-								<FontAwesomeIcon
-									className="text-colorOne text-lg"
-									icon={faArrowUpRightFromSquare}
-								/>
-								<span className="text-colorOne font-">
-									Demo
-								</span>
-							</a>
-						)}
+							{/* Links Section  */}
+							<div className="flex-1 flex justify-end gap-4">
+								{project.github && (
+									<a
+										id="github"
+										href={project.github}
+										className="py-1 px-2 lg:px-4 lg:py-2 rounded-lg transition-colors flex items-center gap-2"
+									>
+										<FontAwesomeIcon
+											className="text-colorFour text-xl hover:text-colorThree"
+											icon={faGithub}
+										/>
+									</a>
+								)}
+								{!project.link.includes("Coming Soon") && (
+									<a
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="py-1 px-2 lg:px-4 lg:py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"
+									>
+										<FontAwesomeIcon
+											className="text-colorFour text-xl hover:text-colorThree"
+											icon={faArrowUpRightFromSquare}
+										/>
+									</a>
+								)}
+							</div>
+						</div>
 					</div>
 				</div>
 				{/* Back of card */}
 				<div
-					className={`flex-col w-full h-full text-center flex items-center justify-center backface-hidden min-h-[20rem] ${
+					className={`flex-col w-full h-56 text-center flex items-center justify-center backface-hidden ${
 						viewProject ? "" : "hidden"
 					}`}
 					style={{
