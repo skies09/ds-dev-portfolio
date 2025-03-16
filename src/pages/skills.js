@@ -39,7 +39,7 @@ const Skills = () => {
 			ref={containerRef}
 			id="skills"
 		>
-			<div className="lg:my-12 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
+			<div className="lg:mb-12 lg:mt-2 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
 				<motion.div
 					className="w-11/12 lg:w-3/4 lg:mt-0 flex justify-center items-center h-auto"
 					variants={containerVariants}

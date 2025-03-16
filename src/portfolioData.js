@@ -59,6 +59,7 @@ export const portfolioData = [
 		linkText: "https://the-neo-project.web.app",
 		github: "https://github.com/skies09/the-neo-project",
 		additionalGithub: "https://github.com/skies09/neoProject",
+		category: "app",
 	},
 	{
 		id: 2,
@@ -71,8 +72,8 @@ export const portfolioData = [
 		link: "https://donna-dog-photography.web.app",
 		linkText: "https://donna-dog-photography.web.app",
 		github: "https://github.com/skies09/donna-dog-photography",
+		category: "landing",
 	},
-
 	{
 		id: 3,
 		title: "Happy Trails",
@@ -84,6 +85,7 @@ export const portfolioData = [
 		link: "https://happy-trails-457e2.web.app",
 		linkText: "https://happy-trails.web.app",
 		github: "https://github.com/skies09/happy-trails",
+		category: "landing",
 	},
 	{
 		id: 4,
@@ -96,6 +98,7 @@ export const portfolioData = [
 		link: "https://all-roads-transport.web.app",
 		linkText: "https://all-roads-transport.web.app",
 		github: "https://github.com/skies09/all-roads-transport",
+		category: "landing",
 	},
 	{
 		id: 5,
@@ -109,6 +112,7 @@ export const portfolioData = [
 		link: "Coming Soon",
 		linkText: "Coming Soon",
 		github: "",
+		category: "app",
 	},
 	// {
 	// 	id: 6,
