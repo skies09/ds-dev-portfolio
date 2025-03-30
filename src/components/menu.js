@@ -30,7 +30,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 			variants={variants}
 			initial="closed"
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="w-1/2 md:w-1/5 h-screen bg-colorTwo fixed top-0 -right-4 flex flex-col items-center justify-center z-40"
+			className="w-1/2 md:w-1/5 h-screen bg-colorTwo fixed top-0 -right-4 flex flex-col items-center justify-center z-40 border-l border-dotted border-colorFive"
 		>
 			<ul className="flex items-start justify-center flex-col">
 				<li className="mt-3" onClick={() => setMenuOpen(false)}>

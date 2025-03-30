@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
 	return (
-		<div className="w-full h-16 bg-colorThree fixed top-0 z-50">
+		<div className="w-full h-16 bg-colorThree border-b border-dotted border-colorFive fixed top-0 z-50">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center justify-center">
 					<a
