@@ -4,12 +4,12 @@ import PortfolioCard from "../components/portfolioCard";
 import { portfolioData } from "../portfolioData";
 
 const Portfolio = () => {
-	const [activeTab, setActiveTab] = useState("landing");
+	const [activeTab, setActiveTab] = useState("website");
 	const containerRef = useRef(null);
 	const isInView = useInView(containerRef, { once: true });
 	const mainControls = useAnimation();
 
-	const tabs = ["landing", "app"];
+	const tabs = ["website", "app"];
 
 	useEffect(() => {
 		if (isInView) {
@@ -48,7 +48,7 @@ const Portfolio = () => {
 						}`}
 						onClick={() => setActiveTab(tab)}
 					>
-						{tab === "landing" ? "Landing Pages" : "App Projects"}
+						{tab === "website" ? "Websites" : "App Projects"}
 					</button>
 				))}
 			</div>
