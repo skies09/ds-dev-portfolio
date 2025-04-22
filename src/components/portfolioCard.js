@@ -11,9 +11,9 @@ const PortfolioCard = ({ project, index }) => {
 	return (
 		<>
 			<motion.div
-				className={`flex justify-between items-center bg-colorThree ${
+				className={`flex justify-between items-center ${
 					viewProject ? "px-4 py-3" : ""
-				} border border-[#75dbff] rounded-xl w-full h-68 shadow-shadow-colorTwo mt-6`}
+				} rounded-2xl w-full h-68 shadow-shadow-colorTwo mt-6`}
 				whileHover={{ scale: 1.05 }}
 				onClick={() => {
 					if (viewProject) {
@@ -29,7 +29,7 @@ const PortfolioCard = ({ project, index }) => {
 			>
 				{/* Front of card */}
 				<div
-					className={`relative w-full rounded-xl overflow-hidden group ${
+					className={`relative w-full rounded-2xl overflow-hidden group ${
 						viewProject ? "rotate-y-180 hidden" : ""
 					}`}
 					style={{ backfaceVisibility: "hidden" }}
@@ -41,7 +41,7 @@ const PortfolioCard = ({ project, index }) => {
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-100" />
 					<div className="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
-						<div className="bg-colorFive backdrop-blur-sm border border-t-colorThree w-full py-2 flex items-center px-4">
+						<div className="bg-colorFive backdrop-blur-sm w-full py-2 flex items-center px-4">
 							<h3 className="text-md lg:text-xl text-colorThree font-bold tracking-wide font-roboto flex-2">
 								{project.title}
 							</h3>
