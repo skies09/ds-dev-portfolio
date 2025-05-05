@@ -103,27 +103,17 @@ export const portfolioData = [
 	{
 		id: 5,
 		title: "BuJo",
-		img: "zenithQuest.png",
+		img: "bujo.png",
 		shortDescription: "Bullet Journal",
 		longDescription: "Diary, bullet journal and mind mapping",
-		languages: ["Django", "React"],
+		languages: ["Django", "React", "Typescript"],
 		keyFeatures: [],
-		// link: "www.bujo.co.uk",
-		link: "Coming Soon",
-		linkText: "Coming Soon",
-		github: "",
+		link: "https://bu-jo-4ca96.web.app/",
+		linkText: "https://bu-jo.web.app/",
+		github: "https://github.com/skies09/bu-jo",
+		additionalGithub: "https://github.com/skies09/Bujo",
 		category: "app",
 	},
-	// {
-	// 	id: 6,
-	// 	title: "Pik N Crisp",
-	// 	img: "",
-	// 	shortDescription: "",
-	// 	longDescription: "",
-	// 	languages: ["Django", "React"],
-	// 	keyFeatures: [],
-	// 	link: "Coming Soon",
-	// },
 ];
 
 export const testimonials = [
