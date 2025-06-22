@@ -1,0 +1,29 @@
+.shiny-text {
+  color: #6796cca4; 
+  background: linear-gradient(
+    120deg,
+    #00A8E8 0%,      /* colorOne */
+    #007EA7 30%,     /* colorFour */
+    #F0F8FF 50%,     /* colorFive for the shimmer flash */
+    #007EA7 70%,     /* colorFour */
+    #00A8E8 100%     /* colorOne */
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}

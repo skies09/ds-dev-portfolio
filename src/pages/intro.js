@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
 import Button from "../components/button";
+import ShinyText from "../components/ShinyText/shinyText";
 
 const Intro = () => {
 	const typingString = [
@@ -27,9 +28,12 @@ const Intro = () => {
 					transition={{ duration: 1 }}
 				>
 					Hey, I'm{" "}
-					<span className="font-display font-bold text-3xl md:text-5xl m-1 text-[#2cc9ff]">
-						Donna Smith
-					</span>
+					<ShinyText
+						text="Donna Smith"
+						disabled={false}
+						speed={3}
+						className="font-display font-bold text-3xl md:text-5xl m-1 text-[#2cc9ff]"
+					/>
 				</motion.p>
 				<div className="my-4">
 					<ReactTypingEffect
