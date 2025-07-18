@@ -21,8 +21,14 @@ code {
 }
 
 
-.gradient-background {
-  background: linear-gradient(245deg,#00171f,#007ea7,#003459);
+.gradient-background-footer {
+  background: linear-gradient(90deg,#00171f,#007ea7,#003459);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.gradient-background-skills {
+  background: linear-gradient(245deg,#007ea7,#003459);
   background-size: 180% 180%;
   animation: gradient-animation 8s ease infinite;
 }

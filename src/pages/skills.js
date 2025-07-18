@@ -55,7 +55,7 @@ const Skills = () => {
 								{skills.map((skill, index) => (
 									<motion.span
 										key={index}
-										className="px-4 py-2 bg-colorTwo font-serif text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background"
+										className="px-4 py-2 bg-colorTwo font-serif text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills"
 										variants={skillVariants}
 									>
 										{skill}

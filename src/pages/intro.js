@@ -69,7 +69,7 @@ const Intro = () => {
 							<Button
 								text="Contact"
 								className={
-									"mx-4 font-mono px-6 py-2 bg-colorOne text-colorThree border border-colorFour rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-36"
+									"mx-4 font-mono px-6 py-2 bg-colorOne text-colorThree border border-colorThree rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-36"
 								}
 								active={true}
 								action={"contact"}
