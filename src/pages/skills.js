@@ -28,8 +28,6 @@ const Skills = () => {
 	useEffect(() => {
 		if (isInView) {
 			mainControls.start("show");
-		} else {
-			mainControls.start("hidden");
 		}
 	}, [isInView, mainControls]);
 

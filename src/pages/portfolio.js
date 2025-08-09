@@ -62,6 +62,7 @@ const Portfolio = () => {
 					variants={gridContainerVariants}
 					initial="hidden"
 					whileInView="show"
+					viewport={{ once: true }}
 					className="flex flex-wrap justify-center gap-6 p-4 py-6 w-11/12 mx-auto"
 				>
 					{portfolioData

@@ -22,6 +22,7 @@ const Testimonials = () => {
 							initial={{ opacity: 0, y: 50 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 1.5, delay: index * 0.2 }}
+							viewport={{ once: true }}
 							className="bg-colorFive rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300"
 						>
 							<FontAwesomeIcon

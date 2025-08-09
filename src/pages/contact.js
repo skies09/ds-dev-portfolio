@@ -118,6 +118,7 @@ const Contact = () => {
 					initial={{ opacity: 0, y: -100 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
+					viewport={{ once: true }}
 					className="pt-16 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
 				>
 					Got a cool project idea?
@@ -130,6 +131,7 @@ const Contact = () => {
 						className="w-10/12 lg:w-1/2 flex justify-center items-start bg-colorThree h-80 lg:h-96"
 						initial={{ opacity: 0, x: -100 }}
 						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
 						transition={{
 							duration: 2,
 							ease: "easeOut",
@@ -147,6 +149,7 @@ const Contact = () => {
 						className="w-1/2 flex flex-col justify-center items-center h-60 lg:h-[30rem] pt-16 lg:pt-0"
 						initial={{ opacity: 0, x: 100 }}
 						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
 						transition={{
 							duration: 2,
 							ease: "easeOut",

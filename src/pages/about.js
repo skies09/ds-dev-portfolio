@@ -27,8 +27,6 @@ const About = () => {
 	useEffect(() => {
 		if (isInView) {
 			mainControls.start("show");
-		} else {
-			mainControls.start("hidden");
 		}
 	}, [isInView, mainControls]);
 
@@ -43,6 +41,7 @@ const About = () => {
 					className="w-3/4 lg:w-1/2 flex justify-center items-center h-auto"
 					initial={{ opacity: 0 }}
 					animate={mainControls}
+					viewport={{ once: true }}
 					variants={{
 						hidden: { opacity: 0 },
 						show: { opacity: 1 },
@@ -61,6 +60,7 @@ const About = () => {
 					variants={containerVariants}
 					initial="hidden"
 					whileInView="show"
+					viewport={{ once: true }}
 				>
 					<div className="flex flex-col mr-6 lg:mr-0">
 						{skillsData.map((s) => (
@@ -70,6 +70,7 @@ const About = () => {
 								</p>
 								<motion.p
 									variants={aboutTextVariants}
+									viewport={{ once: true }}
 									className="pl-8 pt-2 text-sm lg:text-lg text-[#2cc9ff] font-bold flex justify-center font-monoTwo"
 								>
 									{s.skills}
