@@ -26,6 +26,10 @@ module.exports = {
 					"0 0 5px #00A8E8, 0 0 10px #00A8E8, 0 0 20px #00A8E8, 0 0 40px #00A8E8",
 				"shadow-colorTwo":
 					"0 0 5px #003459, 0 0 10px #003459, 0 0 20px #003459, 0 0 40px #003459",
+				"neo-outset":
+					"8px 8px 16px rgba(0, 23, 31, 0.8), -8px -8px 16px rgba(0, 82, 135, 0.3)",
+				"neo-inset":
+					"inset 8px 8px 16px rgba(0, 23, 31, 0.8), inset -8px -8px 16px rgba(0, 82, 135, 0.3)",
 			},
 		},
 	},

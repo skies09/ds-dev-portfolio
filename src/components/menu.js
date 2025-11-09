@@ -30,13 +30,13 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 			variants={variants}
 			initial="closed"
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="w-1/2 md:w-1/5 h-screen bg-colorTwo fixed top-0 -right-4 flex flex-col items-center justify-center z-40 border-l border-dotted border-colorFive"
+			className="w-1/2 md:w-1/5 h-screen bg-colorTwo/40 backdrop-blur-sm fixed top-0 -right-4 flex flex-col items-center justify-center z-40 shadow-neo-outset"
 		>
-			<ul className="flex items-start justify-center flex-col">
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+			<ul className="flex items-start justify-center flex-col px-4">
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#intro"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faHouse}
@@ -48,10 +48,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#about"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faUser}
@@ -63,10 +63,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#skills"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faGears}
@@ -78,10 +78,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#portfolio"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faBriefcase}
@@ -93,10 +93,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#testimonials"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faComments}
@@ -108,10 +108,10 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						</span>
 					</a>
 				</li>
-				<li className="mt-3" onClick={() => setMenuOpen(false)}>
+				<li className="mt-3 w-full" onClick={() => setMenuOpen(false)}>
 					<a
 						href="#contact"
-						className="flex justify-center items-center"
+						className="flex justify-center items-center p-3 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 					>
 						<FontAwesomeIcon
 							icon={faEnvelope}
