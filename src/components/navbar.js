@@ -39,7 +39,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 						></span>
 						<span
 							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out ${
-								menuOpen ? "opacity-0" : ""
+								menuOpen ? "opacity-0 scale-y-0 h-0" : "opacity-100 scale-y-100 h-1"
 							}`}
 						></span>
 						<span
