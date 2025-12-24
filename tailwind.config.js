@@ -9,6 +9,7 @@ module.exports = {
 			colorThree: "#00171F",
 			colorFour: "#007EA7",
 			colorFive: "#F0F8Ff",
+			colorSix: "#8A00C4",
 		},
 		fontFamily: {
 			sans: ["Open Sans", "sans-serif"],

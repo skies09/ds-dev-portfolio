@@ -57,7 +57,7 @@ const Intro = () => {
 					<div className="my-6 flex flex-row">
 						<div className="mx-1">
 							<Button
-								text="See my work"
+								text="Portfolio"
 								className={
 									"font-mono px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute"
 								}
@@ -67,9 +67,9 @@ const Intro = () => {
 						</div>
 						<div className="">
 							<Button
-								text="Let's chat"
+								text="Contact"
 								className={
-									"mx-4 font-mono px-6 py-2 bg-colorOne text-colorThree border border-colorThree rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-44"
+									"mx-4 font-mono px-6 py-2 bg-colorOne text-colorThree border border-colorThree rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-32"
 								}
 								active={true}
 								action={"contact"}

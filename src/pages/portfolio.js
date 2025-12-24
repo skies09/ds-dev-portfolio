@@ -63,21 +63,16 @@ const Portfolio = () => {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true }}
-					className="flex flex-wrap justify-center gap-6 p-4 py-6 w-11/12 mx-auto"
+					className="flex flex-col gap-6 p-4 py-6 w-11/12 max-w-7xl mx-auto"
 				>
 					{portfolioData
 						.filter((project) => project.category === activeTab)
-						.map((project) => (
-							<motion.div
+						.map((project, idx) => (
+							<PortfolioCard
 								key={project.id}
-								variants={gridSquareVariants}
-								className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex justify-center items-center"
-							>
-								<PortfolioCard
-									project={project}
-									index={project.id}
-								/>
-							</motion.div>
+								project={project}
+								index={idx}
+							/>
 						))}
 				</motion.section>
 			</div>
