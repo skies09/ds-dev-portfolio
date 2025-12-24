@@ -9,53 +9,96 @@ const PortfolioCard = ({ project, index }) => {
 	const isImageLeft = index % 2 === 0;
 
 	return (
-		<motion.div
+		<div
 			className={`w-full flex flex-col lg:flex-row gap-0 items-start lg:items-center mb-8 lg:mb-16 relative ${
 				isImageLeft ? "" : "lg:flex-row-reverse"
 			}`}
-			initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{ duration: 0.6, delay: index * 0.1 }}
 		>
 			{/* Mobile: Title at top */}
-			<div className="w-full mb-4 lg:hidden text-center">
+			<motion.div
+				className="w-full mb-4 lg:hidden text-center"
+				initial={{ opacity: 0, y: -20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.5 }}
+			>
 				<h3 className="text-3xl font-bold text-colorFive font-display tracking-tight">
 					{project.title}
 				</h3>
-			</div>
+			</motion.div>
 
 			{/* Image Section */}
-			<div
+			<motion.div
 				className={`w-full lg:w-3/5 flex justify-center relative z-20 lg:z-0 ${
 					isImageLeft ? "lg:pr-0" : "lg:pl-0"
 				}`}
+				initial={{ 
+					opacity: 0, 
+					x: isImageLeft ? -100 : 100,
+					scale: 0.9
+				}}
+				whileInView={{ 
+					opacity: 1, 
+					x: 0,
+					scale: 1
+				}}
+				viewport={{ once: true }}
+				transition={{ 
+					duration: 0.8, 
+					delay: index * 0.15,
+					ease: [0.25, 0.46, 0.45, 0.94]
+				}}
 			>
-				<div className="relative w-[85%] lg:w-full h-64 lg:h-96 rounded-lg overflow-hidden group -mb-6 lg:mb-0">
+				<div 
+					className="relative w-[85%] lg:w-full h-64 lg:h-96 rounded-lg overflow-hidden group -mb-6 lg:mb-0"
+					style={{
+						boxShadow: "0 0 30px rgba(0, 168, 232, 0.4), 0 0 60px rgba(0, 168, 232, 0.2), 0 0 100px rgba(0, 168, 232, 0.1)",
+					}}
+				>
 					<img
 						className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 						src={`../../assets/Images/${project.img}`}
 						alt={`Screenshot of ${project.title} project`}
 					/>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* Content Section */}
-			<div
+			<motion.div
 				className={`w-full lg:w-2/5 flex flex-col justify-center lg:mt-0 ${
 					isImageLeft ? "lg:pl-8" : "lg:pr-8 lg:items-end"
 				}`}
+				initial={{ 
+					opacity: 0, 
+					x: isImageLeft ? 100 : -100,
+					scale: 0.9
+				}}
+				whileInView={{ 
+					opacity: 1, 
+					x: 0,
+					scale: 1
+				}}
+				viewport={{ once: true }}
+				transition={{ 
+					duration: 0.8, 
+					delay: index * 0.15 + 0.2,
+					ease: [0.25, 0.46, 0.45, 0.94]
+				}}
 			>
 				{/* Desktop: Title */}
-				<div
+				<motion.div
 					className={`hidden lg:block mb-4 ${
 						isImageLeft ? "text-left" : "text-right"
 					}`}
+					initial={{ opacity: 0, y: -20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6, delay: index * 0.15 + 0.3 }}
 				>
 					<h3 className="text-5xl font-bold text-colorFive font-display tracking-tight">
 						{project.title}
 					</h3>
-				</div>
+				</motion.div>
 
 				{/* Text Box */}
 				<div
@@ -118,10 +161,14 @@ const PortfolioCard = ({ project, index }) => {
 				</div>
 
 				{/* Links */}
-				<div
+				<motion.div
 					className={`flex items-center gap-3 lg:gap-4 mt-3 lg:mt-4 justify-center ${
 						isImageLeft ? "lg:justify-start" : "lg:justify-end"
 					}`}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6, delay: index * 0.15 + 0.4 }}
 				>
 					{project.github && (
 						<a
@@ -153,9 +200,9 @@ const PortfolioCard = ({ project, index }) => {
 							/>
 						</a>
 					)}
-				</div>
-			</div>
-		</motion.div>
+				</motion.div>
+			</motion.div>
+		</div>
 	);
 };
 
