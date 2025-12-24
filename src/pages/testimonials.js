@@ -10,7 +10,7 @@ import { testimonials } from "../portfolioData";
 
 const Testimonials = () => {
 	return (
-		<section id="testimonials" className="py-16 bg-colorThree">
+		<section id="testimonials" className="py-8 lg:py-12 bg-colorThree">
 			<div className="container max-w-7xl mx-auto px-4">
 				<h2 className="text-3xl font-bold text-center mb-6 text-colorFive">
 					Testimonials

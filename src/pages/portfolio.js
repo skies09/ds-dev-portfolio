@@ -63,7 +63,7 @@ const Portfolio = () => {
 					initial="hidden"
 					whileInView="show"
 					viewport={{ once: true }}
-					className="flex flex-col gap-6 p-4 py-6 w-11/12 max-w-7xl mx-auto"
+					className="flex flex-col gap-6 p-4 py-6 mt-6 lg:mt-12 w-11/12 max-w-7xl mx-auto"
 				>
 					{portfolioData
 						.filter((project) => project.category === activeTab)

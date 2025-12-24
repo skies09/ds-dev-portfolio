@@ -10,7 +10,7 @@ const PortfolioCard = ({ project, index }) => {
 
 	return (
 		<motion.div
-			className={`w-full flex flex-col lg:flex-row gap-6 lg:gap-0 items-start lg:items-center mb-12 lg:mb-16 relative ${
+			className={`w-full flex flex-col lg:flex-row gap-0 items-start lg:items-center mb-8 lg:mb-16 relative ${
 				isImageLeft ? "" : "lg:flex-row-reverse"
 			}`}
 			initial={{ opacity: 0, y: 30 }}
@@ -18,9 +18,20 @@ const PortfolioCard = ({ project, index }) => {
 			viewport={{ once: true }}
 			transition={{ duration: 0.6, delay: index * 0.1 }}
 		>
+			{/* Mobile: Title at top */}
+			<div className="w-full mb-4 lg:hidden text-center">
+				<h3 className="text-3xl font-bold text-colorFive font-display tracking-tight">
+					{project.title}
+				</h3>
+			</div>
+
 			{/* Image Section */}
-			<div className={`w-full lg:w-3/5 ${isImageLeft ? "lg:pr-0" : "lg:pl-0"}`}>
-				<div className="relative w-full h-80 lg:h-96 rounded-lg overflow-hidden group">
+			<div
+				className={`w-full lg:w-3/5 flex justify-center relative z-20 lg:z-0 ${
+					isImageLeft ? "lg:pr-0" : "lg:pl-0"
+				}`}
+			>
+				<div className="relative w-[85%] lg:w-full h-64 lg:h-96 rounded-lg overflow-hidden group -mb-6 lg:mb-0">
 					<img
 						className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 						src={`../../assets/Images/${project.img}`}
@@ -29,48 +40,52 @@ const PortfolioCard = ({ project, index }) => {
 				</div>
 			</div>
 
-			{/* Content Section - Title, Text Box, and Links */}
+			{/* Content Section */}
 			<div
-				className={`w-full lg:w-2/5 flex flex-col justify-center mt-6 lg:mt-0 ${
-					isImageLeft
-						? "lg:pl-8"
-						: "lg:pr-8 lg:items-end"
+				className={`w-full lg:w-2/5 flex flex-col justify-center lg:mt-0 ${
+					isImageLeft ? "lg:pl-8" : "lg:pr-8 lg:items-end"
 				}`}
 			>
-				{/* Title - Outside, above everything */}
-				<div className={`mb-4 text-left ${isImageLeft ? "lg:text-left" : "lg:text-right"}`}>
-					<p className="text-xs text-colorOne font-semibold mb-2 font-display uppercase tracking-wider">
-						Featured Project
-					</p>
-					<h3 className="text-2xl lg:text-3xl font-bold text-colorFive font-display tracking-tight">
+				{/* Desktop: Title */}
+				<div
+					className={`hidden lg:block mb-4 ${
+						isImageLeft ? "text-left" : "text-right"
+					}`}
+				>
+					<h3 className="text-5xl font-bold text-colorFive font-display tracking-tight">
 						{project.title}
 					</h3>
 				</div>
 
-				{/* Text Box - Overlapping image on desktop */}
+				{/* Text Box */}
 				<div
-					className={`rounded-lg p-6 lg:p-8 shadow-2xl text-left relative z-10 ${
-						isImageLeft ? "lg:text-left lg:-ml-12" : "lg:text-right lg:-mr-12"
+					className={`rounded-lg pt-10 pb-5 px-5 lg:pt-8 lg:pb-8 lg:px-8 shadow-2xl text-left relative z-10 lg:z-20 ${
+						isImageLeft
+							? "lg:text-left lg:-ml-12"
+							: "lg:text-right lg:-mr-12"
 					}`}
 					style={{
 						backgroundColor: "rgba(0, 52, 89, 0.95)",
-						boxShadow: "0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(240, 248, 255, 0.1)",
+						boxShadow:
+							"0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(240, 248, 255, 0.1)",
 					}}
 				>
 					{/* Description */}
-					<p className="text-sm lg:text-base text-colorFive/90 font-sans leading-relaxed mb-5">
+					<p className="text-sm lg:text-base text-colorFive/90 font-sans leading-relaxed mb-4 lg:mb-5">
 						{project.longDescription}
 					</p>
 
 					{/* Key Features */}
 					{project.keyFeatures && project.keyFeatures.length > 0 && (
-						<div className="mb-5">
-							<ul className="space-y-2">
+						<div className="mb-4 lg:mb-5">
+							<ul className="space-y-1.5 lg:space-y-2">
 								{project.keyFeatures.map((feature, idx) => (
 									<li
 										key={idx}
 										className={`text-sm text-colorFive/80 font-sans flex items-start ${
-											isImageLeft ? "" : "lg:flex-row-reverse lg:justify-end"
+											isImageLeft
+												? ""
+												: "lg:flex-row-reverse lg:justify-end"
 										}`}
 									>
 										<span className="text-colorOne mr-2 mt-1">
@@ -86,14 +101,14 @@ const PortfolioCard = ({ project, index }) => {
 					{/* Tech Stack */}
 					{project.languages && project.languages.length > 0 && (
 						<div
-							className={`flex flex-wrap gap-2 justify-start ${
-								isImageLeft ? "lg:justify-start" : "lg:justify-end"
+							className={`flex flex-wrap gap-1.5 lg:gap-2 ${
+								isImageLeft ? "justify-start" : "lg:justify-end"
 							}`}
 						>
 							{project.languages.map((lang, idx) => (
 								<span
 									key={idx}
-									className="px-3 py-1 text-xs font-medium text-colorOne bg-colorOne/10 border border-colorOne/30 rounded-full font-monoTwo"
+									className="px-2.5 py-1 text-xs font-medium text-colorOne bg-colorOne/10 border border-colorOne/30 rounded-full font-monoTwo"
 								>
 									{lang}
 								</span>
@@ -102,9 +117,9 @@ const PortfolioCard = ({ project, index }) => {
 					)}
 				</div>
 
-				{/* Links - Outside, below text box */}
+				{/* Links */}
 				<div
-					className={`flex items-center gap-4 mt-4 justify-start ${
+					className={`flex items-center gap-3 lg:gap-4 mt-3 lg:mt-4 justify-center ${
 						isImageLeft ? "lg:justify-start" : "lg:justify-end"
 					}`}
 				>
@@ -118,7 +133,7 @@ const PortfolioCard = ({ project, index }) => {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<FontAwesomeIcon
-								className="text-xl lg:text-2xl"
+								className="text-lg lg:text-2xl"
 								icon={faGithub}
 							/>
 						</a>
@@ -133,7 +148,7 @@ const PortfolioCard = ({ project, index }) => {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<FontAwesomeIcon
-								className="text-xl lg:text-2xl"
+								className="text-lg lg:text-2xl"
 								icon={faArrowUpRightFromSquare}
 							/>
 						</a>
