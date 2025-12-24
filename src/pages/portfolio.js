@@ -36,16 +36,42 @@ const Portfolio = () => {
 				{tabs.map((tab) => (
 					<motion.button
 						key={tab}
-						whileHover={{ scale: 1.05, y: -2 }}
-						whileTap={{ scale: 0.98 }}
-						className={`px-8 py-3.5 rounded-xl font-display font-semibold tracking-wider transition-all duration-300 ${
+						whileHover={{ scale: activeTab === tab ? 1.03 : 1.03, y: -2 }}
+						whileTap={{ scale: 0.97 }}
+						transition={{ duration: 0.2, ease: "easeOut" }}
+						className={`px-12 py-4 rounded-xl font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden ${
 							activeTab === tab
-								? "bg-colorTwo text-colorFive border-2 border-colorOne/60 shadow-neo-outset"
-								: "bg-colorTwo text-colorFive border-2 border-colorOne/30 hover:border-colorOne/60 hover:bg-colorTwo/90 shadow-neo-outset hover:shadow-neo-inset"
+								? "bg-gradient-to-br from-colorTwo via-colorFour to-colorTwo text-colorFive"
+								: "bg-colorTwo/80 backdrop-blur-sm text-colorFive border-2 border-colorFour/40 hover:border-colorFour/70"
 						}`}
 						onClick={() => setActiveTab(tab)}
+						style={
+							activeTab === tab
+								? {
+										boxShadow: "0 4px 15px rgba(0, 52, 89, 0.4), 0 2px 8px rgba(0, 122, 167, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.1)",
+									}
+								: {
+										boxShadow: "0 4px 15px rgba(0, 23, 31, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.05)",
+									}
+						}
+						onMouseEnter={(e) => {
+							if (activeTab === tab) {
+								e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 52, 89, 0.5), 0 4px 12px rgba(0, 122, 167, 0.4), inset 0 1px 0 rgba(240, 248, 255, 0.15)";
+							} else {
+								e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 23, 31, 0.4), inset 0 1px 0 rgba(240, 248, 255, 0.1)";
+								e.currentTarget.style.backgroundColor = "rgba(0, 52, 89, 0.9)";
+							}
+						}}
+						onMouseLeave={(e) => {
+							if (activeTab === tab) {
+								e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 52, 89, 0.4), 0 2px 8px rgba(0, 122, 167, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.1)";
+							} else {
+								e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 23, 31, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.05)";
+								e.currentTarget.style.backgroundColor = "rgba(0, 52, 89, 0.8)";
+							}
+						}}
 					>
-						{tab === "website" ? "Websites" : "App Projects"}
+						<span className="relative z-10">{tab === "website" ? "Websites" : "App Projects"}</span>
 					</motion.button>
 				))}
 			</div>

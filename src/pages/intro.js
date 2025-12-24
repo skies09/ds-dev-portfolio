@@ -56,15 +56,15 @@ const Intro = () => {
 
 					<div className="my-6 flex flex-row flex-wrap gap-4">
 						<Button
-							text="Portfolio"
-							active={true}
-							action={"portfolio"}
-							variant="neon"
-						/>
-						<Button
 							text="Contact"
 							active={true}
 							action={"contact"}
+							variant="primary"
+						/>
+						<Button
+							text="Portfolio"
+							active={true}
+							action={"portfolio"}
 							variant="secondary"
 						/>
 					</div>
