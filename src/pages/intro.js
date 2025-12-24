@@ -45,7 +45,7 @@ const Intro = () => {
 					/>
 				</div>
 
-				<div className="w-4/5 md:w-3/5 lg:w-1/3">
+				<div className="w-4/5 md:w-3/5 lg:w-auto">
 					<motion.div
 						className="mb-6 border-t border-dotted border-colorFive"
 						initial={{ width: 0 }}
@@ -54,27 +54,19 @@ const Intro = () => {
 						style={{ height: "1px" }}
 					></motion.div>
 
-					<div className="my-6 flex flex-row">
-						<div className="mx-1">
-							<Button
-								text="Portfolio"
-								className={
-									"font-mono px-6 py-2 text-[#2cc9ff] border border-[#2cc9ff] rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute"
-								}
-								active={true}
-								action={"portfolio"}
-							/>
-						</div>
-						<div className="">
-							<Button
-								text="Contact"
-								className={
-									"mx-4 font-mono px-6 py-2 bg-colorOne text-colorThree border border-colorThree rounded-xl tracking-widest font-semibold lg:overflow-hidden lg:absolute lg:left-32"
-								}
-								active={true}
-								action={"contact"}
-							/>
-						</div>
+					<div className="my-6 flex flex-row flex-wrap gap-4">
+						<Button
+							text="Portfolio"
+							active={true}
+							action={"portfolio"}
+							variant="neon"
+						/>
+						<Button
+							text="Contact"
+							active={true}
+							action={"contact"}
+							variant="secondary"
+						/>
 					</div>
 				</div>
 			</motion.div>

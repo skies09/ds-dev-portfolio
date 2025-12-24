@@ -27,29 +27,26 @@ const Portfolio = () => {
 		},
 	};
 
-	const gridSquareVariants = {
-		hidden: { opacity: 0 },
-		show: { opacity: 1 },
-	};
-
 	return (
 		<div className="bg-colorThree pt-4">
 			<h2 className="text-3xl font-bold text-center text-colorFive -mb-4">
 				Portfolio
 			</h2>
-			<div className="flex justify-center gap-2 lg:gap-6 mt-12">
+			<div className="flex justify-center gap-4 lg:gap-5 mt-12">
 				{tabs.map((tab) => (
-					<button
+					<motion.button
 						key={tab}
-						className={`px-6 py-2 rounded-lg font-medium transition-all ${
+						whileHover={{ scale: 1.05, y: -2 }}
+						whileTap={{ scale: 0.98 }}
+						className={`px-8 py-3.5 rounded-xl font-display font-semibold tracking-wider transition-all duration-300 ${
 							activeTab === tab
-								? "bg-colorOne text-colorFive"
-								: "text-colorFive hover:underline"
+								? "bg-colorTwo text-colorFive border-2 border-colorOne/60 shadow-neo-outset"
+								: "bg-colorTwo text-colorFive border-2 border-colorOne/30 hover:border-colorOne/60 hover:bg-colorTwo/90 shadow-neo-outset hover:shadow-neo-inset"
 						}`}
 						onClick={() => setActiveTab(tab)}
 					>
 						{tab === "website" ? "Websites" : "App Projects"}
-					</button>
+					</motion.button>
 				))}
 			</div>
 			<div

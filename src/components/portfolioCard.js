@@ -231,11 +231,8 @@ const PortfolioCard = ({ project, index }) => {
 										delay: index * 0.12 + 0.7 + idx * 0.05,
 										ease: "easeOut",
 									}}
-									whileHover={{ scale: 1.08, y: -3 }}
-									className="px-4 py-2 text-xs font-bold text-colorFive bg-colorOne border-2 border-colorOne rounded-lg font-monoTwo hover:bg-colorFour hover:border-colorFour hover:text-colorFive shadow-lg hover:shadow-xl hover:shadow-colorOne/50 transition-all duration-300 cursor-default"
-									style={{
-										boxShadow: "0 4px 12px rgba(0, 168, 232, 0.3), 0 2px 4px rgba(0, 168, 232, 0.2)",
-									}}
+									whileHover={{ scale: 1.05, y: -2 }}
+									className="px-3 py-1.5 text-xs font-semibold text-colorOne/90 bg-colorTwo/50 border border-colorOne/30 rounded-lg font-monoTwo hover:bg-colorTwo/70 hover:border-colorOne/60 hover:text-colorOne shadow-neo-outset hover:shadow-neo-inset transition-all duration-300 cursor-default"
 								>
 									{lang}
 								</motion.span>

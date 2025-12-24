@@ -96,12 +96,15 @@ const Contact = () => {
 						name="message"
 						rows="3"
 					/>
-					<button
-						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-mono text-sm lg:text-lg text-colorFive font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour gradient-background-skills"
+					<motion.button
+						whileHover={{ scale: 1.05, y: -2 }}
+						whileTap={{ scale: 0.98 }}
+						className="relative flex justify-center items-center mx-auto px-8 py-3.5 mt-6 bg-colorTwo text-colorFive border-2 border-colorOne/40 hover:border-colorOne/70 hover:bg-colorTwo/90 font-display font-semibold tracking-wider rounded-xl shadow-neo-outset hover:shadow-neo-inset transition-all duration-300"
 						type="submit"
+						disabled={loading}
 					>
 						{loading ? "Sending..." : "Send"}
-					</button>
+					</motion.button>
 				</Form>
 			</Formik>
 		);
@@ -110,7 +113,7 @@ const Contact = () => {
 	return (
 		<div>
 			<div
-				className="w-screen overflow-hidden bg-colorThree pb-6 lg:pb-0"
+				className="w-screen overflow-hidden bg-colorThree pb-6"
 				ref={containerRef}
 				id="contact"
 			>
