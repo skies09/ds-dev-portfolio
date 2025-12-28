@@ -40,7 +40,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 			variants={variants}
 			initial="closed"
 			transition={{ duration: 1, ease: "easeInOut" }}
-			className="w-1/2 md:w-1/5 h-screen bg-colorTwo/40 backdrop-blur-sm fixed top-0 -right-0 flex flex-col items-center justify-center z-40 shadow-neo-outset"
+			className="w-3/5 md:w-1/5 h-screen bg-colorTwo/40 backdrop-blur-sm fixed top-0 -right-0 flex flex-col items-center justify-center z-40 shadow-neo-outset"
 		>
 			<div className="flex flex-col items-center justify-center gap-6">
 				<div
@@ -52,7 +52,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 							key={index}
 							href={item.href}
 							onClick={() => setMenuOpen(false)}
-							className="group flex items-center gap-1 lg:gap-4 p-3 rounded-xl transition-all duration-300 hover:shadow-neo-inset"
+							className="group flex items-center gap-1 lg:gap-4 p-4 px-6 rounded-full transition-all duration-300 hover:shadow-neo-inset"
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>

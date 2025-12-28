@@ -261,7 +261,7 @@ const PortfolioCard = ({ project, index }) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`View ${project.title} on GitHub`}
-							className="relative p-3 rounded-xl bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
+							className="relative p-4 rounded-full bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.98 }}
 							onClick={(e) => e.stopPropagation()}
@@ -278,7 +278,7 @@ const PortfolioCard = ({ project, index }) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`Visit ${project.title} website`}
-							className="relative p-3 rounded-xl bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
+							className="relative p-4 rounded-full bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.98 }}
 							onClick={(e) => e.stopPropagation()}

@@ -46,7 +46,7 @@ const SocialLinks = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label={`Visit ${link.label}`}
-					className="relative p-3 rounded-xl bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset"
+					className="relative p-4 rounded-full bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset"
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.98 }}
 					initial={{ opacity: 0, scale: 0.8 }}
