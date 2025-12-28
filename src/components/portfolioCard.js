@@ -61,7 +61,7 @@ const PortfolioCard = ({ project, index }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label={`Visit ${project.title} website`}
-						className="relative w-[85%] lg:w-full h-64 lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0 block"
+						className="relative w-[85%] lg:w-full h-auto md:w-auto lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0 block"
 						style={{
 							boxShadow: `
 								0 0 40px rgba(0, 168, 232, 0.5),
@@ -72,15 +72,26 @@ const PortfolioCard = ({ project, index }) => {
 						}}
 					>
 						<div className="absolute inset-0 bg-gradient-to-br from-colorOne/20 via-transparent to-colorOne/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+						{/* Mobile Image */}
+						{project.imgMobile && (
+							<img
+								className="w-full h-full object-contain transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 lg:hidden"
+								src={`../../assets/Images/${project.imgMobile}`}
+								alt={`Screenshot of ${project.title} project`}
+							/>
+						)}
+						{/* Desktop Image */}
 						<img
-							className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+							className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 ${
+								project.imgMobile ? "hidden lg:block" : ""
+							}`}
 							src={`../../assets/Images/${project.img}`}
 							alt={`Screenshot of ${project.title} project`}
 						/>
 					</a>
 				) : (
 					<div
-						className="relative w-[85%] lg:w-full h-64 lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0"
+						className="relative w-[85%] lg:w-full h-[500px] lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0"
 						style={{
 							boxShadow: `
 								0 0 40px rgba(0, 168, 232, 0.5),
@@ -91,8 +102,19 @@ const PortfolioCard = ({ project, index }) => {
 						}}
 					>
 						<div className="absolute inset-0 bg-gradient-to-br from-colorOne/20 via-transparent to-colorOne/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+						{/* Mobile Image */}
+						{project.imgMobile && (
+							<img
+								className="w-full h-full object-contain transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 lg:hidden"
+								src={`../../assets/Images/${project.imgMobile}`}
+								alt={`Screenshot of ${project.title} project`}
+							/>
+						)}
+						{/* Desktop Image */}
 						<img
-							className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+							className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 ${
+								project.imgMobile ? "hidden lg:block" : ""
+							}`}
 							src={`../../assets/Images/${project.img}`}
 							alt={`Screenshot of ${project.title} project`}
 						/>

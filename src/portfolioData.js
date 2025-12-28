@@ -51,6 +51,7 @@ export const portfolioData = [
 		id: 1,
 		title: "The Neo Project",
 		img: "neoProject.png",
+		imgMobile: "neoProjectMobile.png",
 		shortDescription: "Smart Search for Rescue Dogs",
 		longDescription:
 			"A fast, intuitive search platform that helps users discover rescue dogs using an optimized binary search system. Designed to make rehoming easier through clean UI, real-time filtering, and a friendly browsing experience.",
@@ -64,22 +65,9 @@ export const portfolioData = [
 	},
 	{
 		id: 2,
-		title: "Donna's Dog Photography",
-		img: "donnaDogPhotography.png",
-		shortDescription: "Professional Dog Photography Portfolio",
-		longDescription:
-			"A vibrant and elegant portfolio site for a dog photography business, showcasing high-quality images with smooth navigation and a minimalist, modern layout tailored to highlight the photographer’s work.",
-		languages: ["React", "Tailwind"],
-		keyFeatures: [],
-		link: "https://donna-dog-photography.web.app",
-		linkText: "https://donna-dog-photography.web.app",
-		github: "https://github.com/skies09/donna-dog-photography",
-		category: "website",
-	},
-	{
-		id: 3,
 		title: "Wiggles & Walks",
 		img: "wigglesAndWalks.png",
+		imgMobile: "wigglesAndWalksMobile.png",
 		shortDescription: "Dog Walking Service Website",
 		longDescription:
 			"A warm and approachable website for a local dog walking business, built to showcase services, pricing, and brand personality while keeping user experience simple, friendly, and mobile-first.",
@@ -91,9 +79,25 @@ export const portfolioData = [
 		category: "website",
 	},
 	{
+		id: 3,
+		title: "Donna's Dog Photography",
+		img: "donnaDogPhotography.png",
+		imgMobile: "donnaDogPhotographyMobile.png",
+		shortDescription: "Professional Dog Photography Portfolio",
+		longDescription:
+			"A vibrant and elegant portfolio site for a dog photography business, showcasing high-quality images with smooth navigation and a minimalist, modern layout tailored to highlight the photographer’s work.",
+		languages: ["React", "Tailwind"],
+		keyFeatures: [],
+		link: "https://donna-dog-photography.web.app",
+		linkText: "https://donna-dog-photography.web.app",
+		github: "https://github.com/skies09/donna-dog-photography",
+		category: "website",
+	},
+	{
 		id: 4,
 		title: "Apex Logistics",
 		img: "apexLogistics.png",
+		imgMobile: "apexLogisticsMobile.png",
 		shortDescription: "Professional Driver Hire Platform",
 		longDescription:
 			"A clean, corporate-ready platform for a driver-hire logistics company. Built for clarity and trust, it highlights services, contact channels, and flexible driver-hire options through a polished React + TypeScript interface.",
@@ -108,6 +112,7 @@ export const portfolioData = [
 		id: 5,
 		title: "BuJo",
 		img: "bujo.png",
+		imgMobile: "bujoMobile.png",
 		shortDescription: "All-in-One Digital Bullet Journal",
 		longDescription:
 			"A productivity app combining bullet journaling, day planning, and mind-mapping into a single streamlined interface. Designed for users who want structure and creativity in one place, with an intuitive workflow powered by Django and React. Mobile app coming soon.",
