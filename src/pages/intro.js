@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
+import { faBriefcase, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/button";
 import ShinyText from "../components/ShinyText/shinyText";
 
@@ -54,18 +55,22 @@ const Intro = () => {
 						style={{ height: "1px" }}
 					></motion.div>
 
-					<div className="my-6 flex flex-row flex-wrap gap-4">
+					<div className="my-6 flex flex-row gap-2 lg:gap-4">
 						<Button
 							text="Contact"
 							active={true}
 							action={"contact"}
 							variant="primary"
+							icon={faEnvelope}
+							className="text-sm lg:text-base py-1.5 lg:py-4 pl-6 lg:pl-4 pr-12"
 						/>
 						<Button
 							text="Portfolio"
 							active={true}
 							action={"portfolio"}
 							variant="secondary"
+							icon={faBriefcase}
+							className="text-sm lg:text-base py-1.5 lg:py-4 pl-6 lg:pl-4 pr-12"
 						/>
 					</div>
 				</div>

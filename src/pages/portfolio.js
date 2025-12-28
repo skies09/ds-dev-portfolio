@@ -39,7 +39,7 @@ const Portfolio = () => {
 						whileHover={{ scale: activeTab === tab ? 1.03 : 1.03, y: -2 }}
 						whileTap={{ scale: 0.97 }}
 						transition={{ duration: 0.2, ease: "easeOut" }}
-						className={`px-12 py-4 rounded-xl font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden ${
+						className={`px-12 py-4 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden ${
 							activeTab === tab
 								? "bg-gradient-to-br from-colorTwo via-colorFour to-colorTwo text-colorFive"
 								: "bg-colorTwo/80 backdrop-blur-sm text-colorFive border-2 border-colorFour/40 hover:border-colorFour/70"
