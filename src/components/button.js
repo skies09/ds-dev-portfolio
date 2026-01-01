@@ -26,7 +26,7 @@ const Button = ({
 				whileHover={{ scale: 1.03, y: -2 }}
 				whileTap={{ scale: 0.97 }}
 				transition={{ duration: 0.2, ease: "easeOut" }}
-				className={`${baseClasses} bg-colorTwo/80 backdrop-blur-sm text-colorFive border-2 border-colorFour/40 hover:border-colorFour/70 ${className}`}
+				className={`${baseClasses} bg-colorTwo/80 backdrop-blur-sm text-colorFive  hover:border-colorFour/70 ${className}`}
 				onClick={() => handleClick(action)}
 				style={{
 					boxShadow:
@@ -64,7 +64,7 @@ const Button = ({
 				whileHover={{ scale: 1.03, y: -2 }}
 				whileTap={{ scale: 0.97 }}
 				transition={{ duration: 0.2, ease: "easeOut" }}
-				className={`${baseClasses} bg-gradient-to-br from-colorTwo via-colorFour to-colorTwo text-colorFive ${className}`}
+				className={`${baseClasses}  text-colorFive border-2 border-colorFour/40 ${className}`}
 				onClick={() => handleClick(action)}
 				style={{
 					boxShadow:

@@ -103,7 +103,7 @@ const Contact = () => {
 					<motion.button
 						whileHover={{ scale: 1.05, y: -2 }}
 						whileTap={{ scale: 0.98 }}
-						className="relative flex justify-center items-center mx-auto pl-3 pr-8 lg:pl-5 py-2 lg:py-3.5 mt-6 bg-colorTwo text-colorFive border-2 border-colorOne/40 hover:border-colorOne/70 hover:bg-colorTwo/90 font-display font-semibold tracking-wider rounded-full shadow-neo-outset hover:shadow-neo-inset transition-all duration-300 overflow-visible min-w-[140px] lg:min-w-[180px]"
+						className="relative flex justify-center items-center mx-auto pl-3 pr-8 lg:pl-5 py-2 lg:py-3.5 mt-6  text-colorFive border-2 border-colorOne/40 hover:border-colorOne/70 hover:bg-colorTwo/90 font-display font-semibold tracking-wider rounded-full shadow-neo-outset hover:shadow-neo-inset transition-all duration-300 overflow-visible min-w-[140px] lg:min-w-[180px]"
 						type="submit"
 						disabled={loading}
 					>

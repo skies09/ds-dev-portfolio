@@ -116,7 +116,7 @@ export const portfolioData = [
 		shortDescription: "All-in-One Digital Bullet Journal",
 		longDescription:
 			"A productivity app combining bullet journaling, day planning, and mind-mapping into a single streamlined interface. Designed for users who want structure and creativity in one place, with an intuitive workflow powered by Django and React. Mobile app coming soon.",
-		languages: ["Django", "React", "Typescript"],
+		languages: ["Django", "React", "Tailwind", "Typescript"],
 		keyFeatures: [],
 		link: "https://bu-jo-4ca96.web.app/",
 		linkText: "https://bu-jo.web.app/",

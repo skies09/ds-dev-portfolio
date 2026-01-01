@@ -70,7 +70,7 @@ const Intro = () => {
 							text="Contact"
 							active={true}
 							action={"contact"}
-							variant="primary"
+							variant="secondary"
 							icon={faEnvelope}
 							className="text-sm lg:text-base py-1.5 lg:py-4 pl-6 lg:pl-4 pr-12"
 						/>
