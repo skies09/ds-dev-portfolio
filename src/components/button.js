@@ -14,7 +14,7 @@ const Button = ({
 	};
 
 	const baseClasses =
-		"relative py-2 lg:py-4 pl-6 lg:pl-8 pr-12 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-visible flex items-center justify-center w-auto lg:min-w-[180px]";
+		"relative py-2 lg:py-4 pl-6 lg:pl-8 pr-10 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-visible flex items-center justify-center w-auto lg:min-w-[180px]";
 
 	if (!active) {
 		return null;
@@ -47,7 +47,7 @@ const Button = ({
 			>
 				<span className="relative z-10">{text}</span>
 				{icon && (
-					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem] rounded-full bg-colorFour/60 flex items-center justify-center border-2 border-colorOne/40">
+					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem] flex items-center justify-center">
 						<FontAwesomeIcon
 							icon={icon}
 							className="relative z-10 text-sm lg:text-lg"
@@ -81,7 +81,7 @@ const Button = ({
 			>
 				<span className="relative z-10">{text}</span>
 				{icon && (
-					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem] rounded-full bg-colorTwo/60 flex items-center justify-center border-2 border-colorOne/40">
+					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem]  flex items-center justify-center">
 						<FontAwesomeIcon
 							icon={icon}
 							className="relative z-10 text-sm lg:text-lg"

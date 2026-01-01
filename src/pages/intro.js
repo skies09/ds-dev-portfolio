@@ -36,6 +36,16 @@ const Intro = () => {
 						className="font-display font-bold text-3xl md:text-5xl m-1 text-[#2cc9ff]"
 					/>
 				</motion.p>
+				<motion.p
+					className="text-colorFive text-sm md:text-lg font-mono my-2 lg:my-4"
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.3 }}
+				>
+					Need a website or app? Something broken?{" "}
+					<span className="hidden lg:inline">Vibe-coded chaos?</span>
+					<br></br>If it's supposed to work and doesn't—call me.
+				</motion.p>
 				<div className="my-4">
 					<ReactTypingEffect
 						className="text-lg md:text-2xl font-monoTwo text-colorFive"
@@ -75,7 +85,7 @@ const Intro = () => {
 					</div>
 				</div>
 			</motion.div>
-			<div className="items-end justify-end w-full h-auto hidden lg:flex mt-0 lg:-mt-40 2xl:-mt-56 ml-16">
+			<div className="items-end justify-end w-full h-auto hidden lg:flex mt-0 lg:-mt-40 2xl:-mt-80 ml-16">
 				<img
 					className="w-3/4 h-auto -skew-y-6 opacity-25"
 					src="../../assets/Images/codeImage.png"
