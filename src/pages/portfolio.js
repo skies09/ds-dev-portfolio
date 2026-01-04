@@ -42,10 +42,10 @@ const Portfolio = () => {
 						}}
 						whileTap={{ scale: 0.97 }}
 						transition={{ duration: 0.2, ease: "easeOut" }}
-						className={`w-11/12 lg:w-auto px-6 lg:px-12 py-4 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden flex items-center justify-center border-2 border-colorFour/40 ${
+						className={`w-11/12 lg:w-auto px-6 lg:px-12 py-4 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden flex items-center justify-center border-2 ${
 							activeTab === tab
-								? "bg-colorTwo/80 backdrop-blur-sm text-colorFive  hover:border-colorFour/70"
-								: "text-colorFive"
+								? "bg-colorTwo/80 backdrop-blur-sm text-colorFive border-colorFour/70 hover:border-colorFour/90"
+								: "text-colorFive border-colorFour/40 bg-transparent hover:border-colorFour/60"
 						}`}
 						onClick={() => setActiveTab(tab)}
 						style={
@@ -55,8 +55,7 @@ const Portfolio = () => {
 											"0 4px 15px rgba(0, 52, 89, 0.4), 0 2px 8px rgba(0, 122, 167, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.1)",
 								  }
 								: {
-										boxShadow:
-											"0 4px 15px rgba(0, 23, 31, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.05)",
+										boxShadow: "none",
 								  }
 						}
 						onMouseEnter={(e) => {
@@ -65,7 +64,7 @@ const Portfolio = () => {
 									"0 6px 20px rgba(0, 52, 89, 0.5), 0 4px 12px rgba(0, 122, 167, 0.4), inset 0 1px 0 rgba(240, 248, 255, 0.15)";
 							} else {
 								e.currentTarget.style.boxShadow =
-									"0 6px 20px rgba(0, 23, 31, 0.4), inset 0 1px 0 rgba(240, 248, 255, 0.1)";
+									"0 2px 8px rgba(0, 122, 167, 0.2)";
 							}
 						}}
 						onMouseLeave={(e) => {
@@ -73,8 +72,7 @@ const Portfolio = () => {
 								e.currentTarget.style.boxShadow =
 									"0 4px 15px rgba(0, 52, 89, 0.4), 0 2px 8px rgba(0, 122, 167, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.1)";
 							} else {
-								e.currentTarget.style.boxShadow =
-									"0 4px 15px rgba(0, 23, 31, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.05)";
+								e.currentTarget.style.boxShadow = "none";
 							}
 						}}
 					>

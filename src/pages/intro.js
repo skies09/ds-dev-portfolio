@@ -44,7 +44,7 @@ const Intro = () => {
 				>
 					Need a website or app? Something broken?{" "}
 					<span className="hidden lg:inline">Vibe-coded chaos?</span>
-					<br></br>If it's supposed to work and doesn't—call me.
+					<br></br>If it's supposed to work and doesn't—contact me.
 				</motion.p>
 				<div className="my-4">
 					<ReactTypingEffect

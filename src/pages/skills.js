@@ -45,20 +45,29 @@ const Skills = () => {
 					animate={mainControls}
 				>
 					<section id="skills" className="bg-white py-8">
-						<div className="max-w-6xl mx-auto px-4">
+						<div className="max-w-6xl mx-auto lg:px-4">
 							<h2 className="text-3xl font-bold text-center text-colorFive mb-8 font-mono">
 								Skills & Technologies
 							</h2>
 							<div className="flex flex-wrap justify-center gap-4">
-								{skills.map((skill, index) => (
-									<motion.span
-										key={index}
-										className="px-4 py-2 bg-colorTwo font-serif text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills"
-										variants={skillVariants}
-									>
-										{skill}
-									</motion.span>
-								))}
+								{Object.entries(skills).map(
+									([skillName, iconName], index) => {
+										return (
+											<motion.span
+												key={index}
+												className="px-4 py-2 bg-colorTwo font-serif text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills flex flex-row items-center gap-2"
+												variants={skillVariants}
+											>
+												<img
+													src={`https://skillicons.dev/icons?i=${iconName}&theme=dark`}
+													alt={`${skillName} Icon`}
+													className="w-4 h-4 lg:w-6 lg:h-6"
+												/>
+												{skillName}
+											</motion.span>
+										);
+									}
+								)}
 							</div>
 						</div>
 					</section>
