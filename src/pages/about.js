@@ -50,7 +50,7 @@ const About = () => {
 				>
 					<img
 						className="shadow-shadow-colorOne w-4/6 mt-16 lg:mt-0 h-auto border-colorOne rounded-full"
-						src={`../../assets/Images/profilePic.jpg`}
+						src={`../../assets/Images/profilePic.png`}
 						alt="Project"
 					/>
 				</motion.div>
