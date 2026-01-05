@@ -6,6 +6,7 @@ import Intro from "./pages/intro";
 import About from "./pages/about";
 import Portfolio from "./pages/portfolio";
 import Skills from "./pages/skills";
+import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Testimonials from "./pages/testimonials";
 
@@ -20,6 +21,7 @@ export default function App() {
 				<Intro />
 				<About />
 				<Skills />
+				<Services />
 				<Portfolio />
 				<Testimonials />
 				<Contact />

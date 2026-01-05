@@ -8,6 +8,7 @@ import {
 	faEnvelope,
 	faGears,
 	faHouse,
+	faScrewdriverWrench,
 	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,6 +30,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 		{ icon: faHouse, text: "Home", href: "#intro" },
 		{ icon: faUser, text: "About", href: "#about" },
 		{ icon: faGears, text: "Skills", href: "#skills" },
+		{ icon: faScrewdriverWrench, text: "Services", href: "#services" },
 		{ icon: faBriefcase, text: "Portfolio", href: "#portfolio" },
 		{ icon: faComments, text: "Testimonials", href: "#testimonials" },
 		{ icon: faEnvelope, text: "Contact", href: "#contact" },
