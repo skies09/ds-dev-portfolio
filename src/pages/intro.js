@@ -85,10 +85,10 @@ const Intro = () => {
 					</div>
 				</div>
 			</motion.div>
-			<div className="items-end justify-end w-full h-auto hidden lg:flex mt-0 lg:-mt-40 2xl:-mt-80 ml-16">
+			<div className="items-end justify-end w-full h-auto hidden lg:flex mt-0 lg:-mt-72 2xl:-mt-[25rem] ml-24">
 				<img
-					className="w-3/4 h-auto -skew-y-6 opacity-25"
-					src="../../assets/Images/codeImage.png"
+					className="w-[70%] h-auto -skew-y-6 opacity-25"
+					src="../../assets/Images/codeImage1.png"
 					alt="Project"
 				/>
 			</div>
