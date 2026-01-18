@@ -43,11 +43,11 @@ export const skillsData = [
 	},
 	{
 		section: "Deployment",
-		skills: "AWS, Azure, Git",
+		skills: "AWS, Azure, Git, Firebase",
 	},
 	{
 		section: "Design",
-		skills: "Figma, Adobe Photoshop",
+		skills: "Figma, Adobe Photoshop, Canva",
 	},
 	{
 		section: "Interests",
