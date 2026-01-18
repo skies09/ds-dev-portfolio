@@ -36,6 +36,23 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 		{ icon: faEnvelope, text: "Contact", href: "#contact" },
 	];
 
+	const handleMenuClick = (e, href) => {
+		e.preventDefault();
+		const page = href.replace("#", "");
+		const element = document.getElementById(page);
+		if (element) {
+			const navbarHeight = 64; // Height of fixed navbar (h-16 = 64px)
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+		}
+		setMenuOpen(false);
+	};
+
 	return (
 		<motion.div
 			animate={menuOpen ? "open" : "closed"}
@@ -53,7 +70,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 						<a
 							key={index}
 							href={item.href}
-							onClick={() => setMenuOpen(false)}
+							onClick={(e) => handleMenuClick(e, item.href)}
 							className="group flex items-center gap-1 lg:gap-4 p-4 px-6 rounded-full transition-all duration-300 hover:shadow-neo-inset"
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}

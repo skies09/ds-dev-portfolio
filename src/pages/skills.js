@@ -44,7 +44,7 @@ const Skills = () => {
 					initial="hidden"
 					animate={mainControls}
 				>
-					<section id="skills" className="bg-white py-8">
+					<section className="bg-white py-8">
 						<div className="max-w-6xl mx-auto lg:px-4">
 							<h2 className="text-3xl font-bold text-center text-colorFive mb-8 font-mono">
 								Skills & Technologies

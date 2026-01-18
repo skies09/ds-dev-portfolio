@@ -28,7 +28,7 @@ const Portfolio = () => {
 	};
 
 	return (
-		<div className="bg-colorThree pt-4">
+		<div className="bg-colorThree pt-4" id="portfolio">
 			<h2 className="text-3xl font-bold text-center text-colorFive -mb-4">
 				Portfolio
 			</h2>
@@ -85,7 +85,6 @@ const Portfolio = () => {
 			<div
 				className="w-screen overflow-hidden flex flex-col gap-10 overflow-x-hidden lg:h-auto pb-4 bg-colorThree"
 				ref={containerRef}
-				id="portfolio"
 			>
 				<motion.section
 					key={activeTab}

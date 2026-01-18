@@ -10,7 +10,20 @@ const Button = ({
 	icon,
 }) => {
 	const handleClick = (page) => {
-		window.location.href = "#" + page;
+		const element = document.getElementById(page);
+		if (element) {
+			const navbarHeight = 64; // Height of fixed navbar (h-16 = 64px)
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+		} else {
+			// Fallback to hash navigation if element not found
+			window.location.href = "#" + page;
+		}
 	};
 
 	const baseClasses =
