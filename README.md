@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# DS Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive, developer portfolio site showcasing my frontend and full‑stack projects, skills, and testimonials. Built with React and Tailwind CSS, it highlights real client work and personal projects with a clean, modern UI.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Developer overview**: Intro section with role, focus areas, and a concise personal summary.
+- **Project gallery**: Curated list of featured projects with thumbnails, descriptions, tech stack, and links to live demos and GitHub repos.
+- **Skills sections**: Grouped skills by languages, specialties, databases, deployment, design tools, and personal interests.
+- **Testimonials**: Short quotes from collaborators and clients to add social proof.
+- **Responsive layout**: Optimized for desktop and mobile using Tailwind utility classes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend**: React (Create React App)
+- **Styling**: Tailwind CSS
+- **Animation & UX**: Framer Motion, React Typing Effect
+- **Forms & Validation**: Formik, Yup
+- **Email / Contact**: EmailJS (`@emailjs/browser`, `emailjs-com`)
+- **Icons**: Font Awesome
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js** (LTS recommended)
+- **npm** (comes with Node)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+```bash
+git clone <this-repo-url>
+cd ds-dev-portfolio
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Starts the app in development mode.
+- Open `http://localhost:3000` in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Tests
 
-## Learn More
+```bash
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs the test runner in watch mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Production Build
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Builds the app for production into the `build` folder.
+- Optimizes assets for best performance.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Content & Customization
 
-### Making a Progressive Web App
+### Portfolio data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Projects, skills, and testimonials** are defined in `src/portfolioData.js`.
+- You can update:
+  - **`skills` / `skillsData`**: to change skill categories and labels.
+  - **`portfolioData`**: to add, remove, or edit projects (title, images, descriptions, tech stack, live links, GitHub links, category).
+  - **`testimonials`**: to adjust or add new quotes.
 
-### Advanced Configuration
+After editing this file, the UI will automatically reflect your changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Styling & Layout
 
-### Deployment
+- Tailwind configuration lives in `tailwind.config.js`.
+- Global styles and theme choices can be adjusted via Tailwind config and any base CSS files (e.g. `index.css` / `App.css` if present).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app is built as a static SPA and can be deployed to any static hosting provider (e.g. Firebase Hosting, Netlify, Vercel, GitHub Pages).
+
+General steps:
+
+1. Run `npm run build`.
+2. Deploy the contents of the `build` folder to your hosting provider of choice.
+
+If you are using Firebase Hosting, configure it with `firebase.json` and `.firebaserc`, then run the usual Firebase CLI deploy commands.
+
+---
+
+## Scripts (Summary)
+
+- **`npm start`**: Run development server.
+- **`npm test`**: Run tests in watch mode.
+- **`npm run build`**: Create production build.
+- **`npm run eject`**: Eject CRA config (not usually necessary).
+
+---
+
+## License
+
+This project is intended as a personal portfolio. If you’d like to reuse or adapt parts of it, please credit the original author (Donna) and review the repository license if added.
