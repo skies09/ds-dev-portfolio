@@ -43,7 +43,8 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 		if (element) {
 			const navbarHeight = 64; // Height of fixed navbar (h-16 = 64px)
 			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+			const offsetPosition =
+				elementPosition + window.pageYOffset - navbarHeight;
 
 			window.scrollTo({
 				top: offsetPosition,
@@ -94,7 +95,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 								/>
 							</div>
 							<span
-								className={`font-display font-medium transition-colors duration-300 text-xl whitespace-nowrap ${
+								className={`font-monoTwo font-semibold transition-colors duration-300 text-xl whitespace-nowrap ${
 									hoveredIndex === index
 										? "text-colorOne"
 										: "text-colorFive"

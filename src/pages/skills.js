@@ -55,7 +55,7 @@ const Skills = () => {
 										return (
 											<motion.span
 												key={index}
-												className="px-4 py-2 bg-colorTwo font-serif text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills flex flex-row items-center gap-2"
+												className="px-4 py-2 bg-colorTwo font-monoTwo text-md lg:text-lg font-semibold rounded-lg text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills flex flex-row items-center gap-2"
 												variants={skillVariants}
 											>
 												<img
@@ -66,7 +66,7 @@ const Skills = () => {
 												{skillName}
 											</motion.span>
 										);
-									}
+									},
 								)}
 							</div>
 						</div>

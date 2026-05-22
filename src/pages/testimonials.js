@@ -84,7 +84,7 @@ const Testimonials = () => {
 													}}
 												/>
 											</motion.div>
-										)
+										),
 									)}
 								</div>
 
@@ -98,10 +98,10 @@ const Testimonials = () => {
 								{/* Author Section */}
 								<div className="flex items-center justify-between pt-6 border-t border-colorFive/20">
 									<div>
-										<h3 className="font-bold text-colorFive text-lg lg:text-xl font-display mb-1">
+										<h3 className="font-bold text-colorFive text-lg lg:text-xl font-monoTwo mb-1">
 											{testimonial.name}
 										</h3>
-										<p className="text-sm lg:text-base text-colorOne/80 font-sans uppercase tracking-wider">
+										<p className="text-sm lg:text-base text-colorOne/80 font-monoTwo uppercase tracking-wider">
 											{testimonial.role}
 										</p>
 									</div>

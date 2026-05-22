@@ -1,11 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faCode,
-	faPuzzlePiece,
-	faWrench,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCode, faGears, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
 	const containerRef = useRef(null);
@@ -16,19 +12,19 @@ const Services = () => {
 	const services = [
 		{
 			icon: faCode,
-			title: "Build Websites and Apps",
+			title: "Build Websites & Apps",
 			description:
 				"From concept to deployment, I create modern, responsive websites and applications that are easy to use and built to last. I work closely with you from initial idea to final launch to turn your vision into a polished digital product—whether it’s a simple static landing page or a complex web application.",
 		},
 		{
-			icon: faPuzzlePiece,
+			icon: faGears,
 			title: "Add Features & Functionality",
 			description:
 				"Need more from your current website or app? I can extend your platform with custom features such as online stores, user accounts, payments, API integrations, or anything else you need. Whether it’s a simple improvement or a brand-new idea, I’ll make sure it’s built cleanly and integrates perfectly with your existing system.",
 		},
 		{
 			icon: faWrench,
-			title: "Fix Website & App Issues",
+			title: "Fix Website & App Bug Issues",
 			description:
 				"If your website or app isn’t performing at its full potential, I’ll quickly identify the issues—whether it’s broken features, poor performance, or suboptimal functionality. From debugging to optimization, I’ll enhance your platform to run as smoothly and efficiently as possible.",
 		},
@@ -102,38 +98,38 @@ const Services = () => {
 							{/* Background gradient */}
 							<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-colorOne/10 via-transparent to-colorFour/10 pointer-events-none" />
 
-							<div className="relative z-10 flex flex-col items-center text-center">
-								{/* Icon */}
-								<motion.div
-									initial={{ scale: 0, rotate: -180 }}
-									whileInView={{ scale: 1, rotate: 0 }}
-									viewport={{ once: true }}
-									transition={{
-										type: "spring",
-										stiffness: 150,
-										damping: 12,
-										delay: index * 0.2 + 0.3,
-									}}
-									className="mb-6"
-								>
-									<div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-colorOne/20 to-colorFour/20 flex items-center justify-center border-2 border-colorOne/50 shadow-shadow-colorOne">
-										<FontAwesomeIcon
-											icon={service.icon}
-											className="text-4xl lg:text-5xl text-colorOne"
-											style={{
-												filter: "drop-shadow(0 0 10px rgba(0, 168, 232, 0.8))",
-											}}
-										/>
-									</div>
-								</motion.div>
-
-								{/* Title */}
-								<h3 className="text-xl lg:text-2xl font-bold text-colorFive mb-4 lg:mb-6 font-display">
-									{service.title}
-								</h3>
+							<div className="relative z-10 flex flex-col">
+								{/* Title + Icon row */}
+								<div className="flex items-start gap-4 mb-4 lg:mb-6 lg:min-h-24">
+									<h3 className="w-2/3 text-xl lg:text-2xl font-bold text-colorFive text-left font-display lg:min-h-[3lh]">
+										{service.title}
+									</h3>
+									<motion.div
+										initial={{ scale: 0, rotate: -180 }}
+										whileInView={{ scale: 1, rotate: 0 }}
+										viewport={{ once: true }}
+										transition={{
+											type: "spring",
+											stiffness: 150,
+											damping: 12,
+											delay: index * 0.2 + 0.3,
+										}}
+										className="w-1/3 flex justify-end shrink-0"
+									>
+										<div className="w-16 h-16 rounded-full bg-gradient-to-br from-colorOne/20 to-colorFour/20 flex items-center justify-center border-2 border-colorOne/50 shadow-shadow-colorOne">
+											<FontAwesomeIcon
+												icon={service.icon}
+												className="text-3xl text-colorOne block justify-center items-center mx-auto"
+												style={{
+													filter: "drop-shadow(0 0 10px rgba(0, 168, 232, 0.8))",
+												}}
+											/>
+										</div>
+									</motion.div>
+								</div>
 
 								{/* Description */}
-								<p className="text-colorFive/95 font-sans text-sm lg:text-base leading-relaxed font-medium">
+								<p className="text-colorFive/95 font-monoTwo text-sm lg:text-base text-left leading-relaxed font-medium">
 									{service.description}
 								</p>
 							</div>

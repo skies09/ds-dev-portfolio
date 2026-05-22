@@ -24,7 +24,7 @@ const Contact = () => {
 				process.env.REACT_APP_EMAIL_SERVICE_KEY,
 				process.env.REACT_APP_EMAIL_TEMPLATE_KEY,
 				values,
-				process.env.REACT_APP_EMAIL_KEY
+				process.env.REACT_APP_EMAIL_KEY,
 			)
 			.then(
 				(result) => {
@@ -35,7 +35,7 @@ const Contact = () => {
 				(error) => {
 					console.log(error.text);
 					setLoading(false);
-				}
+				},
 			);
 	}
 
@@ -134,9 +134,9 @@ const Contact = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
 					viewport={{ once: true }}
-					className="pt-16 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
+					className="pt-16 px-2 text-4xl lg:text-5xl text-colorFive font-bold flex justify-center text-center font-display"
 				>
-					Got a cool project idea?
+					Got a project idea?
 					<br />
 					Get in touch!
 				</motion.div>
@@ -178,7 +178,7 @@ const Contact = () => {
 									size="lg"
 									className="text-colorFive"
 								/>
-								<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
+								<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider font-roboto">
 									07950981097
 								</span>
 							</div>
@@ -188,7 +188,7 @@ const Contact = () => {
 									size="lg"
 									className="text-colorFive"
 								/>
-								<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
+								<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider font-roboto">
 									donna.smith08@icloud.com
 								</span>
 							</div>
