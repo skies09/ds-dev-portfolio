@@ -72,7 +72,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
 							key={index}
 							href={item.href}
 							onClick={(e) => handleMenuClick(e, item.href)}
-							className="group flex items-center gap-1 lg:gap-4 p-4 px-6 rounded-full transition-all duration-300 hover:shadow-neo-inset"
+							className="group flex items-center gap-1 lg:gap-4 p-4 px-6 rounded-2xl transition-all duration-300 hover:shadow-neo-inset"
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 						>

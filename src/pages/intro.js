@@ -72,7 +72,7 @@ const Intro = () => {
 							action={"contact"}
 							variant="secondary"
 							icon={faEnvelope}
-							className="text-sm lg:text-base py-1.5 lg:py-4 pl-6 lg:pl-4 pr-12"
+							className="text-sm lg:text-base"
 						/>
 						<Button
 							text="Portfolio"
@@ -80,7 +80,7 @@ const Intro = () => {
 							action={"portfolio"}
 							variant="secondary"
 							icon={faBriefcase}
-							className="text-sm lg:text-base py-1.5 lg:py-4 pl-6 lg:pl-4 pr-12"
+							className="text-sm lg:text-base"
 						/>
 					</div>
 				</div>

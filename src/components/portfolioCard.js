@@ -61,7 +61,7 @@ const PortfolioCard = ({ project, index }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label={`Visit ${project.title} website`}
-						className="relative w-[85%] lg:w-full h-auto md:w-auto lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0 block"
+						className="relative w-[85%] lg:w-full h-auto md:w-auto lg:h-96 rounded-2xl overflow-hidden group -mb-8 lg:mb-0 block"
 						style={{
 							boxShadow: `
 								0 0 40px rgba(0, 168, 232, 0.5),
@@ -91,7 +91,7 @@ const PortfolioCard = ({ project, index }) => {
 					</a>
 				) : (
 					<div
-						className="relative w-[85%] lg:w-full h-[500px] lg:h-96 rounded-xl overflow-hidden group -mb-8 lg:mb-0"
+						className="relative w-[85%] lg:w-full h-[500px] lg:h-96 rounded-2xl overflow-hidden group -mb-8 lg:mb-0"
 						style={{
 							boxShadow: `
 								0 0 40px rgba(0, 168, 232, 0.5),
@@ -167,7 +167,7 @@ const PortfolioCard = ({ project, index }) => {
 
 				{/* Text Box */}
 				<motion.div
-					className={`rounded-xl pt-[3.5rem] pb-6 px-6 lg:pt-10 lg:pb-10 lg:px-10 shadow-2xl text-left relative z-10 lg:z-20 ${
+					className={`rounded-2xl pt-[3.5rem] pb-6 px-6 lg:pt-10 lg:pb-10 lg:px-10 shadow-2xl text-left relative z-10 lg:z-20 ${
 						isImageLeft
 							? "lg:text-left lg:-ml-14"
 							: "lg:text-right lg:-mr-14"
@@ -253,7 +253,7 @@ const PortfolioCard = ({ project, index }) => {
 										delay: index * 0.12 + 0.7 + idx * 0.05,
 										ease: "easeOut",
 									}}
-									className="px-3 py-1.5 text-xs font-semibold text-colorFive/90 bg-colorTwo/50 border border-colorOne/30 rounded-lg font-monoTwo shadow-neo-outset cursor-default"
+									className="px-3 py-1.5 text-xs font-semibold text-colorFive/90 bg-colorTwo/50 border border-colorOne/30 rounded-2xl font-monoTwo shadow-neo-outset cursor-default"
 								>
 									{lang}
 								</motion.span>

@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import * as Yup from "yup";
 import Footer from "../components/footer";
 import SocialLinks from "../components/socialLinks";
+import Button from "../components/button";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -71,7 +72,7 @@ const Contact = () => {
 						Name
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
+						className="w-full h-8 z-10 rounded-2xl my-2 lg:my-4 pl-2 font-monoTwo"
 						type="text"
 						id="user_name"
 						name="user_name"
@@ -80,7 +81,7 @@ const Contact = () => {
 						Email
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
+						className="w-full h-8 z-10 rounded-2xl my-2 lg:my-4 pl-2 font-monoTwo"
 						type="email"
 						id="user_email"
 						name="user_email"
@@ -95,28 +96,19 @@ const Contact = () => {
 					</p>
 					<Field
 						as="textarea"
-						className="w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2 font-monoTwo"
+						className="w-full lg:h-24 z-10 rounded-2xl my-2 lg:my-4 pl-2 pt-2 font-monoTwo"
 						id="message"
 						name="message"
 						rows="3"
 					/>
-					<motion.button
-						whileHover={{ scale: 1.05, y: -2 }}
-						whileTap={{ scale: 0.98 }}
-						className="relative flex justify-center items-center mx-auto pl-3 pr-8 lg:pl-5 py-2 lg:py-3.5 mt-6  text-colorFive border-2 border-colorOne/40 hover:border-colorOne/70 hover:bg-colorTwo/90 font-display font-semibold tracking-wider rounded-full shadow-neo-outset hover:shadow-neo-inset transition-all duration-300 overflow-visible min-w-[140px] lg:min-w-[180px]"
+					<Button
+						text={loading ? "Sending..." : "Send"}
+						variant="secondary"
+						icon={!loading ? faPaperPlane : undefined}
 						type="submit"
 						disabled={loading}
-					>
-						<span>{loading ? "Sending..." : "Send"}</span>
-						{!loading && (
-							<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem] flex items-center justify-center">
-								<FontAwesomeIcon
-									icon={faPaperPlane}
-									className="text-lg"
-								/>
-							</div>
-						)}
-					</motion.button>
+						className="mx-auto mt-6 text-sm lg:text-base"
+					/>
 				</Form>
 			</Formik>
 		);

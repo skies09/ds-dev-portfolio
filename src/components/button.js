@@ -8,13 +8,17 @@ const Button = ({
 	action,
 	variant = "primary",
 	icon,
+	type = "button",
+	disabled = false,
+	onClick,
 }) => {
 	const handleClick = (page) => {
 		const element = document.getElementById(page);
 		if (element) {
 			const navbarHeight = 64; // Height of fixed navbar (h-16 = 64px)
 			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+			const offsetPosition =
+				elementPosition + window.pageYOffset - navbarHeight;
 
 			window.scrollTo({
 				top: offsetPosition,
@@ -27,7 +31,11 @@ const Button = ({
 	};
 
 	const baseClasses =
-		"relative py-2 lg:py-4 pl-6 lg:pl-8 pr-10 rounded-full font-display font-semibold tracking-wide transition-all duration-300 overflow-visible flex items-center justify-center w-auto lg:min-w-[180px]";
+		"relative py-3 lg:py-4 px-5 lg:px-7 rounded-2xl font-display font-semibold tracking-wide transition-all duration-300 overflow-visible inline-flex items-center justify-center gap-2 lg:gap-2.5 w-auto lg:min-w-[180px]";
+
+	const handleButtonClick = action
+		? () => handleClick(action)
+		: onClick;
 
 	if (!active) {
 		return null;
@@ -36,11 +44,13 @@ const Button = ({
 	if (variant === "primary") {
 		return (
 			<motion.button
+				type={type}
+				disabled={disabled}
 				whileHover={{ scale: 1.03, y: -2 }}
 				whileTap={{ scale: 0.97 }}
 				transition={{ duration: 0.2, ease: "easeOut" }}
 				className={`${baseClasses} bg-colorTwo/80 backdrop-blur-sm text-colorFive  hover:border-colorFour/70 ${className}`}
-				onClick={() => handleClick(action)}
+				onClick={handleButtonClick}
 				style={{
 					boxShadow:
 						"0 4px 15px rgba(0, 23, 31, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.05)",
@@ -60,12 +70,10 @@ const Button = ({
 			>
 				<span className="relative z-10">{text}</span>
 				{icon && (
-					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem] flex items-center justify-center">
-						<FontAwesomeIcon
-							icon={icon}
-							className="relative z-10 text-sm lg:text-lg"
-						/>
-					</div>
+					<FontAwesomeIcon
+						icon={icon}
+						className="relative z-10 shrink-0 text-sm lg:text-base"
+					/>
 				)}
 			</motion.button>
 		);
@@ -74,11 +82,13 @@ const Button = ({
 	if (variant === "secondary") {
 		return (
 			<motion.button
+				type={type}
+				disabled={disabled}
 				whileHover={{ scale: 1.03, y: -2 }}
 				whileTap={{ scale: 0.97 }}
 				transition={{ duration: 0.2, ease: "easeOut" }}
 				className={`${baseClasses}  text-colorFive border-2 border-colorFour/40 ${className}`}
-				onClick={() => handleClick(action)}
+				onClick={handleButtonClick}
 				style={{
 					boxShadow:
 						"0 4px 15px rgba(0, 52, 89, 0.4), 0 2px 8px rgba(0, 122, 167, 0.3), inset 0 1px 0 rgba(240, 248, 255, 0.1)",
@@ -94,12 +104,10 @@ const Button = ({
 			>
 				<span className="relative z-10">{text}</span>
 				{icon && (
-					<div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-[3.5rem] lg:h-[3.5rem]  flex items-center justify-center">
-						<FontAwesomeIcon
-							icon={icon}
-							className="relative z-10 text-sm lg:text-lg"
-						/>
-					</div>
+					<FontAwesomeIcon
+						icon={icon}
+						className="relative z-10 shrink-0 text-sm lg:text-base"
+					/>
 				)}
 			</motion.button>
 		);
