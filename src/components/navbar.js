@@ -1,60 +1,89 @@
-import { faCodeBranch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconCodeBranch } from "./icons";
+import Button from "./button";
+import { scrollToSection } from "../utils/scrollToSection";
+
+const navLinks = [
+	{ label: "About", href: "#about" },
+	{ label: "Services", href: "#services" },
+	{ label: "Portfolio", href: "#portfolio" },
+	{ label: "Contact", href: "#contact" },
+];
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
-	return (
-		<div className="w-full h-16 bg-colorThree border-b border-dotted border-colorFive fixed top-0 z-50">
-			<div className="flex justify-between items-center">
-				<div className="flex items-center justify-center">
-					<a
-						href="#intro"
-						className="hidden md:flex font-monoTwo text-lg font-semibold text-colorOne ml-6 tracking-tight hover:text-colorFour mt-2"
-					>
-						Donna Smith
-					</a>
+	const handleNavClick = (e, href) => {
+		e.preventDefault();
+		scrollToSection(href.replace("#", ""));
+	};
 
+	return (
+		<header className="w-full h-16 bg-colorThree/95 backdrop-blur-sm border-b border-dotted border-colorFive/30 fixed top-0 z-50">
+			<div className="max-w-7xl mx-auto flex justify-between items-center h-full px-4 lg:px-6">
+				<div className="flex items-center">
 					<a
 						href="#intro"
-						className="block md:hidden font-monoTwo text-lg font-semibold text-colorOne ml-3 items-center justify-center hover:text-colorFour mt-2"
+						onClick={(e) => handleNavClick(e, "#intro")}
+						className="font-monoTwo text-lg font-semibold text-colorOne tracking-tight hover:text-colorFour transition-colors"
 					>
-						{"</DS>"}
+						<span className="hidden md:inline">Donna Smith</span>
+						<span className="md:hidden">{"</DS>"}</span>
 					</a>
-					<FontAwesomeIcon
-						icon={faCodeBranch}
-						size="sm"
-						className="flex justify-center items-center ml-2 mt-2 text-colorOne hover:text-colorFour"
-					/>
+					<IconCodeBranch className="ml-2 text-sm text-colorOne" />
 				</div>
-				<div className="mr-4 mt-2 w-8 h-12 flex items-center">
-					<div
-						className="w-8 h-6 flex flex-col justify-between cursor-pointer"
+
+				<nav className="hidden lg:flex items-center gap-6" aria-label="Primary">
+					{navLinks.map((link) => (
+						<a
+							key={link.href}
+							href={link.href}
+							onClick={(e) => handleNavClick(e, link.href)}
+							className="text-colorFive/80 hover:text-colorOne font-monoTwo text-sm transition-colors"
+						>
+							{link.label}
+						</a>
+					))}
+					<Button
+						text="Get a Quote"
+						active={true}
+						action="contact"
+						variant="primary"
+						className="!py-2 !px-5 !min-w-0 text-sm"
+					/>
+				</nav>
+
+				<div className="lg:hidden w-8 h-12 flex items-center">
+					<button
+						type="button"
+						aria-label={menuOpen ? "Close menu" : "Open menu"}
+						aria-expanded={menuOpen}
+						aria-controls="mobile-menu"
+						className="w-8 h-6 flex flex-col justify-between cursor-pointer bg-transparent border-none p-0"
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
 						<span
-							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-300 ease-in-out origin-center ${
 								menuOpen
 									? "transform rotate-45 translate-y-2.5"
 									: ""
 							}`}
-						></span>
+						/>
 						<span
-							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out ${
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-300 ease-in-out ${
 								menuOpen
 									? "opacity-0 scale-y-0 h-0"
 									: "opacity-100 scale-y-100 h-1"
 							}`}
-						></span>
+						/>
 						<span
-							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
+							className={`block w-full h-1 bg-colorOne rounded-3xl transition-all duration-300 ease-in-out origin-center ${
 								menuOpen
 									? "transform -rotate-45 -translate-y-2.5"
 									: ""
 							}`}
-						></span>
-					</div>
+						/>
+					</button>
 				</div>
 			</div>
-		</div>
+		</header>
 	);
 };
 

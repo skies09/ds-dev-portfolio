@@ -1,26 +1,19 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faQuoteLeft,
-	faQuoteRight,
-	faStar,
-} from "@fortawesome/free-solid-svg-icons";
+import { IconQuote, IconStar } from "../components/icons";
 import { motion } from "framer-motion";
+import SectionHeader from "../components/sectionHeader";
 import { testimonials } from "../portfolioData";
 
 const Testimonials = () => {
 	return (
-		<section id="testimonials" className="lg:pb-12 bg-colorThree">
+		<section id="testimonials" className="relative lg:pb-12 bg-colorThree section-wash-alt">
 			<div className="container max-w-6xl mx-auto px-4">
-				<motion.h2
-					className="text-4xl lg:text-5xl font-bold text-center mb-8 lg:mb-10 text-colorFive font-display"
-					initial={{ opacity: 0, y: -20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-				>
-					Testimonials
-				</motion.h2>
+				<SectionHeader
+					eyebrow="Social proof"
+					title="What Clients Say"
+					subtitle="Real feedback from people I've worked with."
+					className="mb-8 lg:mb-10"
+				/>
 
 				<div className="grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-10">
 					{testimonials.map((testimonial, index) => (
@@ -43,10 +36,7 @@ const Testimonials = () => {
 						>
 							{/* Background decorative quote */}
 							<div className="absolute top-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-								<FontAwesomeIcon
-									icon={faQuoteRight}
-									className="text-colorOne text-7xl lg:text-8xl"
-								/>
+								<IconQuote className="text-colorOne w-24 h-24 lg:w-28 lg:h-28" />
 							</div>
 
 							<div className="relative z-10">
@@ -76,13 +66,7 @@ const Testimonials = () => {
 													ease: "easeOut",
 												}}
 											>
-												<FontAwesomeIcon
-													icon={faStar}
-													className="text-colorOne text-lg lg:text-xl"
-													style={{
-														filter: "drop-shadow(0 0 6px rgba(0, 168, 232, 0.8))",
-													}}
-												/>
+												<IconStar className="text-colorOne w-5 h-5 lg:w-6 lg:h-6" />
 											</motion.div>
 										),
 									)}
@@ -109,7 +93,7 @@ const Testimonials = () => {
 							</div>
 
 							{/* Hover gradient overlay */}
-							<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-colorOne/5 via-transparent to-colorSix/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+							<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-colorOne/5 via-transparent to-colorAccent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 						</motion.div>
 					))}
 				</div>

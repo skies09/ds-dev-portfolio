@@ -1,29 +1,33 @@
 .shiny-text {
-  color: #6796cca4; 
+  color: transparent;
   background: linear-gradient(
-    120deg,
-    #00A8E8 0%,      /* colorOne */
-    #007EA7 30%,     /* colorFour */
-    #F0F8FF 50%,     /* colorFive for the shimmer flash */
-    #007EA7 70%,     /* colorFour */
-    #00A8E8 100%     /* colorOne */
+    105deg,
+    #9AE7F5 0%,
+    #3DD6F5 18%,
+    #E6F4FA 42%,
+    #ffffff 50%,
+    #E6F4FA 58%,
+    #3DD6F5 82%,
+    #9AE7F5 100%
   );
-  background-size: 200% 100%;
+  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   display: inline-block;
-  animation: shine 5s linear infinite;
+  animation: shine 4.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 18px rgba(61, 214, 245, 0.18));
 }
 
 @keyframes shine {
   0% {
-    background-position: 100%;
+    background-position: 120% 0;
   }
   100% {
-    background-position: -100%;
+    background-position: -120% 0;
   }
 }
 
 .shiny-text.disabled {
   animation: none;
+  filter: none;
 }

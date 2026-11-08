@@ -1,79 +1,62 @@
-import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import SectionHeader from "../components/sectionHeader";
 import { skills } from "../portfolioData";
 
-const Skills = () => {
-	const containerRef = useRef(null);
-	const mainControls = useAnimation();
-
-	const isInView = useInView(containerRef, { once: true });
-
-	const containerVariants = {
-		hidden: { opacity: 1 },
-		show: {
-			opacity: 1,
-			transition: {
-				delayChildren: 1,
-				staggerChildren: 0.2,
-			},
+const containerVariants = {
+	hidden: { opacity: 1 },
+	show: {
+		opacity: 1,
+		transition: {
+			delayChildren: 0.2,
+			staggerChildren: 0.05,
 		},
-	};
+	},
+};
 
-	// Variants for individual skill items
-	const skillVariants = {
-		hidden: { opacity: 0, y: 20 },
-		show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-	};
+const skillVariants = {
+	hidden: { opacity: 0, y: 20 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
 
-	useEffect(() => {
-		if (isInView) {
-			mainControls.start("show");
-		}
-	}, [isInView, mainControls]);
-
+const Skills = () => {
 	return (
-		<div
-			className="w-screen overflow-hidden h-auto bg-colorThree"
-			ref={containerRef}
+		<section
+			className="relative w-screen overflow-hidden h-auto bg-colorThree py-8 lg:py-12 section-wash-alt"
 			id="skills"
 		>
-			<div className="lg:mb-12 lg:mt-2 flex flex-col lg:flex-row-reverse justify-center items-center w-11/12 mx-auto">
+			<div className="max-w-6xl mx-auto px-4">
+				<SectionHeader
+					eyebrow="Stack"
+					title="Skills & Technologies"
+					subtitle="Modern tools chosen for speed, reliability, and long-term maintainability."
+					className="mb-8"
+				/>
+
 				<motion.div
-					className="w-11/12 lg:w-3/4 lg:mt-0 flex justify-center items-center h-auto"
+					className="flex flex-wrap justify-center gap-3 lg:gap-4"
 					variants={containerVariants}
 					initial="hidden"
-					animate={mainControls}
+					whileInView="show"
+					viewport={{ once: true }}
 				>
-					<section className="bg-white py-8">
-						<div className="max-w-6xl mx-auto lg:px-4">
-							<h2 className="text-3xl font-bold text-center text-colorFive mb-8 font-mono">
-								Skills & Technologies
-							</h2>
-							<div className="flex flex-wrap justify-center gap-4">
-								{Object.entries(skills).map(
-									([skillName, iconName], index) => {
-										return (
-											<motion.span
-												key={index}
-												className="px-4 py-2 bg-colorTwo font-monoTwo text-md lg:text-lg font-semibold rounded-2xl text-colorFive hover:bg-colorOne hover:text-colorFive transition duration-200 gradient-background-skills flex flex-row items-center gap-2"
-												variants={skillVariants}
-											>
-												<img
-													src={`https://skillicons.dev/icons?i=${iconName}&theme=dark`}
-													alt={`${skillName} Icon`}
-													className="w-4 h-4 lg:w-6 lg:h-6"
-												/>
-												{skillName}
-											</motion.span>
-										);
-									},
-								)}
-							</div>
-						</div>
-					</section>
+					{Object.entries(skills).map(([skillName, iconName]) => (
+						<motion.span
+							key={skillName}
+							className="px-4 py-2 bg-colorTwo/80 font-monoTwo text-sm lg:text-base font-semibold rounded-2xl text-colorFive border border-colorOne/20 hover:border-colorOne/50 hover:bg-colorTwo hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(61,214,245,0.14)] transition duration-200 flex flex-row items-center gap-2"
+							variants={skillVariants}
+						>
+							<img
+								src={`https://skillicons.dev/icons?i=${iconName}&theme=dark`}
+								alt=""
+								className="w-5 h-5 lg:w-6 lg:h-6"
+								loading="lazy"
+							/>
+							{skillName}
+						</motion.span>
+					))}
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

@@ -1,0 +1,32 @@
+export {
+	IconRocket,
+	IconBriefcase,
+	IconCode,
+	IconCodeBranch,
+	IconGears,
+	IconWrench,
+	IconHome,
+	IconUser,
+	IconTools,
+	IconProcess,
+	IconChat,
+	IconQuestion,
+	IconMail,
+	IconClipboard,
+	IconBuild,
+	IconHandshake,
+	IconChevronDown,
+	IconExternal,
+	IconCheck,
+	IconPhone,
+	IconSend,
+	IconStar,
+	IconQuote,
+} from "./TechIcon";
+
+export {
+	IconGithub,
+	IconLinkedin,
+	IconInstagram,
+	IconFacebook,
+} from "./SocialIcons";

@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { IconExternal, IconGithub } from "../components/icons";
 
 const PortfolioCard = ({ project, index }) => {
 	// Alternate layout: even index = image left, odd index = image right
@@ -76,7 +74,7 @@ const PortfolioCard = ({ project, index }) => {
 						{project.imgMobile && (
 							<img
 								className="w-full h-full object-contain transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 lg:hidden"
-								src={`../../assets/Images/${project.imgMobile}`}
+								src={`/assets/Images/${project.imgMobile}`}
 								alt={`Screenshot of ${project.title} project`}
 							/>
 						)}
@@ -85,7 +83,7 @@ const PortfolioCard = ({ project, index }) => {
 							className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 ${
 								project.imgMobile ? "hidden lg:block" : ""
 							}`}
-							src={`../../assets/Images/${project.img}`}
+							src={`/assets/Images/${project.img}`}
 							alt={`Screenshot of ${project.title} project`}
 						/>
 					</a>
@@ -106,7 +104,7 @@ const PortfolioCard = ({ project, index }) => {
 						{project.imgMobile && (
 							<img
 								className="w-full h-full object-contain transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 lg:hidden"
-								src={`../../assets/Images/${project.imgMobile}`}
+								src={`/assets/Images/${project.imgMobile}`}
 								alt={`Screenshot of ${project.title} project`}
 							/>
 						)}
@@ -115,7 +113,7 @@ const PortfolioCard = ({ project, index }) => {
 							className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 ${
 								project.imgMobile ? "hidden lg:block" : ""
 							}`}
-							src={`../../assets/Images/${project.img}`}
+							src={`/assets/Images/${project.img}`}
 							alt={`Screenshot of ${project.title} project`}
 						/>
 					</div>
@@ -160,7 +158,7 @@ const PortfolioCard = ({ project, index }) => {
 						ease: [0.16, 1, 0.3, 1],
 					}}
 				>
-					<h3 className="text-5xl lg:text-6xl font-bold text-colorFive font-display tracking-tight leading-tight bg-gradient-to-r from-colorFive via-colorOne to-colorSix bg-clip-text text-transparent">
+					<h3 className="text-5xl lg:text-6xl font-bold text-colorFive font-display tracking-tight leading-tight bg-gradient-to-r from-colorFive via-colorOne to-colorAccent bg-clip-text text-transparent">
 						{project.title}
 					</h3>
 				</motion.div>
@@ -181,7 +179,7 @@ const PortfolioCard = ({ project, index }) => {
 						ease: [0.16, 1, 0.3, 1],
 					}}
 					style={{
-						backgroundColor: "rgba(0, 52, 89, 0.98)",
+						backgroundColor: "rgba(12, 31, 51, 0.98)",
 						backdropFilter: "blur(10px)",
 						boxShadow:
 							"0 25px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(240, 248, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
@@ -189,9 +187,15 @@ const PortfolioCard = ({ project, index }) => {
 					}}
 				>
 					{/* Description */}
-					<p className="text-sm lg:text-base text-colorFive/95 font-sans leading-relaxed mb-6 lg:mb-7 font-medium">
+					<p className="text-sm lg:text-base text-colorFive/95 font-sans leading-relaxed mb-4 lg:mb-5 font-medium">
 						{project.longDescription}
 					</p>
+
+					{project.result && (
+						<p className="text-sm text-colorOne font-monoTwo mb-5 lg:mb-6 border-l-2 border-colorOne pl-3">
+							{project.result}
+						</p>
+					)}
 
 					{/* Key Features */}
 					{project.keyFeatures && project.keyFeatures.length > 0 && (
@@ -218,7 +222,7 @@ const PortfolioCard = ({ project, index }) => {
 										}`}
 									>
 										<span
-											className={`text-transparent bg-gradient-to-r from-colorOne to-colorSix bg-clip-text mr-3 mt-0.5 font-bold text-lg ${
+											className={`text-colorOne mr-3 mt-0.5 font-bold text-lg ${
 												isImageLeft
 													? ""
 													: "lg:ml-3 lg:mr-0"
@@ -253,7 +257,7 @@ const PortfolioCard = ({ project, index }) => {
 										delay: index * 0.12 + 0.7 + idx * 0.05,
 										ease: "easeOut",
 									}}
-									className="px-3 py-1.5 text-xs font-semibold text-colorFive/90 bg-colorTwo/50 border border-colorOne/30 rounded-2xl font-monoTwo shadow-neo-outset cursor-default"
+									className="px-3 py-1.5 text-xs font-semibold text-colorFive/90 bg-colorTwo/50 border border-colorOne/20 rounded-lg font-monoTwo cursor-default"
 								>
 									{lang}
 								</motion.span>
@@ -282,15 +286,12 @@ const PortfolioCard = ({ project, index }) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`View ${project.title} on GitHub`}
-							className="relative p-4 rounded-full bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
+							className="relative inline-flex items-center justify-center w-11 h-11 rounded-full bg-colorTwo/80 text-colorFive hover:text-colorOne border border-colorOne/20 hover:border-colorOne/50 transition-all duration-300 group/link"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.98 }}
 							onClick={(e) => e.stopPropagation()}
 						>
-							<FontAwesomeIcon
-								className="text-xl lg:text-2xl relative z-10"
-								icon={faGithub}
-							/>
+							<IconGithub className="w-5 h-5 lg:w-6 lg:h-6 relative z-10" />
 						</motion.a>
 					)}
 					{!project.link.includes("Coming Soon") && (
@@ -299,15 +300,12 @@ const PortfolioCard = ({ project, index }) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label={`Visit ${project.title} website`}
-							className="relative p-4 rounded-full bg-colorTwo text-colorFive hover:text-colorOne transition-all duration-300 shadow-neo-outset hover:shadow-neo-inset group/link"
+							className="relative inline-flex items-center justify-center w-11 h-11 rounded-full bg-colorTwo/80 text-colorFive hover:text-colorOne border border-colorOne/20 hover:border-colorOne/50 transition-all duration-300 group/link"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.98 }}
 							onClick={(e) => e.stopPropagation()}
 						>
-							<FontAwesomeIcon
-								className="text-xl lg:text-2xl relative z-10"
-								icon={faArrowUpRightFromSquare}
-							/>
+							<IconExternal className="w-5 h-5 lg:w-6 lg:h-6 relative z-10" />
 						</motion.a>
 					)}
 				</motion.div>
