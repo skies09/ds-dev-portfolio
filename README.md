@@ -1,16 +1,21 @@
 # DS Developer Portfolio
 
-A responsive, developer portfolio site showcasing my frontend and full‑stack projects, skills, and testimonials. Built with React and Tailwind CSS, it highlights real client work and personal projects with a clean, modern UI.
+A responsive developer portfolio for Donna Smith — showcasing full-stack projects, services, process, skills, and client feedback. Built with React and Tailwind CSS, with a conversion-focused contact flow.
 
 ---
 
 ## Features
 
-- **Developer overview**: Intro section with role, focus areas, and a concise personal summary.
-- **Project gallery**: Curated list of featured projects with thumbnails, descriptions, tech stack, and links to live demos and GitHub repos.
-- **Skills sections**: Grouped skills by languages, specialties, databases, deployment, design tools, and personal interests.
-- **Testimonials**: Short quotes from collaborators and clients to add social proof.
-- **Responsive layout**: Optimized for desktop and mobile using Tailwind utility classes.
+- **Hero intro**: Name, availability, typing highlights, trust stats, and primary CTAs
+- **About**: Bio, highlights, and skill category overview
+- **Skills**: Technology stack with icons
+- **Services**: New sites, features/integrations, and fixes — each with a CTA
+- **Process**: Discovery → scope → build → handover
+- **Portfolio**: Tabbed project gallery (websites / apps) with live and GitHub links
+- **Testimonials**: Client feedback with ratings
+- **FAQ**: Common hiring questions
+- **Contact**: Validated form (Formik + Yup) via EmailJS, plus direct phone/email and social links
+- **Responsive layout**: Desktop navbar, mobile slide-out menu, floating quote CTA
 
 ---
 
@@ -20,8 +25,9 @@ A responsive, developer portfolio site showcasing my frontend and full‑stack p
 - **Styling**: Tailwind CSS
 - **Animation & UX**: Framer Motion, React Typing Effect
 - **Forms & Validation**: Formik, Yup
-- **Email / Contact**: EmailJS (`@emailjs/browser`, `emailjs-com`)
-- **Icons**: Font Awesome
+- **Email / Contact**: EmailJS (`@emailjs/browser`)
+- **Icons**: Font Awesome (React SVG)
+- **Hosting**: Firebase Hosting (optional)
 
 ---
 
@@ -40,14 +46,25 @@ cd ds-dev-portfolio
 npm install
 ```
 
+### Environment variables
+
+Create a `.env` file in the project root (see EmailJS dashboard for values):
+
+```bash
+REACT_APP_EMAIL_SERVICE_KEY=your_service_id
+REACT_APP_EMAIL_TEMPLATE_KEY=your_template_id
+REACT_APP_EMAIL_KEY=your_public_key
+```
+
+Restart the dev server after changing env vars.
+
 ### Development
 
 ```bash
 npm start
 ```
 
-- Starts the app in development mode.
-- Open `http://localhost:3000` in your browser.
+Opens the app at `http://localhost:3000`.
 
 ### Tests
 
@@ -55,16 +72,13 @@ npm start
 npm test
 ```
 
-Runs the test runner in watch mode.
-
 ### Production Build
 
 ```bash
 npm run build
 ```
 
-- Builds the app for production into the `build` folder.
-- Optimizes assets for best performance.
+Outputs an optimized build to the `build` folder.
 
 ---
 
@@ -72,43 +86,48 @@ npm run build
 
 ### Portfolio data
 
-- **Projects, skills, and testimonials** are defined in `src/portfolioData.js`.
-- You can update:
-  - **`skills` / `skillsData`**: to change skill categories and labels.
-  - **`portfolioData`**: to add, remove, or edit projects (title, images, descriptions, tech stack, live links, GitHub links, category).
-  - **`testimonials`**: to adjust or add new quotes.
+Projects, skills, testimonials, and FAQs live in `src/portfolioData.js`:
 
-After editing this file, the UI will automatically reflect your changes.
+- **`skills` / `skillsData`** — stack labels and About skill groups
+- **`portfolioData`** — projects (title, images, copy, tech, links, category)
+- **`testimonials`** — client quotes and ratings
+- **`faqs`** — FAQ questions and answers
 
-### Styling & Layout
+### Styling
 
-- Tailwind configuration lives in `tailwind.config.js`.
-- Global styles and theme choices can be adjusted via Tailwind config and any base CSS files (e.g. `index.css` / `App.css` if present).
+- Theme colours and fonts: `tailwind.config.js`
+- Global styles / hero atmosphere: `src/index.css`
+
+### Images
+
+Static images are served from `public/assets/Images/` and referenced as `/assets/Images/...`.
 
 ---
 
 ## Deployment
 
-The app is built as a static SPA and can be deployed to any static hosting provider (e.g. Firebase Hosting, Netlify, Vercel, GitHub Pages).
+Built as a static SPA. Deploy the `build` folder to Firebase Hosting, Netlify, Vercel, or similar.
 
-General steps:
+With Firebase already configured (`firebase.json`, `.firebaserc`):
 
-1. Run `npm run build`.
-2. Deploy the contents of the `build` folder to your hosting provider of choice.
-
-If you are using Firebase Hosting, configure it with `firebase.json` and `.firebaserc`, then run the usual Firebase CLI deploy commands.
+```bash
+npm run build
+firebase deploy
+```
 
 ---
 
-## Scripts (Summary)
+## Scripts
 
-- **`npm start`**: Run development server.
-- **`npm test`**: Run tests in watch mode.
-- **`npm run build`**: Create production build.
-- **`npm run eject`**: Eject CRA config (not usually necessary).
+| Command | Description |
+| --- | --- |
+| `npm start` | Development server |
+| `npm test` | Test runner (watch mode) |
+| `npm run build` | Production build |
+| `npm run eject` | Eject CRA config (rarely needed) |
 
 ---
 
 ## License
 
-This project is intended as a personal portfolio. If you’d like to reuse or adapt parts of it, please credit the original author (Donna) and review the repository license if added.
+Personal portfolio project. If you reuse or adapt parts of it, please credit Donna Smith and check the repository license if one is added.
