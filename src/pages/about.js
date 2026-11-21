@@ -30,11 +30,15 @@ const containerVariants = {
 const About = () => {
 	return (
 		<section
-			className="relative w-screen overflow-hidden h-auto bg-colorThree py-12 lg:py-16 section-wash"
+			className="relative w-screen overflow-hidden h-auto bg-colorThree py-16 lg:py-24 section-wash"
 			id="about"
 		>
 			<div className="container max-w-6xl mx-auto px-4">
-				<SectionHeader eyebrow="The person behind the code" title="About Me" />
+				<SectionHeader
+					eyebrow="Why work with me"
+					title="Built for business owners, not tech jargon"
+					subtitle="Clear communication, honest pricing, and websites designed to bring in customers."
+				/>
 
 				<div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-16">
 					<motion.div
@@ -45,7 +49,7 @@ const About = () => {
 						transition={{ duration: 0.8 }}
 					>
 						<img
-							className="shadow-shadow-colorOne w-full max-w-xs h-auto border-2 border-colorOne/30 rounded-full"
+							className="shadow-shadow-colorOne w-full max-w-xs h-auto border border-colorOne/25 rounded-full"
 							src="/assets/Images/profilePic.png"
 							alt="Donna Smith — Full-stack web developer"
 						/>
@@ -60,23 +64,22 @@ const About = () => {
 					>
 						<motion.p
 							variants={aboutTextVariants}
-							className="text-colorFive/90 text-base lg:text-lg font-sans leading-relaxed"
+							className="text-colorFive text-lg lg:text-xl font-sans font-medium leading-[1.75]"
 						>
-							I'm a full-stack web developer who specialises in building
-							websites and web applications for small businesses, startups,
-							and entrepreneurs. Whether you need a brand-new site from
-							scratch, new features on an existing platform, or a broken
-							project fixed — I deliver polished, reliable results on time.
+							You don't need more tech talk — you need a site that works.
+							I build and fix websites for small businesses and startups
+							so you can look professional online and spend less time
+							wrestling with your tech.
 						</motion.p>
 
 						<motion.p
 							variants={aboutTextVariants}
-							className="text-colorFive/80 text-sm lg:text-base font-sans leading-relaxed"
+							className="text-colorFive/90 text-base lg:text-lg font-sans leading-[1.75]"
 						>
-							I work with React, Django, and modern tooling to create
-							fast, responsive experiences. Every project gets the same
-							attention: thoughtful design, solid architecture, and code
-							that's easy to maintain long after launch.
+							From brand-new launches to features on what you already
+							have (or something that's broken), I keep things simple:
+							clear communication, realistic timelines, and code you can
+							grow with after launch.
 						</motion.p>
 
 						<motion.ul
@@ -87,7 +90,7 @@ const About = () => {
 								<motion.li
 									key={item}
 									variants={aboutTextVariants}
-									className="flex items-start gap-2 text-sm lg:text-base text-colorFive/90 font-sans"
+									className="flex items-start gap-2 text-base text-colorFive font-sans"
 								>
 									<IconCheck className="text-colorOne mt-0.5 shrink-0 w-5 h-5" />
 									{item}
@@ -97,8 +100,7 @@ const About = () => {
 
 						<motion.div variants={aboutTextVariants}>
 							<Button
-								text="Let's Work Together"
-								active={true}
+								text="Book a Free Quote"
 								action="contact"
 								variant="primary"
 								className="text-sm lg:text-base mt-2"
@@ -119,12 +121,12 @@ const About = () => {
 						.map((s) => (
 							<div
 								key={s.section}
-								className="bg-colorTwo/60 rounded-xl p-4 border border-colorOne/20 text-center w-full"
+								className="bg-colorTwo rounded-xl p-4 border border-colorFive/10 text-center w-full"
 							>
-								<p className="text-xs text-colorOne font-bold font-monoTwo uppercase tracking-wider mb-1">
+								<p className="text-sm text-colorOne font-semibold font-sans mb-1">
 									{s.section}
 								</p>
-								<p className="text-sm text-colorFive/90 font-monoTwo">
+								<p className="text-sm text-colorFive/90 font-sans leading-relaxed">
 									{s.skills}
 								</p>
 							</div>

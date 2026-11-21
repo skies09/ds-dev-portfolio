@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IconChevronDown } from "../components/icons";
+import Button from "../components/button";
 import SectionHeader from "../components/sectionHeader";
 import { faqs } from "../portfolioData";
 
@@ -8,12 +9,12 @@ const FAQ = () => {
 	const [openIndex, setOpenIndex] = useState(null);
 
 	return (
-		<section id="faq" className="relative bg-colorThree py-12 lg:py-16 section-wash">
+		<section id="faq" className="relative bg-colorThree py-16 lg:py-24 section-wash">
 			<div className="container max-w-3xl mx-auto px-4">
 				<SectionHeader
-					eyebrow="FAQ"
-					title="Frequently Asked Questions"
-					subtitle="Common questions from clients — answered upfront so you can hire with confidence."
+					eyebrow="Before you book"
+					title="Questions, answered"
+					subtitle="Pricing, timelines, and ownership — so you can enquire with confidence."
 					className="mb-10"
 				/>
 
@@ -30,7 +31,7 @@ const FAQ = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
 								transition={{ duration: 0.4, delay: index * 0.05 }}
-								className="bg-colorTwo/60 rounded-xl border border-colorOne/20 overflow-hidden"
+								className="bg-colorTwo rounded-xl border border-colorFive/10 overflow-hidden"
 							>
 								<button
 									type="button"
@@ -42,7 +43,7 @@ const FAQ = () => {
 									aria-expanded={isOpen}
 									aria-controls={panelId}
 								>
-									<span className="text-colorFive font-display font-semibold text-base lg:text-lg pr-4">
+									<span className="text-colorFive font-display font-bold text-lg pr-4 leading-snug tracking-tight">
 										{faq.question}
 									</span>
 									<IconChevronDown
@@ -63,7 +64,7 @@ const FAQ = () => {
 											transition={{ duration: 0.3 }}
 											className="overflow-hidden"
 										>
-											<p className="px-5 pb-5 text-colorFive/80 font-sans text-sm lg:text-base leading-relaxed">
+											<p className="px-5 pb-5 text-colorFive/90 font-sans text-base leading-relaxed">
 												{faq.answer}
 											</p>
 										</motion.div>
@@ -72,6 +73,18 @@ const FAQ = () => {
 							</motion.div>
 						);
 					})}
+				</div>
+
+				<div className="mt-10 text-center">
+					<p className="text-colorFive/85 font-sans text-base mb-4">
+						Still unsure? A free quote costs nothing — and clears everything up.
+					</p>
+					<Button
+						text="Get a Free Quote"
+						action="contact"
+						variant="primary"
+						className="text-sm lg:text-base"
+					/>
 				</div>
 			</div>
 		</section>

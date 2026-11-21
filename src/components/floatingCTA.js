@@ -40,8 +40,7 @@ const FloatingCTA = () => {
 					className="fixed bottom-6 right-6 z-50 hidden md:block"
 				>
 					<Button
-						text="Get a Quote"
-						active={true}
+						text="Free Quote"
 						action="contact"
 						variant="primary"
 						icon={IconChat}

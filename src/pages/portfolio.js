@@ -20,12 +20,12 @@ const Portfolio = () => {
 	const [activeTab, setActiveTab] = useState("website");
 
 	return (
-		<section className="relative bg-colorThree pt-12 lg:pt-16 pb-4" id="portfolio">
+		<section className="relative bg-colorThree pt-16 lg:pt-24 pb-4" id="portfolio">
 			<div className="max-w-6xl mx-auto px-4">
 				<SectionHeader
-					eyebrow="Selected work"
-					title="Portfolio"
-					subtitle="Real projects for real businesses — see the results."
+					eyebrow="Proof in the work"
+					title="Recent projects"
+					subtitle="Real builds for real businesses — see the kind of results you could get."
 					className="mb-2"
 				/>
 			</div>

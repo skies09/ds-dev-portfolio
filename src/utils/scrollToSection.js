@@ -7,13 +7,10 @@ export const scrollToSection = (sectionId) => {
 	}
 
 	const element = document.getElementById(sectionId);
-	if (!element) {
-		window.location.href = `#${sectionId}`;
-		return;
-	}
+	if (!element) return;
 
 	const offsetPosition =
-		element.getBoundingClientRect().top + window.pageYOffset - NAVBAR_HEIGHT;
+		element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
 
 	window.scrollTo({
 		top: offsetPosition,

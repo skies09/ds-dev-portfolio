@@ -21,14 +21,14 @@ const skillVariants = {
 const Skills = () => {
 	return (
 		<section
-			className="relative w-screen overflow-hidden h-auto bg-colorThree py-8 lg:py-12 section-wash-alt"
+			className="relative w-screen overflow-hidden h-auto bg-colorThree py-16 lg:py-20 section-wash-alt"
 			id="skills"
 		>
 			<div className="max-w-6xl mx-auto px-4">
 				<SectionHeader
-					eyebrow="Stack"
-					title="Skills & Technologies"
-					subtitle="Modern tools chosen for speed, reliability, and long-term maintainability."
+					eyebrow="Built with care"
+					title="Tools that keep you fast"
+					subtitle="Modern stack chosen so your site stays quick, reliable, and easy to grow."
 					className="mb-8"
 				/>
 
@@ -42,12 +42,13 @@ const Skills = () => {
 					{Object.entries(skills).map(([skillName, iconName]) => (
 						<motion.span
 							key={skillName}
-							className="px-4 py-2 bg-colorTwo/80 font-monoTwo text-sm lg:text-base font-semibold rounded-2xl text-colorFive border border-colorOne/20 hover:border-colorOne/50 hover:bg-colorTwo hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(61,214,245,0.14)] transition duration-200 flex flex-row items-center gap-2"
+							className="px-3.5 py-2 bg-colorTwo font-sans text-sm font-medium rounded-xl text-colorFive border border-colorFive/10 hover:border-colorOne/35 hover:-translate-y-0.5 transition duration-200 flex flex-row items-center gap-2"
 							variants={skillVariants}
 						>
 							<img
 								src={`https://skillicons.dev/icons?i=${iconName}&theme=dark`}
 								alt=""
+								aria-hidden="true"
 								className="w-5 h-5 lg:w-6 lg:h-6"
 								loading="lazy"
 							/>

@@ -73,5 +73,3 @@ export const IconPhone = (props) => <FaIcon icon={faPhone} {...props} />;
 export const IconSend = (props) => <FaIcon icon={faPaperPlane} {...props} />;
 export const IconStar = (props) => <FaIcon icon={faStar} {...props} />;
 export const IconQuote = (props) => <FaIcon icon={faQuoteLeft} {...props} />;
-
-export default FaIcon;

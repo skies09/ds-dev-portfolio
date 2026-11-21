@@ -12,30 +12,29 @@ const SectionHeader = ({
 
 	return (
 		<motion.div
-			className={`flex flex-col ${alignClass} mb-10 lg:mb-14 ${className}`}
+			className={`flex flex-col ${alignClass} mb-10 lg:mb-12 ${className}`}
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true, margin: "-40px" }}
 			transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
 		>
 			{eyebrow && (
-				<p className="text-colorOne font-monoTwo text-xs lg:text-sm tracking-[0.22em] uppercase mb-3">
-					<span className="text-colorOne/50 mr-1">{"//"}</span>
+				<p className="text-colorOne font-sans text-sm font-semibold tracking-[0.12em] uppercase mb-4">
 					{eyebrow}
 				</p>
 			)}
-			<h2 className="text-3xl lg:text-4xl font-bold text-colorFive font-display leading-tight">
+			<h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-colorFive font-display tracking-[-0.03em] leading-[1.1]">
 				{title}
 			</h2>
 			<div
-				className={`mt-4 h-px w-16 bg-gradient-to-r from-colorOne via-colorAccent/80 to-transparent ${
+				className={`mt-5 h-px w-12 bg-colorOne/80 ${
 					align === "center" ? "mx-auto" : ""
 				}`}
 				aria-hidden="true"
 			/>
 			{subtitle && (
 				<p
-					className={`mt-5 text-colorFive/70 font-sans text-sm lg:text-base max-w-2xl leading-relaxed ${
+					className={`mt-5 text-colorFive/90 font-sans text-lg max-w-xl leading-relaxed ${
 						align === "center" ? "mx-auto" : ""
 					}`}
 				>

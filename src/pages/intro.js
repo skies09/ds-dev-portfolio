@@ -5,9 +5,9 @@ import Button from "../components/button";
 import ShinyText from "../components/ShinyText/shinyText";
 
 const trustStats = [
-	{ value: "5+", label: "Projects delivered" },
-	{ value: "100%", label: "Client satisfaction" },
-	{ value: "2–4 wks", label: "Typical turnaround" },
+	{ value: "Free", label: "Quote & discovery call" },
+	{ value: "48 hrs", label: "Typical reply time" },
+	{ value: "2–4 wks", label: "Most projects live" },
 ];
 
 const Intro = () => {
@@ -31,79 +31,74 @@ const Intro = () => {
 				aria-hidden="true"
 			/>
 			<div
-				className="absolute top-[36%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(420px,72vw)] h-[min(420px,72vw)] lg:w-[min(380px,36vw)] lg:h-[min(380px,36vw)] rounded-full hero-bg-orb hero-glow-animate pointer-events-none"
-				aria-hidden="true"
-			/>
-			<div
-				className="absolute top-[18%] left-[12%] w-48 h-48 rounded-full bg-colorOne/[0.04] blur-3xl pointer-events-none"
-				aria-hidden="true"
-			/>
-			<div
-				className="absolute bottom-[15%] right-[10%] w-56 h-56 rounded-full bg-colorFour/[0.06] blur-3xl pointer-events-none"
+				className="absolute top-[34%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(360px,70vw)] h-[min(360px,70vw)] lg:w-[min(320px,30vw)] lg:h-[min(320px,30vw)] rounded-full hero-bg-orb hero-glow-animate pointer-events-none"
 				aria-hidden="true"
 			/>
 
 			<span
-				className="hero-float absolute top-[22%] left-[8%] lg:left-[14%] text-4xl lg:text-6xl hidden sm:block"
+				className="hero-float absolute top-[24%] left-[10%] lg:left-[16%] text-5xl lg:text-7xl hidden md:block"
 				aria-hidden="true"
 			>
 				{"{"}
 			</span>
 			<span
-				className="hero-float hero-float-delay absolute top-[28%] right-[8%] lg:right-[14%] text-4xl lg:text-6xl hidden sm:block"
+				className="hero-float hero-float-delay absolute top-[30%] right-[10%] lg:right-[16%] text-5xl lg:text-7xl hidden md:block"
 				aria-hidden="true"
 			>
 				{"}"}
 			</span>
-			<div className="relative z-10 w-full max-w-3xl mx-auto px-4 py-32 lg:py-24 flex flex-col items-center text-center">
+
+			<div className="relative z-10 w-full max-w-3xl mx-auto px-4 py-28 lg:py-32 flex flex-col items-center text-center">
 				<motion.div
-					className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full border border-colorOne/25 bg-colorTwo/40 backdrop-blur-sm"
+					className="inline-flex items-center gap-2.5 px-3.5 py-1.5 mb-8 rounded-full border border-colorFive/10 bg-colorTwo/50"
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
+					transition={{ duration: 0.55 }}
 				>
 					<span className="status-dot" aria-hidden="true" />
-					<span className="text-colorAccent text-xs md:text-sm font-monoTwo tracking-wide">
-						Available for hire · UK-based
+					<span className="text-colorFive/90 text-sm font-sans font-medium tracking-wide">
+						Open for new projects · Free quotes
 					</span>
 				</motion.div>
 
 				<motion.h1
 					className="leading-none"
-					initial={{ opacity: 0, y: 14 }}
+					initial={{ opacity: 0, y: 16 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+					transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
 				>
 					<ShinyText
 						text="Donna Smith"
 						disabled={false}
-						speed={4.5}
-						className="font-brand font-bold text-5xl md:text-6xl lg:text-7xl tracking-[-0.03em]"
+						speed={5}
+						className="font-brand font-extrabold text-5xl md:text-6xl lg:text-hero-lg tracking-[-0.045em]"
 					/>
 				</motion.h1>
 
 				<motion.p
-					className="text-colorFive/80 text-base md:text-lg lg:text-xl font-sans mt-5 lg:mt-6 max-w-2xl leading-relaxed"
+					className="text-colorFive text-lg md:text-xl font-sans font-medium mt-6 lg:mt-7 max-w-xl leading-relaxed"
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.2 }}
+					transition={{ duration: 0.55, delay: 0.18 }}
 				>
-					I help small businesses and startups with new websites, new
-					features on existing sites, and fixes when something isn't working
-					right.
+					Fast, professional websites that help small businesses get noticed
+					— and turn visitors into customers.
 				</motion.p>
 
 				<motion.div
 					className="mt-8 lg:mt-10 w-full flex justify-center items-center text-center"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.6, delay: 0.3 }}
+					transition={{ duration: 0.55, delay: 0.28 }}
 				>
-					<span className="font-monoTwo text-colorOne/40 mr-2 hidden sm:inline">
+					<span
+						className="font-mono text-colorOne/50 mr-2 text-lg md:text-xl"
+						aria-hidden="true"
+					>
 						{"›"}
 					</span>
 					<ReactTypingEffect
-						className="hero-typing text-base md:text-lg font-monoTwo text-colorOne/80"
+						className="hero-typing text-lg md:text-xl font-display font-semibold text-colorOne tracking-tight"
 						text={typingString}
 						speed={60}
 						eraseSpeed={50}
@@ -112,29 +107,20 @@ const Intro = () => {
 				</motion.div>
 
 				<motion.div
-					className="w-16 h-px bg-gradient-to-r from-transparent via-colorOne/50 to-transparent my-4 lg:my-5"
-					initial={{ scaleX: 0 }}
-					animate={{ scaleX: 1 }}
-					transition={{ duration: 1, delay: 0.4 }}
-				/>
-
-				<motion.div
-					className="flex flex-row flex-wrap justify-center gap-3 lg:gap-4"
+					className="flex flex-row flex-wrap justify-center gap-3 lg:gap-4 mt-10 lg:mt-12"
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.45 }}
+					transition={{ duration: 0.55, delay: 0.38 }}
 				>
 					<Button
-						text="Start Your Project"
-						active={true}
+						text="Get a Free Quote"
 						action="contact"
 						variant="primary"
 						icon={IconRocket}
 						className="text-sm lg:text-base"
 					/>
 					<Button
-						text="See My Work"
-						active={true}
+						text="See Recent Work"
 						action="portfolio"
 						variant="secondary"
 						icon={IconBriefcase}
@@ -142,24 +128,27 @@ const Intro = () => {
 					/>
 				</motion.div>
 
+				<motion.p
+					className="mt-4 text-sm text-colorFive/70 font-sans"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.45, delay: 0.42 }}
+				>
+					No obligation · Clear fixed pricing · Reply within 48 hours
+				</motion.p>
+
 				<motion.div
-					className="flex flex-col sm:flex-row sm:flex-nowrap justify-center items-center gap-8 lg:gap-16 mt-10 lg:mt-14 pt-8 pb-8 border-t border-b border-colorOne/10 w-full"
+					className="flex flex-col sm:flex-row sm:flex-nowrap justify-center items-center gap-8 lg:gap-14 mt-14 lg:mt-16 pt-8 border-t border-colorFive/10 w-full max-w-2xl"
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.55 }}
+					transition={{ duration: 0.55, delay: 0.48 }}
 				>
-					{trustStats.map((stat, index) => (
-						<div key={stat.label} className="text-center shrink-0 relative">
-							{index > 0 && (
-								<span
-									className="hidden sm:block absolute -left-8 lg:-left-10 top-1/2 -translate-y-1/2 w-px h-8 bg-colorOne/15"
-									aria-hidden="true"
-								/>
-							)}
-							<p className="text-2xl md:text-3xl font-display font-bold text-colorOne">
+					{trustStats.map((stat) => (
+						<div key={stat.label} className="text-center shrink-0">
+							<p className="text-2xl md:text-3xl font-display font-extrabold text-colorFive tracking-tight">
 								{stat.value}
 							</p>
-							<p className="text-xs md:text-sm text-colorFive/50 font-monoTwo mt-1">
+							<p className="text-sm text-colorFive/80 font-sans font-medium mt-1.5">
 								{stat.label}
 							</p>
 						</div>

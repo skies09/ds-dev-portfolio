@@ -35,11 +35,11 @@ const validationSchema = Yup.object({
 		.required("Message is required"),
 });
 
-const labelClass =
-	"text-sm lg:text-base text-colorFive font-semibold font-display opacity-90";
+const labelClass = "text-base text-colorFive font-semibold font-sans";
 const fieldClass =
-	"w-full z-10 rounded-xl my-2 pl-3 py-2 font-display bg-colorTwo/50 border border-colorOne/20 text-colorFive focus:border-colorOne focus:outline-none transition-colors";
-const selectClass = `${fieldClass} appearance-none pr-10 bg-no-repeat bg-[length:1rem_1rem] bg-[right_0.875rem_center] bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%23E6F4FA%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')]`;
+	"w-full z-10 rounded-xl my-2 pl-3 py-3 text-base font-sans bg-colorTwo/50 border border-colorOne/20 text-colorFive placeholder:text-colorFive/50 focus:border-colorOne focus:outline-none focus-visible:ring-2 focus-visible:ring-colorOne/40 transition-colors";
+const errorClass = "text-sm text-colorOne font-sans -mt-1 mb-1";
+const selectClass = `${fieldClass} appearance-none pr-10 bg-no-repeat bg-[length:1rem_1rem] bg-[right_0.875rem_center] bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%23E8EDF5%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')]`;
 
 const ContactForm = ({ onSuccess }) => {
 	const [submitError, setSubmitError] = useState("");
@@ -96,7 +96,7 @@ const ContactForm = ({ onSuccess }) => {
 						autoComplete="name"
 					/>
 					<ErrorMessage
-						className="text-sm text-colorOne font-monoTwo -mt-1 mb-1"
+						className={errorClass}
 						name="user_name"
 						component="div"
 					/>
@@ -113,7 +113,7 @@ const ContactForm = ({ onSuccess }) => {
 						autoComplete="email"
 					/>
 					<ErrorMessage
-						className="text-sm text-colorOne font-monoTwo -mt-1 mb-1"
+						className={errorClass}
 						name="user_email"
 						component="div"
 					/>
@@ -135,7 +135,7 @@ const ContactForm = ({ onSuccess }) => {
 						))}
 					</Field>
 					<ErrorMessage
-						className="text-sm text-colorOne font-monoTwo -mt-1 mb-1"
+						className={errorClass}
 						name="project_type"
 						component="div"
 					/>
@@ -149,10 +149,10 @@ const ContactForm = ({ onSuccess }) => {
 						id="message"
 						name="message"
 						rows="4"
-						placeholder="What are you looking to build? Any timeline or budget in mind?"
+						placeholder="e.g. Need a new site for my cafe, or a booking form on my existing site. Hoping to launch in 3–4 weeks."
 					/>
 					<ErrorMessage
-						className="text-sm text-colorOne font-monoTwo -mt-1 mb-1"
+						className={errorClass}
 						name="message"
 						component="div"
 					/>
@@ -167,13 +167,16 @@ const ContactForm = ({ onSuccess }) => {
 					)}
 
 					<Button
-						text={isSubmitting ? "Sending..." : "Send Message"}
+						text={isSubmitting ? "Sending..." : "Request my free quote"}
 						variant="primary"
 						icon={!isSubmitting ? IconSend : undefined}
 						type="submit"
 						disabled={isSubmitting}
 						className="mx-auto mt-4 text-sm lg:text-base w-full"
 					/>
+					<p className="w-full text-center text-sm text-colorFive/65 font-sans mt-3">
+						Free quote · No pressure · Reply within 48 hours
+					</p>
 				</Form>
 			)}
 		</Formik>
@@ -186,14 +189,14 @@ const Contact = () => {
 	return (
 		<div>
 			<section
-				className="relative w-screen overflow-hidden bg-colorThree pb-6 pt-12 lg:pt-16 section-wash-alt"
+				className="relative w-screen overflow-hidden bg-colorThree pb-8 pt-16 lg:pt-24 section-wash-alt"
 				id="contact"
 			>
 				<div className="px-4 mb-10">
 					<SectionHeader
-						eyebrow="Let's talk"
-						title="Ready to start your project?"
-						subtitle="Fill in the form below and I'll get back to you within 24 hours."
+						eyebrow="Free quote · No obligation"
+						title="Tell me what you need"
+						subtitle="Share a few details and I'll reply within 48 hours with next steps."
 						className="mb-0"
 					/>
 				</div>
@@ -210,11 +213,11 @@ const Contact = () => {
 							<ContactForm onSuccess={() => setFormSubmitted(true)} />
 						) : (
 							<div className="text-center py-12">
-								<p className="text-xl lg:text-2xl text-colorFive font-bold font-display mb-2">
+								<p className="text-2xl lg:text-3xl text-colorFive font-extrabold font-display tracking-tight mb-2">
 									Thanks for reaching out!
 								</p>
-								<p className="text-colorFive/80 font-sans">
-									I'll review your message and get back to you within 24
+								<p className="text-colorFive/90 font-sans text-base">
+									I'll review your message and get back to you within 48
 									hours.
 								</p>
 							</div>
@@ -228,16 +231,19 @@ const Contact = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<h3 className="text-xl font-display font-bold text-colorFive mb-4">
-							Prefer to reach out directly?
+						<h3 className="text-lg font-display font-bold text-colorFive mb-2 tracking-tight">
+							Prefer a quick chat?
 						</h3>
+						<p className="text-colorFive/80 font-sans text-base mb-4 leading-relaxed">
+							Call or email anytime — no form needed.
+						</p>
 						<div className="flex flex-col gap-4 border-b border-dotted border-colorFive/30 pb-6 mb-2 w-full">
 							<a
 								href="tel:07950981097"
 								className="flex flex-row items-center text-colorFive hover:text-colorOne transition-colors no-underline"
 							>
 								<IconPhone className="text-colorOne w-5 h-5" />
-								<span className="ml-4 text-base lg:text-lg tracking-wider font-monoTwo">
+								<span className="ml-4 text-base font-sans">
 									07950981097
 								</span>
 							</a>
@@ -246,7 +252,7 @@ const Contact = () => {
 								className="flex flex-row items-center text-colorFive hover:text-colorOne transition-colors no-underline"
 							>
 								<IconMail className="text-colorOne w-5 h-5" />
-								<span className="ml-4 text-base lg:text-lg tracking-wider font-monoTwo break-all">
+								<span className="ml-4 text-base font-sans break-all">
 									donna.smith08@icloud.com
 								</span>
 							</a>
