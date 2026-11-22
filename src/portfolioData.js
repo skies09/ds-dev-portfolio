@@ -124,6 +124,24 @@ export const portfolioData = [
 		github: "https://github.com/skies09/bu-jo",
 		category: "app",
 	},
+	{
+		id: 6,
+		title: "PawDex",
+		img: "pawdex.png",
+		imgMobile: "pawdexMobile.png",
+		longDescription:
+			"A dog health tracking app that helps owners log conditions, medications, and weight in one place — then export clear vet-ready reports. Built for calmer appointments and chronic-care routines that are easy to keep up with day to day.",
+		result: "On-device SQLite storage with condition modules, med reminders, and shareable vet PDFs",
+		languages: ["React Native", "Expo", "Typescript", "SQLite"],
+		keyFeatures: [
+			"Condition-based health modules",
+			"Medication reminders",
+			"Vet-ready report export",
+		],
+		link: "https://pawdex-app.web.app/",
+		github: "https://github.com/skies09/pawdex-website",
+		category: "apps",
+	},
 ];
 
 export const testimonials = [

@@ -4,7 +4,13 @@ import PortfolioCard from "../components/portfolioCard";
 import SectionHeader from "../components/sectionHeader";
 import { portfolioData } from "../portfolioData";
 
-const tabs = ["website", "app"];
+const tabs = ["website", "app", "apps"];
+
+const tabLabels = {
+	website: "Websites",
+	app: "App Projects",
+	apps: "Apps",
+};
 
 const gridContainerVariants = {
 	hidden: { opacity: 0 },
@@ -30,7 +36,7 @@ const Portfolio = () => {
 				/>
 			</div>
 			<div
-				className="flex flex-row gap-4 lg:gap-5 mt-12 w-11/12 mx-auto justify-center items-center"
+				className="flex flex-row flex-wrap gap-3 lg:gap-5 mt-12 w-11/12 mx-auto justify-center items-center"
 				role="tablist"
 				aria-label="Portfolio categories"
 			>
@@ -45,7 +51,7 @@ const Portfolio = () => {
 							whileHover={{ y: -2 }}
 							whileTap={{ scale: 0.97 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className={`w-11/12 lg:w-auto px-6 lg:px-12 py-4 rounded-2xl font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden flex items-center justify-center border-2 ${
+							className={`w-auto px-5 sm:px-6 lg:px-12 py-3.5 lg:py-4 rounded-2xl font-display font-semibold tracking-wide transition-all duration-300 overflow-hidden flex items-center justify-center border-2 ${
 								isActive
 									? "bg-colorTwo/80 backdrop-blur-sm text-colorFive border-colorFour/70 shadow-tab-active"
 									: "text-colorFive border-colorFour/40 bg-transparent hover:border-colorFour/60"
@@ -53,7 +59,7 @@ const Portfolio = () => {
 							onClick={() => setActiveTab(tab)}
 						>
 							<span className="relative z-10">
-								{tab === "website" ? "Websites" : "App Projects"}
+								{tabLabels[tab]}
 							</span>
 						</motion.button>
 					);
